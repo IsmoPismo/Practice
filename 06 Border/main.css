@@ -1,0 +1,26 @@
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    border-radius: 45%;
+    background-image: url(surf.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    border: 10px groove orangered;
+    border-radius: 45%;
+}
+
+.dogone {
+    border: 35px dashed orangered;
+}
+
+.dogtwo {
+    border: 35px dotted orangered;
+}
+
+.dogthree {
+    border: 35px double orangered;
+}
