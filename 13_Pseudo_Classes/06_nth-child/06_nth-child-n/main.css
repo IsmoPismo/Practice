@@ -5,3 +5,7 @@ body {
 li:nth-child(3) {
     color: red;
 }
+
+li:last-child{
+  color: green;
+}
