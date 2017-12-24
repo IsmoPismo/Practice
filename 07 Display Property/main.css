@@ -7,10 +7,10 @@ div {
 }
 
 img {
+    width: 200px;
     border: 10px groove blue;
-    border-radius: 4%;
     padding: 15px;
-    margin: 45px;
+    box-sizing: border-box;
 }
 
 .dogone {
