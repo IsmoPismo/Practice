@@ -1,0 +1,25 @@
+.emphasize {
+    color: hotpink;
+}
+
+#promote {
+    color: green;
+    font-size: 135%;
+}
+
+[contenteditable]{
+  align-content: center;
+  border: 1px dashed black;
+}
+
+[src] {
+    border: 10px dashed red;
+}
+
+[href] {
+    border: 5px dashed green;
+}
+
+[target=_blank]{
+  border: 12px groove blue;
+}
