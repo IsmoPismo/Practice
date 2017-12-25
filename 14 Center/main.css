@@ -1,0 +1,17 @@
+*{
+  border: 3px dashed hotpink;
+}
+
+html{
+  border: 3px dashed blue;
+}
+
+div{
+  height: 105px;
+  border: 3px dashed aqua;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
