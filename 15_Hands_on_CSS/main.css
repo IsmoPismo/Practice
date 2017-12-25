@@ -5,8 +5,9 @@ html{
 body{
   width: 70%;
   background-color: yellow;
-  margin: 0 auto;
+  margin: 5px auto;
   border: 10px solid black;
+  border-radius: 4%;
 }
 
 img{
@@ -31,4 +32,14 @@ img{
 
 body > *{
   margin: 8px 13px;
+}
+
+article::first-letter{
+  font-size: 20px;
+  color: tomato;
+}
+
+article::first-line {
+  font-size: 18px;
+  font-family: color: #125;
 }

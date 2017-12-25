@@ -1,0 +1,42 @@
+#Treći {
+  color: red;
+}
+
+.klasa {
+  color: fuchsia;
+}
+
+[target=_blank]{
+  border: 2px solid tomato;
+}
+
+a{
+  font-size: 19px;
+}
+
+a:link {
+  color: purple;
+}
+
+a:visited {
+  color: white;
+  background: black;
+}
+
+a:hover {
+  color: cyan;
+}
+
+a:active {
+  color: white;
+}
+
+p::first-line {
+  color: green;
+  font-size: 18px;
+}
+
+p::first-letter{
+  color: green;
+  font-size: 40px;
+}
