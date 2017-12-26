@@ -1,0 +1,21 @@
+time {
+  display: block;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+h1, body {
+  border: 0.18rem solid black;
+  font-weight: 200;
+}
+
+* {
+  font-family: sans-serif;
+  font-variant: small-caps;
+}
+
+article {
+  font-size: 1.7rem;
+  line-height: 140%;
+  font-family: serif;
+}
