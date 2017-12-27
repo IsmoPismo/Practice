@@ -1,0 +1,15 @@
+div{
+  text-align: center;
+}
+
+p{
+  font-size: 5rem;
+  font-weight: 600;
+  font-variant: small-caps;
+  text-shadow: 1px 1px 0.35px white;
+}
+
+div#id {
+  background-color: green;
+
+}
