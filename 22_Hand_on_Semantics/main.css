@@ -1,0 +1,9 @@
+#main_page{
+  text-shadow: 1px 1px .9px gray;
+  font-size: 2.4rem;
+}
+
+main {
+  font-variant: small-caps;
+  font-size: 1.35rem;
+}
