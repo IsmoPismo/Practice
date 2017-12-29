@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  flex-flow: row wrap;  /*Shorthand propertz*/
+}
+
+div {
+  height: 23px;
+  border: 1px solid black;
+}

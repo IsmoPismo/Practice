@@ -7,21 +7,18 @@ div {
 
 header {
   display: flex;
-  border: 1px groove cyan;
-  border-radius: 5%;
-  flex-wrap: nowrap; /*DEAFAULT*/
-  flex-direction: row;
-  justify-content: space-between;
+  flex-flow: row;
 }
 
 footer {
   display: flex;
-  border: 1px groove orange;
-  margin: 50px 0;
+  flex-flow: row-reverse;
   flex-wrap: wrap;
+  margin: 10px 0;
 }
 
 aside {
   display: flex;
+  flex-flow: column;
   flex-wrap: wrap-reverse;
 }
