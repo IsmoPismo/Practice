@@ -1,0 +1,21 @@
+div {
+  border: 3px dashed hotpink;
+  height: 5rem;
+  width: 8rem;
+}
+
+header {
+  display: flex;
+  border: 1px groove cyan;
+  border-radius: 5%;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  border: 1px groove orange;
+  margin: 50px 0;
+  flex-wrap: wrap
+}
