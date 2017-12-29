@@ -7,7 +7,7 @@ html {
 }
 
 ul {
-    list-style: none;
+    list-style: circle;
 }
 
 li {
@@ -15,11 +15,17 @@ li {
     border-radius: 40%;
     display: inline-block;
     border: 1px solid grey;
+    list-style: circle;
 }
 
 li:hover {
   background-color: grey;
   border: 1px dashed hotpink;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
 }
 
 a:active {
