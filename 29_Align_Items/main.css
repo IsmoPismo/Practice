@@ -1,0 +1,40 @@
+.c1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.c2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.c3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.c4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c5 {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+div {
+  border: 1px dashed hotpink;
+  /* height: 55px; */
+}
+
+header {
+  border: 1px solid brown;
+  margin: 10% 0;
+  height: 70px;
+}

@@ -1,0 +1,34 @@
+.c1 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.c2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.c3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c4 {
+  display: flex;
+  justify-content: center;
+}
+
+.c5 {
+  display: flex;
+  justify-content: space-around;
+}
+
+div {
+  border: 1px dashed hotpink;
+  height: 55px;
+}
+
+header {
+  border: 1px solid brown;
+  margin-bottom: 10%;
+}
