@@ -1,0 +1,11 @@
+body {
+  border: 12px groove hotpink;
+  display: flex;
+  align-content: stretch;
+}
+
+div {
+  width: 155px;
+  border: 1px solid black;
+  background-color: red;
+}

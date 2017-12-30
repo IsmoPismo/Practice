@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+div {
+  margin: 50px;
+  border: 5px solid purple;
+  height: 8rem;
+  box-sizing: border-box;
+}
+
+div:nth-child(even){
+  border: 2px dashed green;
+  align-self: flex-end;
+}
+
+div:nth-child(odd){
+  align-self: flex-start;
+}

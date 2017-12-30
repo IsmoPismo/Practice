@@ -1,0 +1,13 @@
+body{
+  display: flex;
+  flex-flow: row;
+  border: 5px groove hotpink;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+div{
+  margin: 3px;
+  border: 2px groove black;
+}
