@@ -1,0 +1,14 @@
+body{
+  display: flex;
+}
+div{
+  background: red;
+  height: 255px;
+  width: 155px;
+  flex-shrink: 1;
+  border: 3px solid black;
+}
+
+#jes{
+  flex-shrink: 2;
+}

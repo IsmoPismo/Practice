@@ -1,0 +1,32 @@
+body{
+  display: flex;
+  flex-flow: row wrap;
+  border: 1px dashed hotpink;
+}
+
+div{
+  border: 1px solid black;
+  max-height: 350px;
+  margin: 0 auto;
+  display: flex;
+}
+
+#one{
+  align-items: center;
+  order: 3;
+}
+
+#two{
+  align-items: center;
+  order: 2;
+}
+
+#tree{
+  align-items: center;
+  align-items: 0;
+}
+
+#four{
+  align-items: center;
+  order: -1;
+}

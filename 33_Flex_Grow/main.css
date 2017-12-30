@@ -1,0 +1,13 @@
+body{
+  display: flex;
+}
+div{
+  background: red;
+  height: 255px;
+  flex-grow: 1;
+  border: 3px solid black;
+}
+
+#jes{
+  flex-grow: 2;
+}
