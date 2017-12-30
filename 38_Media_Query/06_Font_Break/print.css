@@ -1,0 +1,15 @@
+nav {
+  display: none;
+}
+
+header {
+  font-variant: small-caps;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+
+p {
+  font-variant: small-caps;
+  font-size: 2rem;
+}

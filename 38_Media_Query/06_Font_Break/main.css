@@ -1,0 +1,21 @@
+html {
+  background-color: blue;
+  color: white;
+  border: 2px solid black;
+
+}
+
+body{
+  width: 70%;
+  margin: 35 auto;
+  border: 5px groove white;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 15px;
+  justify-content: center;
+}
