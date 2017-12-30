@@ -1,0 +1,12 @@
+p {
+    color: green;
+    border: 1px groove orange;
+}
+
+h1{
+  display: flex;
+  background-color: yellow;
+  justify-content: center;
+  border-radius: 47%;
+  color: blue;
+}
