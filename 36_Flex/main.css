@@ -1,0 +1,18 @@
+body{
+  display: flex;
+  border: 13px solid gray;
+  align-items: center
+}
+
+div {
+  width: 250px;
+  height: 490px;
+  border: 8px dashed olive;
+  border-radius: 25%;
+  flex: 0 1 auto;
+  margin: 0 auto;
+}
+
+#Neo {
+  flex: 0 5 auto;
+}
