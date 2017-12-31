@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  border: 5px groove hotpink;
+}
+
+div {
+  width: 100%;
+}

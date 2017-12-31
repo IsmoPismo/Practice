@@ -1,0 +1,16 @@
+body {
+  max-width: 825px;
+  margin: 50 auto;
+}
+
+.c1 {
+  width: 70%;
+}
+
+.c2 {
+  width: 30%;
+}
+
+.c3, .c4, .c5 {
+  width: 33.33%;
+}
