@@ -1,0 +1,18 @@
+ul {
+  background: deepskyblue;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-variant: small-caps;
+}
+
+a:hover {
+  background: royalblue;
+  color: gray;
+}

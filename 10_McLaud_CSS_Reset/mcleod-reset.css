@@ -36,8 +36,8 @@ a {
 }
 
 button {
-    cursor: pointer;
-    background-color: transparent;
+    /* cursor: pointer; */
+    /* background-color: transparent; */
 }
 
 blockquote, q {
@@ -47,19 +47,19 @@ blockquote, q {
 
 table {
     /* no spacing between cells*/
-    border-spacing: 0;
+    /* border-spacing: 0; */
     /*borders are collapsed - adjacent table cells share borders */
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
 }
 
 input, select, progress{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none; */
+    /* appearance: none; */
 }
 
 svg {
-    width: 1.9em;
-    height: 1.9em;
-    fill: currentColor;
+    /* width: 1.9em; */
+    /* height: 1.9em; */
+    /* fill: currentColor; */
 }
