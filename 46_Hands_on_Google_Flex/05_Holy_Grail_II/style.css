@@ -1,0 +1,8 @@
+nav, aside, article, header, footer {
+  border: 2px solid aqua;
+  background-color: yellow;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
+  box-sizing: border-box;
+}

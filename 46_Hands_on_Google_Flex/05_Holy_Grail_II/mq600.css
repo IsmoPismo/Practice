@@ -1,0 +1,12 @@
+div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+nav, aside {
+  width: 25%;
+}
+
+article {
+  width: 50%;
+}

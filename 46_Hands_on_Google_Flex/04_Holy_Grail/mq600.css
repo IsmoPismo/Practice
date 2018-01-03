@@ -1,0 +1,22 @@
+body {
+  justify-content: center;
+}
+
+aside {
+  width: 15%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 70%;
+  padding: 0;
+}
+
+.add1 {
+  order: -1;
+}
+
+header {
+  order: -2;
+}

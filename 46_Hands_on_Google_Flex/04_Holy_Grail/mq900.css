@@ -1,0 +1,11 @@
+main {
+  width: 100%;
+}
+
+aside {
+  width: 50%;
+}
+
+.add1 {
+  order: 0;
+}
