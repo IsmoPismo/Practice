@@ -1,0 +1,22 @@
+html, body, ul, li, a {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-flow: column nowrap;
+    list-style: none;
+    background-color: deepskyblue;
+    text-align: center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+    font-size: 2rem;
+}
