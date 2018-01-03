@@ -1,0 +1,17 @@
+body {
+  flex-flow: row wrap;
+  height: 42vh;
+}
+
+nav {
+  width: 10%;
+  text-align: center;
+}
+
+main {
+  width: 60%;
+}
+
+ul {
+  flex-flow: column nowrap;
+}
