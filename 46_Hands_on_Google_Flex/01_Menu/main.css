@@ -7,14 +7,13 @@ html, body, ul, li, a {
 
 ul {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     list-style: none;
     background-color: deepskyblue;
     text-align: center;
 }
 
 a {
-    display: block;
     text-decoration: none;
     color: white;
     font-variant: small-caps;
