@@ -1,0 +1,12 @@
+header, footer, article, nav, aside {
+  background-image: url("tropics.jpg");
+  border: 4px groove royalblue;
+  text-align: center;
+  height: 55px;
+  line-height: 55px;
+  background-position: cover;
+  background-repeat: no-repeat;
+  color: white;
+  font-variant: small-caps;
+  font-size: 2rem;
+}

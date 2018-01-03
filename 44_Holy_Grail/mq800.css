@@ -8,6 +8,7 @@ article {
 
 aside {
   width: 15%;
+  align-self: center;
 }
 
 aside:nth-child(3) {
