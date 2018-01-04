@@ -1,0 +1,21 @@
+html {
+  max-width: 650px;
+  border: 6px groove azure;
+  margin: 9px auto;
+  max-height: 500px;
+}
+
+nav {
+  position: absolute;
+  border: 2px dashed skyblue;
+  min-width: 130px;
+  /* text-align: center; */
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  margin: 5px 8px 0px 140px;
+}

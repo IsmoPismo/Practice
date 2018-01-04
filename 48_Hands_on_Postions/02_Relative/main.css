@@ -1,0 +1,21 @@
+* {
+  border-radius: 5%;
+  border: 3px solid black;
+}
+
+div {
+  background-color: lemonchiffon;
+  border-radius: 8%;
+  height: 50px;
+  line-height: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 8px auto;
+}
+
+.one {
+  background-color: azure;
+  position: relative;
+  top: 1rem;
+  left: 15px;
+}

@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background-color: cyan;
+  border: 2px groove tomato;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 4rem;
+}
