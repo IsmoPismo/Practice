@@ -1,0 +1,23 @@
+html, body, div, p {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: fuchsia;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("..\\dog.png");
+  background-repeat: repeat-y;
+  background-size: 330px 110px;
+}
+
+div {
+  color: GhostWhite;
+  font-size: 18rem;
+  font-variant: small-caps;
+}

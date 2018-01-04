@@ -1,0 +1,22 @@
+html, body, div, p {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: fuchsia;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  color: GhostWhite;
+  font-size: 18rem;
+  font-variant: small-caps;
+  text-shadow: 2px 4px 1px Black;
+
+}

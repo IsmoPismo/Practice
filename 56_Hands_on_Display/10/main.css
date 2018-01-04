@@ -1,0 +1,26 @@
+html, body, div, p {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: mediumpurple;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+div {
+  color: GhostWhite;
+  font-size: 18rem;
+  font-variant: small-caps;
+  border: 4px groove seagreen;
+  background-image: url("..\\dog.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: content-box;
+}
