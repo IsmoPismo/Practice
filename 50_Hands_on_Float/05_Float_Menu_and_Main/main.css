@@ -1,0 +1,19 @@
+img {
+  float: right;
+  border: 8px solid bisque;
+  size: 5rem;
+}
+
+nav {
+  border: 8px solid beige;
+  float: left;
+  padding: 12px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  bottom: 5px;
+  right: 17px;
+  font-size: 2rem;
+}

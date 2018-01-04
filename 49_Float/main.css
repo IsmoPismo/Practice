@@ -1,0 +1,27 @@
+div {
+  border: 1px solid black;
+  border-radius: 7%;
+  height: 50px;
+}
+
+.c1 {
+  background-color: azure;
+  width: 100%;
+}
+
+.c2 {
+  background-color: aliceblue;
+  float: right;
+  width: 24%;
+}
+
+.c3 {
+  background-color: antiquewhite;
+  float: left;
+  width: 75%;
+}
+
+.c4 {
+  background-color: aquamarine;
+  clear: both;
+}

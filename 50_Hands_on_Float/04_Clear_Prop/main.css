@@ -1,0 +1,9 @@
+img {
+  float: left;
+  border: 8px solid bisque;
+}
+
+div {
+  border: 8px solid beige;
+  clear: left;
+}
