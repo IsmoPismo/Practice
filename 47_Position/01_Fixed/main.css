@@ -1,0 +1,21 @@
+.one {
+  background-color: cyan;
+  height: 100vh;
+  border: 4px dashed purple;
+  margin-left: 135px;
+  margin-top: 180px;
+}
+
+.two {
+  position: fixed;
+  top: 25px;
+  left: 28px;
+  height: 75px;
+  background-color: red;
+}
+
+div {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+}

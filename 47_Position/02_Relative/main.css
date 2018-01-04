@@ -1,0 +1,38 @@
+* {
+  border-radius: 5%;
+  border: 3px solid black;
+}
+
+div {
+  background-color: yellow;
+  border-radius: 8%;
+  height: 50px;
+  line-height: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  margin: 8px auto;
+}
+
+.one {
+  background-color: lemonchiffon;
+  position: relative;
+  top: 5px;
+  left: 55px;
+}
+
+.two {
+  background-color: azure;
+  position: relative;
+  bottom: -5px;
+  left: 55px;
+}
+
+.three {
+  background-color: peachpuff;
+  position: relative;
+  bottom: -380px;
+}
+
+.three {
+  position: static;
+}

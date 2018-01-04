@@ -1,0 +1,30 @@
+html {
+  border: 5px solid green;
+}
+
+body {
+  border: 4px solid red;
+}
+
+div {
+  border: 3px solid black;
+}
+
+.one {
+  position: absolute;
+  top: 255px;
+  left: -30px;
+  font-size: 2rem;
+}
+
+.two {
+  position: absolute;
+  top: 55px;
+
+}
+
+.inside {
+  position: absolute;
+  top: 200px;
+  right: 55px;
+}
