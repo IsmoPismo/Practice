@@ -1,0 +1,22 @@
+html {
+  margin: 35px;
+}
+
+body {
+  border: 4px solid black;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  min-height: 250px;
+}
+
+nav {
+  position: absolute;
+  width: 150px;
+}
+
+main {
+  border-left: 1px dashed gray;
+  margin-left: 150px;
+  padding: 20px;
+}
