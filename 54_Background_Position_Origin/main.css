@@ -1,0 +1,30 @@
+div {
+  height: 500px;
+  width: 500px;
+  background-image: url("Dawg.png");
+  background-repeat: no-repeat;
+  border: 8px solid crimson;
+  background-size: contain;
+  padding: 10px;
+  margin: 20px;
+}
+
+div:first-child {
+    background-position: center;
+}
+
+div:nth-child(2) {
+  background-position: 50px 90px;
+}
+
+div:nth-child(3) {
+  background-origin: content-box;
+}
+
+div:nth-child(4) {
+  background-origin: padding-box;
+}
+
+div:last-child {
+  background-origin: border-box;
+}

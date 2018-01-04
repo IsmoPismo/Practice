@@ -1,0 +1,27 @@
+div {
+  height: 300px;
+  width: 300px;
+  background-image: url("Dawg.png");
+  background-repeat: no-repeat;
+  border: 2px solid crimson;
+}
+
+div:first-child {
+    background-size: 300px 300px;
+}
+
+div:nth-child(2) {
+  background-size: 95%;
+}
+
+div:nth-child(3) {
+  background-size: auto;
+}
+
+div:nth-child(4) {
+  background-size: contain;
+}
+
+div:last-child {
+  background-size: cover;
+}
