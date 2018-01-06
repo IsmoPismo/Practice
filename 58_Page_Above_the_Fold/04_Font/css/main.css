@@ -39,18 +39,6 @@ section {
   text-align: center;
 }
 
-/* .idx-center-ceter {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
-
-h1, h2, h3, button {
-  margin: .31rem;
-}
-
 h1 {
   font-size: 2.8rem;
 }
@@ -58,4 +46,8 @@ h1 {
 h2 {
   font-family: 'Kotta One', serif;
   font-weight: 700;
+}
+
+button {
+  
 }
