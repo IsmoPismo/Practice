@@ -1,5 +1,8 @@
 html {
   background-color: darkgray;
+  font-family: 'Cantarell', sans-serif;
+  color: ghostwhite;
+  font-variant: small-caps;
 }
 
 div {
@@ -8,14 +11,14 @@ div {
 
 section {
   /* border: 3px solid mediumpurple; */
+
 }
-
-
 #idx-atf {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: darkgray;
   background-image: url("../img/background-photo.jpg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -24,9 +27,35 @@ section {
   background-attachment: fixed;
 }
 
-.idx-center {
+#idx-atf > div {
+  height: 19vh;
+}
+
+.idx-center-spacebetween {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+/* .idx-center-ceter {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+} */
+
+h1, h2, h3, button {
+  margin: .31rem;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-family: 'Kotta One', serif;
+  font-weight: 700;
 }
