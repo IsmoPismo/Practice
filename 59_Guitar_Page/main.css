@@ -1,0 +1,51 @@
+html {
+  background-color: black;
+  color: ghostwhite;
+  font-family: 'Poiret One', cursive;
+  font-size: 2.4rem;
+  font-variant: small-caps;
+}
+
+#idx-atf {
+  background-image: url("guitar.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-origin: border-box;
+}
+
+.idx-center > div {
+  height: 85vh;
+}
+
+.idx-center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+button {
+  border: 2px solid ghostwhite;
+  margin-top: 15px;
+  padding: 3px;
+  background-color: rgba(95,55,11,.21);
+  border-radius: 4px;
+}
+
+h1, h2 {
+  background-color: rgba(95,55,11,.61);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: rgba(95,55,11,.71);
+}
