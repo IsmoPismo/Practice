@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pre, samp, code, kbd</title>
+    <style>
+        html { font-size: 2rem;}
+    </style>
+</head>
+<body>
+
+<header>Jebo te bog</header>
+
+<small>&lt;pre&gt;</small><br>
+<pre>
+    just
+    like
+    this ...
+    ... yes.
+</pre>
+
+<br>
+
+<small>&lt;samp&gt;</small><br>
+<pre>
+<samp><span class="prompt">mike@interwebz:~$</span><kbd>md5 -s "Hello world"</kbd>
+MD5 ("Hello world") = 3e25960a79dbc69b674cd4ec67a72c62
+
+<span class="prompt">mike@interwebz:~$</span> <span class="cursor">█</span></samp></pre>
+
+<br><br>
+
+<small>&lt;code&gt;</small><br>
+    <pre>
+      <code>
+#Generator
+def cube_nums(n):
+  for i in range(n):
+    yield i**3
+
+print(list(cube_nums(15)))
+      </code>
+    </pre>
+<br><br>
+
+<small>&lt;kbd&gt;</small><br>
+<kbd>ctrl + C</kbd>
+
+<p>example of normal text: just like this ... ... yes.</p>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+header {
+  font-variant: small-caps;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+a {
+  color: ghostwhite;
+  font-size: 1.17rem;
+  background-color: black;
+  text-decoration: none;
+  border: 3px solid magenta;
+  box-shadow: 2px 1px 4px 2px blue;
+}
+
+cite {
+  padding: 7px;
+  border: 1px solid black;
+  border-radius: 3px;
+  box-shadow: -8px -4px 4px 1px aqua;
+}
