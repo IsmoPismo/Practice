@@ -1,0 +1,19 @@
+html {
+  font-size: 2vw;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+div {
+  height: 10rem;
+  width: 10rem;
+  background-color: darkgrey;
+  border: 1px solid black;
+  box-shadow: 7px 6px 1px .15px crimson;
+  border-radius: 13px;
+}
