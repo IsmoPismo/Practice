@@ -17,3 +17,7 @@ div {
   box-shadow: 7px 6px 1px .15px crimson;
   border-radius: 13px;
 }
+
+.one {
+  vertical-align: 8rem;
+}

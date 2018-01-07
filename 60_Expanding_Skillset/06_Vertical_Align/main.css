@@ -1,0 +1,29 @@
+html {
+  font-size: 3vw;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-variant: small-caps;
+  font-weight: 500;
+  border: 1px solid blue;
+  height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+span {
+  vertical-align: -40px;
+}
+
+div {
+  border: 2px solid greenyellow;
+  width: 70%;
+}
+
+p {
+  border: 3px groove hotpink;
+}
