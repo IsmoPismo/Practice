@@ -48,6 +48,7 @@ button {
   border: .05rem solid ghostwhite;
   border-radius: 9px;
   background-color: rgba(200,0,110,.11);
+  vertical-align: baseline;
 }
 
 button:hover {
