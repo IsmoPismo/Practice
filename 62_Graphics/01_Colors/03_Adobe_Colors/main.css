@@ -1,0 +1,31 @@
+div {
+  height: 150px;
+  width: 150px;
+}
+
+#s1 {
+  background-color: #14356D;
+}
+
+#s2 {
+  background-color: #928073;
+}
+
+#s3 {
+  background-color: #D1ECFF;
+}
+
+#s4 {
+  background-color: #EB854A;
+}
+
+#s5 {
+  background-color: #5A3928;
+}
+
+body {
+  background-image: url("C:\\Users\\ismar\\Videos\\Recycle Box\\MV1\\Thumb.png");
+  background-origin: padding-box;
+  background-size: cover;
+  background-position: bottom;
+}
