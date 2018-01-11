@@ -1,0 +1,8 @@
+#idx-atf {
+  background-image: url("../img/background-photo.jpg");
+  background-position: top;
+}
+
+#idx-atf > div {
+  height: 19vh;
+}
