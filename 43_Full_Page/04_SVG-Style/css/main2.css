@@ -1,0 +1,28 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 57px;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+
+header nav, header div {
+  width: 270px;
+  height: 80%;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: flex-start;
+  fill: rgba(200,0,110,.5);
+}
+
+#logo {
+  justify-content: center;
+}
+
+.svg-header:hover {
+  fill: rgba(200,0,110,.85);
+}
