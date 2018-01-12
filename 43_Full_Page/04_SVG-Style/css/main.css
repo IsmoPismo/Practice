@@ -1,8 +1,56 @@
-html {
+html
+{
   background-color: darkgray;
   font-family: 'Cantarell', sans-serif;
   color: ghostwhite;
   font-variant: small-caps;
+}
+header
+{
+  position: fixed;
+  width: 100%;
+  height: 57px;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  fill: rgba(200,0,110,.5);
+}
+header nav, header div
+{
+  width: 300px;
+  height: 80%;
+  margin: 0 1rem;
+  display: flex;
+  align-content: center;
+}
+header h1  {
+    font-size: 1.4rem;
+}
+header a
+{
+  height: 100%;
+  display: flex;
+  align-content: center;
+  color: rgba(200,0,110,.6);
+  fill: rgba(200,0,110,.6);
+}
+header a:hover {
+    fill: rgba(200,0,110,.85);
+    color: rgba(200,0,110,.85);
+}
+
+header nav {
+  justify-content: center;
+}
+
+header nav a:last-child {
+    margin-right: 1rem;
+}
+.svg-header {
+  width: 6rem;
+  margin-left: -1rem;
 }
 
 #idx-atf {
@@ -31,7 +79,7 @@ html {
   text-align: center;
 }
 
-h1 {
+section#idx-atf h1 {
   font-size: 2.8rem;
 }
 
