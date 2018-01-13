@@ -1,0 +1,31 @@
+header
+{
+  justify-content: space-between;
+}
+
+header nav, header div
+{
+  display: flex;
+  width: 300px;
+}
+
+header h1  {
+    font-size: 1.4rem;
+}
+
+.svg-header {
+  display: block;
+}
+
+#idx-atf {
+  background-image: url("../img/background-photo.jpg");
+  background-position: top;
+}
+
+#idx-atf > div {
+  height: 19vh;
+}
+
+footer {
+  display: none;
+}
