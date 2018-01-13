@@ -41,6 +41,7 @@ header a
   align-content: center;
   color: rgba(200,0,110,.6);
   fill: rgba(200,0,110,.6);
+  font-size: 1.6rem;
 }
 header a:hover {
     fill: rgba(200,0,110,.85);
@@ -108,4 +109,25 @@ button {
 
 button:hover {
   background-color: rgba(200,0,110,.5);
+}
+
+footer {
+  background-color: olive;
+}
+
+footer nav {
+  font-size: 1.8rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+footer nav a {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+footer nav a svg {
+  padding-right: 2rem;
 }

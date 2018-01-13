@@ -25,3 +25,7 @@ header h1  {
 #idx-atf > div {
   height: 19vh;
 }
+
+footer {
+  display: none;
+}
