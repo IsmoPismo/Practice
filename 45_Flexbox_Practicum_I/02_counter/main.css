@@ -1,0 +1,56 @@
+body {
+  /* Flex-Box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+}
+
+#counter {
+  /* Flex-Box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Formating */
+  width: 900px;
+  height: 480px;
+  border: 2px solid royalblue;
+  border-radius: 28px;
+}
+
+#count1, #count3 {
+  /* Flex-Box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Formating */
+  height: 100%;
+  width: 20%;
+  background-color: hotpink;
+  color: white;
+}
+
+#count1 {
+  border-radius: 26px 0 0 26px;
+}
+
+#count3 {
+  border-radius: 0 26px 26px 0;
+}
+
+#count1:hover, #count3:hover {
+  background-color: rgba(28, 103, 135, 0.51);
+  cursor: pointer;
+}
+
+#count2 {
+  /* Flex-Box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Formating */
+  height: 100%;
+  width: 60%;
+  background-color: lawngreen;
+  color: white;
+}
