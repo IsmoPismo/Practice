@@ -1,9 +1,16 @@
+html, body, div {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   /* Flex-Box */
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 7rem;
+  height: 100vh;
 }
 
 #counter {
@@ -15,42 +22,47 @@ body {
   width: 900px;
   height: 480px;
   border: 2px solid royalblue;
-  border-radius: 28px;
+  border-radius: 20px;
 }
 
 #count1, #count3 {
+  /* Flex Item */
+  flex-grow: 1;
   /* Flex-Box */
   display: flex;
   align-items: center;
   justify-content: center;
   /* Formating */
   height: 100%;
-  width: 20%;
   background-color: hotpink;
   color: white;
 }
 
+#count2 {
+  /* Flex Item */
+  flex-grow: 2;
+  /* Flex-Box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Formating */
+  height: 100%;
+  background-color: lawngreen;
+  color: white;
+  border-left: 2px solid royalblue;
+  border-right: 2px solid royalblue;
+}
+
+/* Border-Radius */
 #count1 {
-  border-radius: 26px 0 0 26px;
+  border-radius: 18px 0 0 18px;
 }
 
 #count3 {
-  border-radius: 0 26px 26px 0;
+  border-radius: 0 18px 18px 0;
 }
 
 #count1:hover, #count3:hover {
   background-color: rgba(28, 103, 135, 0.51);
   cursor: pointer;
-}
-
-#count2 {
-  /* Flex-Box */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Formating */
-  height: 100%;
-  width: 60%;
-  background-color: lawngreen;
-  color: white;
 }
