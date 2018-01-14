@@ -11,4 +11,4 @@ b =  Number(prompt("Enter second value"));
 var comp = (a > b) ? a + " is bigger than " + b : b + " is bigger than " + a;
 alert(comp);
 typeOfA = typeof a;
-alert(typeOfA);
+alert("Typeof a ==> " + typeOfA);
