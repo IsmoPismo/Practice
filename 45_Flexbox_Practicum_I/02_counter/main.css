@@ -25,7 +25,7 @@ body {
   border-radius: 20px;
 }
 
-#count1, #count3 {
+.button {
   /* Flex Item */
   flex-grow: 1;
   /* Flex-Box */
@@ -54,15 +54,15 @@ body {
 }
 
 /* Border-Radius */
-#count1 {
+.button-left {
   border-radius: 18px 0 0 18px;
 }
 
-#count3 {
+.button-right {
   border-radius: 0 18px 18px 0;
 }
 
-#count1:hover, #count3:hover {
+.button:hover {
   background-color: rgba(28, 103, 135, 0.51);
   cursor: pointer;
 }
