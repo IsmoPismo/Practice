@@ -1,0 +1,40 @@
+* {
+    /* border: 5px solid hotpink !important; */
+}
+
+html, body, div, button {
+  /* Reset */
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+#atf {
+  /* Above the Fold */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px groove rgba(2, 77, 47, 0.39);
+}
+
+button {
+  flex-grow: 1;
+  /* Formating */
+  font-size: 7rem;
+  padding-top: .38rem;
+  border: 0;
+  border-bottom: .38rem solid transparent;
+  background-color: transparent;
+}
+
+button:hover {
+  border-bottom: .38rem solid rgba(17, 145, 22, 0.69);
+}
