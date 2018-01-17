@@ -16,4 +16,6 @@ console.log(task);
 task[29] = "length";
 console.log(task);
 
+alert(Array.isArray(task))
+
 //This gives an error //console.log(taks[task.length - 5]);
