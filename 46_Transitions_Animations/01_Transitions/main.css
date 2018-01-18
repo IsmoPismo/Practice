@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-flow: wrap;
+}
+
+div {
+  /* FlexBox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Formating */
+  height: 250px;
+  width: 250px;
+  background-color: lawngreen;
+  border: 3px solid black;
+  font-size: 3rem;
+  text-align: center;
+  padding: 9px;
+}
+
+div:hover {
+  background-color: rgb(108, 17, 171);
+  border: 13px solid gray;
+}
+
+.trans-prop {
+  transition-property: border;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+}
+
+.steps4 {
+  transition-property: all;
+  transition-duration: 450ms;
+  transition-timing-function: steps(4, end);
+}
