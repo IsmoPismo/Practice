@@ -22,7 +22,7 @@ html, body {
 body {
     color: red;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -33,17 +33,16 @@ body {
 
 .circle {
     font-size: 8rem;
-}
-
-body {
-    animation-name: change-color;
-    animation-duration: .7s;
+    animation-name: movebitch;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    position: relative;
+    animation-timing-function: ease-in-out;
 }
 
-@keyframes change-color {
-    0% { color: crimson; }
-    100%   { color: mediumpurple; }
+@keyframes movebitch {
+  0% { left: 0px; top: 0rem; width: 1rem;}
+  50% { top: 8rem;}
+  100% { left: 65vw; top: 0rem; width: 8.3rem;}
 }

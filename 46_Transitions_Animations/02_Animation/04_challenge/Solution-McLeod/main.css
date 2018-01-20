@@ -22,7 +22,7 @@ html, body {
 body {
     color: red;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -33,17 +33,24 @@ body {
 
 .circle {
     font-size: 8rem;
+    position: relative;
+    left: 0;
 }
 
-body {
-    animation-name: change-color;
-    animation-duration: .7s;
+div {
+    width: 100%;
+    /*border: 4px solid red;*/
+}
+
+.circle {
+    animation-name: move-circle;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
-@keyframes change-color {
-    0% { color: crimson; }
-    100%   { color: mediumpurple; }
+@keyframes move-circle {
+    0% { left: 0; }
+    100%   { left: 68%; }
 }

@@ -10,7 +10,7 @@ animation-play-state: running
 */
 
 html {
-    font-size: 4vw;
+    font-size: 1vw;
 }
 
 html, body {
@@ -26,24 +26,16 @@ body {
     align-items: center;
 }
 
-.icon {
-    width: 1em; height: 1em;
-    fill: currentColor;
-}
-
-.circle {
-    font-size: 8rem;
-}
-
-body {
-    animation-name: change-color;
-    animation-duration: .7s;
+p {
+    font-size: 1rem;
+    animation-name: grow-text;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
-@keyframes change-color {
-    0% { color: crimson; }
-    100%   { color: mediumpurple; }
+@keyframes grow-text {
+    0% { font-size: 1rem; }
+    100%   { font-size: 17rem; }
 }
