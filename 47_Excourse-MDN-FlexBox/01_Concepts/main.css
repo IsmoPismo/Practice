@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  border: 3px solid rgba(108, 190, 21, 0.73);
+}
+
+div {
+  border: 2px groove rgb(90, 29, 164);
+  flex-basis: 350px;
+  flex-grow: 1;
+  align-self: flex-start;
+}
+
+/* To answer my question: YES, flex flex-grow nulifies the justify-content: space... */

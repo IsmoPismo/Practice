@@ -1,0 +1,29 @@
+.box {
+  display: flex;
+  border: 2px solid red;
+}
+
+.box :first-child {
+  width: 150px;
+  border: 2px solid green;
+}
+
+.box > * {
+  flex: 0 0 auto;
+}
+
+.blue {
+  display: flex;
+  border: 1px solid black;
+}
+
+.blue div {
+  background-color: royalblue;
+  color: white;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid crimson;
+  flex: 1 1 0;
+}

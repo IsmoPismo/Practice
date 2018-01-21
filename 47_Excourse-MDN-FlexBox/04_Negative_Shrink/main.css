@@ -1,0 +1,42 @@
+.box {
+  display: flex;
+  border: 2px solid red;
+}
+
+.box :first-child {
+  width: 150px;
+  border: 2px solid green;
+}
+
+.box > * {
+  flex: 0 0 auto;
+}
+
+.blue {
+  display: flex;
+  border: 1px solid black;
+}
+
+.blue div {
+  background-color: royalblue;
+  color: white;
+  height: 75px;
+  border: 1px solid crimson;
+  font-size: 3rem;
+  /* flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0;
+}
+
+.blue div:first-child {
+  flex-basis: 50px;
+  flex-shrink: 1;
+}
+
+
+.blue div:last-child {
+  flex-basis: 50px;
+  flex-shrink: 100;
+}
