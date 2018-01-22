@@ -1,0 +1,11 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid blue;
+}
+
+div {
+  background-color: coral;
+  border: 3px solid green;
+  color: mintcream;
+}

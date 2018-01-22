@@ -1,0 +1,8 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+}
+
+div {
+  border: 2px solid hotpink;
+}
