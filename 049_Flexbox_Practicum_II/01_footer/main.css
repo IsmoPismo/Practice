@@ -38,16 +38,13 @@ footer {
   justify-content: flex-start;
 }
 
-span {
-  font-size: 4.2rem;
-  color: #86969C;
-}
-
-svg {
-  /* Format */
+.icon {
   fill: #86969C;
   width: 66px;
   height: 66px;
+}
+
+.icon-spin {
   animation-name: spinning;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -57,6 +54,12 @@ svg {
 @keyframes spinning {
   0% {transform: rotate(0deg);}
   100% {transform: rotate(360deg);}
+}
+
+span {
+  font-size: 4.2rem;
+  color: #86969C;
+  margin-left: 20px;
 }
 
 button {
@@ -70,9 +73,27 @@ button {
 #reset-button {
   background-color: transparent;
   color: deepskyblue;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
 }
 
 #save-button {
     background-color: deepskyblue;
     color: white;
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+#reset-button:hover {
+  background-color: deepskyblue;
+  color: white;
+
+}
+
+
+#save-button:hover {
+  background-color: transparent;
+  color: deepskyblue;
 }
