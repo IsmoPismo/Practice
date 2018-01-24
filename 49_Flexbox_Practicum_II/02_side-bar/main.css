@@ -1,0 +1,44 @@
+html, body, div, nav {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+    color: #16A2D7;
+    font-size: 2vw;
+}
+
+.sidebar {
+  /* FlexBox */
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  /* Formating */
+  width: 22vw;
+  height: 100vh;
+  border-right: .08rem solid rgba(80, 71, 119, 0.54);
+}
+
+button {
+  padding: .9rem;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: inherit;
+  width: 100%;
+  text-align: left;
+}
+
+button:hover {
+  background-color: rgba(107, 144, 45, 0.15);
+}
+
+.sidebar-child {
+  /* FlexBox */
+  display: flex;
+  flex-flow: column;
+  /* Formating */
+  margin: 1.3rem 0;
+}
