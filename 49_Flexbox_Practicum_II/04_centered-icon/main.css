@@ -1,0 +1,32 @@
+html {
+  font-size: 2vw;
+  color: gray;
+}
+
+#atf {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid gray;
+  box-shadow: 3px 2.7px 5px black;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.phone-icon {
+  font-size: 11rem;
+}
