@@ -1,0 +1,56 @@
+html, body, div, section, h1 {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: rgba(7, 164, 60, 0.21);
+  font-size: 1.5vw;
+  font-variant: small-caps;
+}
+
+
+#atf {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  border: 3px solid rgba(7, 164, 60, 0.21);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 75%;
+}
+
+.feature-list-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid rgba(7, 164, 60, 0.21);
+}
+
+.icon {
+    width: 1em; height: 1em;
+    fill: rgba(7, 164, 60, 0.51);;
+}
+
+.icon-mas {
+  font-size: 5rem;
+}
+
+h1 {
+  margin: 0 18px;
+  color: rgba(7, 164, 60, 0.41);
+}
+
+section>div:nth-child(2) {
+  flex-flow: row-reverse;
+}
+
+section>div:last-child {
+  border-bottom: transparent;
+}
