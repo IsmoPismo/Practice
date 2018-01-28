@@ -70,6 +70,10 @@ button {
   border-radius: 7px;
 }
 
+button:focus {
+  outline: none;
+}
+
 #reset-button {
   background-color: transparent;
   color: deepskyblue;
