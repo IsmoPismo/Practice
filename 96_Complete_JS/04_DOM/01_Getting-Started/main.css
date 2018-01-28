@@ -1,0 +1,103 @@
+html, body, div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 40px;
+}
+
+#atf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 8rem;
+  text-align: center;
+  color: #86969C;
+}
+
+.top-border {
+  border: 1px solid rgba(4, 51, 108, 0.24);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#svg-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.icon {
+  fill: #86969C;
+  width: 66px;
+  height: 66px;
+}
+
+.icon-spin {
+  animation-name: spinning;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spinning {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+span {
+  font-size: 4.2rem;
+  color: #86969C;
+  margin-left: 20px;
+}
+
+button {
+  font-size: 4.2rem;
+  margin: 10px;
+  border: transparent;
+  padding: 15px;
+  border-radius: 7px;
+  outline: none;
+}
+
+#reset-button {
+  background-color: transparent;
+  color: deepskyblue;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+#save-button {
+    background-color: deepskyblue;
+    color: white;
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+#reset-button:hover {
+  background-color: deepskyblue;
+  color: white;
+
+}
+
+#save-button:hover {
+  background-color: transparent;
+  color: deepskyblue;
+}
+
+button:focus {
+  outline: none;
+}
