@@ -28,7 +28,7 @@ html {
   height: 100vh;
 }
 
-button {
+label {
   border: 2px solid ghostwhite;
   margin-top: 15px;
   padding: 3px;
@@ -46,6 +46,52 @@ h1 {
   margin-bottom: 15px;
 }
 
-button:hover {
+label:hover {
   background-color: rgba(95,55,11,.71);
+}
+
+input {
+  display: none;
+}
+
+#sidebar {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  background-color: rgba(249, 113, 235, 0.25);
+  transition-property: all;
+  transition-duration: 1s;
+  /* FlexBox */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"]:checked ~ #sidebar {
+  left: 0%;
+}
+
+input[type="checkbox"]:checked ~ label {
+  transition-property: all;
+  transition-duration: .5s;
+  display: none;
+};
+
+input {
+  display: none;
+}
+
+#sidebar2 {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: -100%;
+  background-color: rgba(249, 113, 235, 0.25);
+  transition-property: all;
+  transition-duration: 1s;
+}
+
+input[type="checkbox"]:checked ~ #sidebar2 {
+  left: 0%;
 }
