@@ -1,0 +1,10 @@
+button {
+  font-size: 2rem;
+  background-image: linear-gradient(green, red, blue);
+  color: white;
+  font-weight: 700;
+  text-shadow: 4px -3px 2px black;
+  padding: 5px;
+  border-radius: 18px;
+  outline: none;
+}
