@@ -1,13 +1,60 @@
 # Practice
 ## HTML/CSS/JS
 
-01_Paragraf_and_Heading/      11_Hands_on_CSS/       21_Hands_on_FlexBox/         31_Position/             41_Font-Awesome/            51_Side_Bar_Fly-out/
-02_Sorted_and_Unsorted_List/  12_Hands_on_CSS_2/     22_Media_Query/              32_Hands_on_Postions/    42_SVG/                     52_Gradient/
-03_Emmet/                     13_CSS_Specicivity/    23_Hands_on_Media_Query/     33_Float/                43_Full_Page/               54_Markdown/
-04_Link_Element/              14_Hand_on_CSS_3/      24_Google_Flexbox/           34_Hands_on_Float/       44_Favicon/                 96_Complete_JS/
-05_Hands_on_Exe/              15_Text_Formating/     25_Hands_on_Google_FlexBox/  35_Hands_on_Display/     45_Flexbox_Practicum_I/     97_Javascript_First-Steps/
-06_Border/                    16_Hands_on_CSS_3/     26_Responsive_Menu/          36_Refactoring/          46_Transitions_Animations/  98_Shayhowe/
-07_Display_Property/          17_Semantic_HTML/      27_Above_the_Fold/           37_Page_Above_the_Fold/  47_Excourse-MDN-FlexBox/    99_Guitar_Page/
-08_CSS_Exe/                   18_Hand_on_Semantics/  28_Holy_Grail/               38_Expanding_Skillset/   48_Excourse-Grid/
-09_CSS_Selector/              19_Review_Display/     29_Holy_Grail_II/            39_Meta_Viewport/        49_Flexbox_Practicum_II/
-10_McLaud_CSS_Reset/          20_FlexBox/            30_Hands_on_Google_Flex/     40_Graphics/             50_Hands_on_Seagul/
+01_Paragraf_and_Heading
+02_Sorted_and_Unsorted_List
+03_Emmet
+04_Link_Element
+05_Hands_on_Exe
+06_Border
+07_Display_Property
+08_CSS_Exe
+09_CSS_Selector
+10_McLaud_CSS_Reset
+11_Hands_on_CSS
+12_Hands_on_CSS_2
+13_CSS_Specicivity
+14_Hand_on_CSS_3
+15_Text_Formating
+16_Hands_on_CSS_3
+17_Semantic_HTML
+18_Hand_on_Semantics
+19_Review_Display
+20_FlexBox
+21_Hands_on_FlexBox
+22_Media_Query
+23_Hands_on_Media_Query
+24_Google_Flexbox
+25_Hands_on_Google_FlexBox
+26_Responsive_Menu
+27_Above_the_Fold
+28_Holy_Grail
+29_Holy_Grail_II
+30_Hands_on_Google_Flex
+31_Position
+32_Hands_on_Postions
+33_Float
+34_Hands_on_Float
+35_Hands_on_Display
+36_Refactoring
+37_Page_Above_the_Fold
+38_Expanding_Skillset
+39_Meta_Viewport
+40_Graphics
+41_Font-Awesome
+42_SVG
+43_Full_Page
+44_Favicon
+45_Flexbox_Practicum_I
+46_Transitions_Animations
+47_Excourse-MDN-FlexBox
+48_Excourse-Grid
+49_Flexbox_Practicum_II
+50_Hands_on_Seagul
+51_Side_Bar_Fly-out
+52_Gradient
+54_Markdown
+96_Complete_JS
+97_Javascript_First-Steps
+98_Shayhowe
+99_Guitar_Page
