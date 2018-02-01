@@ -1,5 +1,8 @@
 # Practice
-## HTML/CSS/JS
+
+### HTML/CSS:
+Hands down the **best online teacher** Todd McLeod
+[HTML](https://www.udemy.com/html-tutorial/)
 
 01. Paragraf and Heading
 02. Sorted and Unsorted List
@@ -54,7 +57,16 @@
 51. Side Bar Fly-out
 52. Gradient
 54. Markdown
-96. Complete JS
-97. Javascript First-Steps
-98. Shayhowe
-99. Guitar Page
+***
+### JS:
+[MDN](https://developer.mozilla.org/bm/docs/Learn/Getting_started_with_the_web/JavaScript_basics) and Crazy Clapping Guy
+
+01. Complete JS
+01. Javascript First-Steps
+***
+### Brawl
+[Shayhowe](https://learn.shayhowe.com/)
+
+01. Shayhowe
+01. Guitar Page
+***
