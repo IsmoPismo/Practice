@@ -1,60 +1,60 @@
 # Practice
 ## HTML/CSS/JS
 
-01_Paragraf_and_Heading
-02_Sorted_and_Unsorted_List
-03_Emmet
-04_Link_Element
-05_Hands_on_Exe
-06_Border
-07_Display_Property
-08_CSS_Exe
-09_CSS_Selector
-10_McLaud_CSS_Reset
-11_Hands_on_CSS
-12_Hands_on_CSS_2
-13_CSS_Specicivity
-14_Hand_on_CSS_3
-15_Text_Formating
-16_Hands_on_CSS_3
-17_Semantic_HTML
-18_Hand_on_Semantics
-19_Review_Display
-20_FlexBox
-21_Hands_on_FlexBox
-22_Media_Query
-23_Hands_on_Media_Query
-24_Google_Flexbox
-25_Hands_on_Google_FlexBox
-26_Responsive_Menu
-27_Above_the_Fold
-28_Holy_Grail
-29_Holy_Grail_II
-30_Hands_on_Google_Flex
-31_Position
-32_Hands_on_Postions
-33_Float
-34_Hands_on_Float
-35_Hands_on_Display
-36_Refactoring
-37_Page_Above_the_Fold
-38_Expanding_Skillset
-39_Meta_Viewport
-40_Graphics
-41_Font-Awesome
-42_SVG
-43_Full_Page
-44_Favicon
-45_Flexbox_Practicum_I
-46_Transitions_Animations
-47_Excourse-MDN-FlexBox
-48_Excourse-Grid
-49_Flexbox_Practicum_II
-50_Hands_on_Seagul
-51_Side_Bar_Fly-out
-52_Gradient
-54_Markdown
-96_Complete_JS
-97_Javascript_First-Steps
-98_Shayhowe
-99_Guitar_Page
+01. Paragraf and Heading
+02. Sorted and Unsorted List
+03. Emmet
+04. Link Element
+05. Hands on Exe
+06. Border
+07. Display Property
+08. CSS Exe
+09. CSS Selector
+10. McLaud CSS Reset
+11. Hands on CSS
+12. Hands on CSS 2
+13. CSS Specicivity
+14. Hand on CSS 3
+15. Text Formating
+16. Hands on CSS 3
+17. Semantic HTML
+18. Hand on Semantics
+19. Review Display
+20. FlexBox
+21. Hands on FlexBox
+22. Media Query
+23. Hands on Media Query
+24. Google Flexbox
+25. Hands on Google FlexBox
+26. Responsive Menu
+27. Above the Fold
+28. Holy Grail
+29. Holy Grail II
+30. Hands on Google Flex
+31. Position
+32. Hands on Postions
+33. Float
+34. Hands on Float
+35. Hands on Display
+36. Refactoring
+37. Page Above the Fold
+38. Expanding Skillset
+39. Meta Viewport
+40. Graphics
+41. Font-Awesome
+42. SVG
+43. Full Page
+44. Favicon
+45. Flexbox Practicum I
+46. Transitions Animations
+47. Excourse-MDN-FlexBox
+48. Excourse-Grid
+49. Flexbox Practicum II
+50. Hands on Seagul
+51. Side Bar Fly-out
+52. Gradient
+54. Markdown
+96. Complete JS
+97. Javascript First-Steps
+98. Shayhowe
+99. Guitar Page

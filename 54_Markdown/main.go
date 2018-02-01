@@ -29,7 +29,7 @@ func main() {
 	end := strings.Split(string(bs), "/")
 	md := markdown(end)
 	for o, v := range md {
-		md[o] = strings.TrimSpace(v) + "\n"
+		md[o] = strings.Replace(strings.Replace(strings.TrimSpace(v)+"\n", "_", ". ", 1), "_", " ", -1)
 	}
 	sort.Strings(md)
 	fmt.Println(md)
