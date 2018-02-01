@@ -1,0 +1,42 @@
+html, body, div {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+  /* FlexBox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Formating */
+  border: 4px groove black;
+  padding: .4rem;
+  border-radius: 17px;
+  /* gradient */
+  background-image: linear-gradient(rgb(23, 113, 0), rgb(1, 204, 212))
+}
+
+span {
+  color: white;
+  font-size: 3rem;
+  padding-right: 8px;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.icon-white {
+  font-size: 4rem;
+  fill: white;
+}
