@@ -23,6 +23,7 @@ button {
   color: white;
   text-shadow: 2px -3px 5px black, 3px 5px 20px brown;
   outline: none;
+  letter-spacing: 2px;
 }
 
 #stdout::first-letter {
@@ -30,5 +31,6 @@ button {
   border-radius: 9px;
   background-color: crimson;
   color: ghostwhite;
-  padding: 4px 1px 4px 4px;
+  padding: 3px;
+  letter-spacing: 5px;
 }
