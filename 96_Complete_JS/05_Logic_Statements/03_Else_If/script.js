@@ -1,6 +1,6 @@
 var myTime = prompt("what hour is it?");
 
-var Id = document.getElementById("id");
+var Id = document.getElementById("Id");
 
 if(myTime >= 8 && myTime < 12) {
     Id.innerHTML = "Wake up its morning";
