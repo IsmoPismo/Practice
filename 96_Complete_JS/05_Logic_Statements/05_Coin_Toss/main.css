@@ -24,3 +24,11 @@ button {
   text-shadow: 2px -3px 5px black, 3px 5px 20px brown;
   outline: none;
 }
+
+#stdout::first-letter {
+  font-size: 1.4em;
+  border-radius: 9px;
+  background-color: crimson;
+  color: ghostwhite;
+  padding: 4px 1px 4px 4px;
+}
