@@ -1,0 +1,26 @@
+header {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border: 5px groove black;
+}
+
+div {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  text-align: center;
+}
+
+button {
+  font-size: 5rem;
+  font-variant: small-caps;
+  background-image: linear-gradient(aqua, purple);
+  color: white;
+  text-shadow: 2px -3px 5px black, 3px 5px 20px brown;
+  outline: none;
+}
