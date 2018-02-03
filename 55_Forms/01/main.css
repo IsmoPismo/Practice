@@ -1,0 +1,14 @@
+input, label {
+  border: 5px solid royalblue;
+  outline: none;
+  font-size: 4rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 5px auto 70px auto;
+  display: block;
+  text-align: center;
+}
+
+label {
+  border: none;
+  margin-bottom: 0;
+}
