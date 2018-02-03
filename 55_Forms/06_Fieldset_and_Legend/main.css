@@ -1,0 +1,7 @@
+fieldset {
+  width: fit-content;
+}
+
+#txtlab {
+  display: block;
+}
