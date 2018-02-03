@@ -1,0 +1,36 @@
+header {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border: 5px groove black;
+  flex-flow: column;
+}
+
+div {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  text-align: center;
+}
+
+button {
+  font-size: 5rem;
+  font-variant: small-caps;
+  background-image: linear-gradient(crimson, hotpink, lawngreen);
+  color: white;
+  text-shadow: 2px -3px 5px black, 3px 5px 20px brown;
+  outline: none;
+}
+
+#stdout::first-letter {
+  font-size: 1.4em;
+  border-radius: 9px;
+  background-color: crimson;
+  color: ghostwhite;
+  padding: 3px;
+  letter-spacing: 5px;
+}
