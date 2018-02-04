@@ -1,0 +1,42 @@
+.main-image {
+  background-image: url("../images/fam.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 44%;
+  max-height: 800px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  width: 290px;
+  height: 1px;
+  border: 1px solid black;
+}
+
+div ~ a {
+  background: none;
+  color: inherit;
+}
+
+
+.image-text {
+  font-size: 90px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+a {
+  padding: 6px;
+  font-size: 29px;
+}

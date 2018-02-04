@@ -10,6 +10,11 @@ h1 {
   font-weight: 100;
   color: #484848;
   letter-spacing: -1px;
+  margin: 4px;
+}
+
+nav {
+  display: none;
 }
 
 figure {
@@ -36,7 +41,7 @@ figcaption{
 }
 
 .main-image {
-  width: 100%;
+  width: 100vw;
   height: 540px;
   background-image: url("../images/fam_blur_under_600_web_medium.jpg");
   background-repeat: no-repeat;
