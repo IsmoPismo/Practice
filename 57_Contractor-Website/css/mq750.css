@@ -8,6 +8,7 @@
 
 h1 {
   font-size: 40px;
+  margin: 12px;
 }
 
 nav {
@@ -19,11 +20,11 @@ nav {
 .line {
   width: 290px;
   height: 1px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.26);
 }
 
 div ~ a {
-  background: none;
+  background: rgba(0, 0, 0, 0.09);
   color: inherit;
 }
 
@@ -37,6 +38,7 @@ h3 {
 }
 
 a {
-  padding: 6px;
+  padding: 10px;
   font-size: 29px;
+  margin: 10px;
 }
