@@ -1,0 +1,27 @@
+html {
+  font-size: 2.5rem;
+}
+
+div div {
+  border-radius: 9.85px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+div div:nth-child(odd) {
+  background-color: crimson;
+  color: white;
+  border: 3px dashed black;
+}
+
+div div:nth-child(even) {
+  background-color: lawngreen;
+    border: 5px groove orange;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(90px, auto)
+}
