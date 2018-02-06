@@ -1,0 +1,22 @@
+/* header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  text-align: center;
+}
+
+nav {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: 5fr repeat(3, minmax(auto, 1fr)) 5fr;
+  grid-gap: 5px;
+} */
+
+/* .horizontal-line {
+  transition-property: all;
+  transition-duration: 800ms;
+  transition-timing-function: ease;
+  height: 1px;
+  width: 0%;
+  border: 1px solid gray;
+} */
