@@ -116,24 +116,28 @@ main h1, h2, p {
 
 /* List and House */
 #house {
+  margin-top: 40px;
   display: grid;
-  grid-template-rows: 30px 1fr;
-  grid-template-columns: 350px 1fr;
-  font-family: 'Rammetto One', cursive;
-  width: 35vw;
-}
-
-ol {
-  grid-row-start: 2;
+  font-size: 1.7rem;
+  grid-template-columns: minmax(240px, 1fr) 260px;
+  font-family: 'Alice', serif;
 }
 
 img {
-  grid-column-start: 2;
+  height: 15rem;
 }
 
-h5 {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  fon
+thead {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+td {
+  text-indent: 5em;
+}
+
+@media (max-width: 600px) {
+  #house {
+    font-size: .7rem;
+  }
 }
