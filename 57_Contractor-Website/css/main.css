@@ -87,8 +87,14 @@ a[href="https://squareup.com/store/fresnoradon"] {
   grid-row-gap: 5px;
 }
 
-main * {
+main h1, h2, p {
   width: 55vw;
+}
+
+@media (max-width: 30em) {
+  main h1, h2, p {
+    width: 85vw;
+  }
 }
 
 .main h1 {
@@ -99,4 +105,35 @@ main * {
 
 .main h2 {
   font-size: 1.9rem;
+}
+
+.main a[href="https://squareup.com/store/fresnoradon"] {
+  width: 28%;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+/* List and House */
+#house {
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: 350px 1fr;
+  font-family: 'Rammetto One', cursive;
+  width: 35vw;
+}
+
+ol {
+  grid-row-start: 2;
+}
+
+img {
+  grid-column-start: 2;
+}
+
+h5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  fon
 }
