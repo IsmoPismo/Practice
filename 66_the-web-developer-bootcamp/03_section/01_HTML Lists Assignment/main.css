@@ -3,3 +3,8 @@
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 5px;
 }
+
+#net-basics li {
+  box-sizing: border-box;
+  border: 2px dashed lawngreen;
+}
