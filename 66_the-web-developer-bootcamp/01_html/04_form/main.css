@@ -1,0 +1,17 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: .3em;
+  font-size: 1.2em;
+}
+
+input[type=submit] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 2rem;
+  border-radius: 15px;
+}
+
+input[type=checkbox] {
+  align-self: end;
+}

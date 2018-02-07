@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
   <title>Document</title>
 </head>
 <body>
@@ -22,15 +23,33 @@
   <label for="male">Other</label>
   <input id="male" type="radio" name="gender" value="other">
 
-  <label for="email"></label>
+  <label for="email">E-Mail</label>
   <input id="email" type="email" required>
   <label for="password">Password</label>
   <input id="password" type="password">
 
-  <label for="bday">Birthday</label>
-  <input type="month">
-  <input type="date">
-  <input type="year">
+  <label for="bday-month">Month</label>
+  <select name="month" id="bday-month">
+    <option value="Jan">Januar</option>
+    <option value="Feb">Februar</option>
+    <option value="Mar">Mart</option>
+    <option value="Apr">April</option>
+    <option value="Mai">Mai</option>
+    <option value="Jun">Juni</option>
+    <option value="Jul">Juli</option>
+    <option value="Aug">August</option>
+    <option value="Sep">Septembar</option>
+    <option value="Oct">Octobar</option>
+    <option value="Nov">Novembar</option>
+    <option value="Dec">Decembar</option>
+  </select>
+  <label for="bday-bday">Birth Date</label>
+  <input id="bday-bday" type="date">
+
+  <label for="agree">I agree with everything ever</label>
+  <input type="checkbox">
+
+  <input type="submit" >
   </select>
 </form>
 
