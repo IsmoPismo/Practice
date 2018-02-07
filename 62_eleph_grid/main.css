@@ -1,0 +1,38 @@
+html, body, header, h1, h2, img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr minmax(220px, 500px) 1fr 1fr;
+  justify-items: center;
+  grid-gap: 1rem;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-variant: small-caps;
+}
+
+h1 {
+  grid-row: 2;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+img {
+  grid-row: 3;
+  height: 100%;
+}
+
+h2 {
+  grid-row: 4;
+  background-color: royalblue;
+  color: ghostwhite;
+  align-self: center;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px groove black;
+  cursor: pointer;
+}
