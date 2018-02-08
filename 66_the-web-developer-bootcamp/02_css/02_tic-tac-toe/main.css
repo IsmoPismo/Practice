@@ -1,0 +1,32 @@
+table, td, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+table {
+  margin: 52px auto;
+  border-collapse: collapse;
+}
+
+td {
+  height: 100px;
+  width: 100px;
+}
+
+.vertical {
+  border-right: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.horizontal {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+}
