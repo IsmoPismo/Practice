@@ -1,0 +1,22 @@
+form {
+  margin: 50px;
+}
+
+label {
+  background-image: linear-gradient(royalblue, deepskyblue);
+  padding: 5px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  text-shadow: 5px 2px 5px gray;
+}
+
+li {
+  list-style: none;
+
+}
+
+
+a.navbar-brand {
+  font-size: 2rem;
+}
