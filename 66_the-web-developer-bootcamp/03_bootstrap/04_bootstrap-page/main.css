@@ -1,0 +1,39 @@
+.container {
+  max-width: 92vw;
+}
+
+.svg {
+  width: 1em;
+  height: 1em;
+  fill: crimson;
+  stroke: black;
+}
+
+.svg-cam {
+  font-size: 50px;
+}
+
+.big-svg {
+  font-size: 25vw;
+}
+
+h1 {
+  margin-right: 3rem;
+}
+
+@media (max-width: 991.98px) {
+.navbar-expand-lg>.container {
+    padding-right: 14px;
+    padding-left: 14px;
+}
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  align-items: center;
+}
+
+.galery {
+}
