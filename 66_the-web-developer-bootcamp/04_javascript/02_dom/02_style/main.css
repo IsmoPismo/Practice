@@ -3,9 +3,10 @@ button {
   width: 100px;
   font-size: 2rem;
   font-variant-caps: small-caps;
-  transition-property: width, height, font-size;
-  transition-duration: 2s, 5s, 0.3s;
-  transition-timing-function: ease-in-out, linear, ease-in;
+  text-shadow: 8px -7px 1px blue;
+  transition-property: width, height, font-size, text-shadow, font-variant-caps;
+  transition-duration: 2s, 5s, 0.3s, 4s, 10s;
+  transition-timing-function: ease-in-out, linear, ease-in, cubic-bezier(), ease;
 }
 
 div {
@@ -21,4 +22,5 @@ div {
   width: 200px;
   font-size: 4rem;
   text-shadow: 2px 1px 5px gray;
+  font-variant-caps: normal;
 }
