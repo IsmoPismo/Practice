@@ -14,3 +14,20 @@ var cat = {
 
 dog.speak()
 cat.speak()
+
+
+
+var comment = {
+  print: function() {
+    alert('- boo -')
+  }
+}
+
+var reply =  {
+  print: function() {
+    alert('- reply to boo -')
+  }
+}
+
+comment.print()
+reply.print()
