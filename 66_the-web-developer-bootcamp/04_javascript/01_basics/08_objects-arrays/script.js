@@ -10,4 +10,4 @@ var lucky = {
 var dogs = ["Lucky", "Aria", "Cura"]
 
 objectStdOut.innerText = lucky.age
-arrayStdOut.innerText = dogs.1
+arrayStdOut.innerText = dogs.1 //imposible

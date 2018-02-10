@@ -1,0 +1,24 @@
+#title {
+  justify-self: end;
+}
+
+#watched {
+  justify-self: center;
+}
+
+#rating {
+  justify-self: start;
+}
+
+
+p {
+  border: 2px dashed hotpink;
+  padding: 5px;
+}
+
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10vw;
+}
