@@ -83,7 +83,7 @@ a[href="https://squareup.com/store/fresnoradon"] {
   align-items: center;
   justify-items: center;
   text-emphasis: disc;
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-row-gap: 5px;
 }
 
@@ -116,7 +116,7 @@ main h1, h2, p {
 
 /* List and House */
 #house {
-  margin-top: 40px;
+  margin: 40px auto;
   display: grid;
   font-size: 1.7rem;
   grid-template-columns: minmax(240px, 1fr) 260px;
@@ -140,4 +140,8 @@ td {
   #house {
     font-size: .7rem;
   }
+}
+
+#testing {
+  margin: 35px;
 }
