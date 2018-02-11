@@ -1,0 +1,41 @@
+html, body, div, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  transition-property: all;
+  transition-duration: 1700ms;
+  transition-timing-function: steps(20);
+}
+
+button {
+  font-size: 3rem;
+  font-family: 'Purple Purse', cursive;
+  background-color: royalblue;
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  outline: none;
+  width: 370px;
+  height: 500px;
+  transition-property: all;
+  transition-duration: 670ms;
+  transition-timing-function: ease-in;
+}
+
+.purple-haze {
+  background-color: mediumpurple;
+  color: purple;
+}
+
+.green-haze {
+  background-color: lawngreen;
+  border: 70px groove gold;
+}
