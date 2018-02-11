@@ -11,6 +11,10 @@ ul {
   font-size: 2rem;
 }
 
-.hover {
+.selected {
   color: pink;
+}
+
+.done {
+  text-decoration: line-through;
 }
