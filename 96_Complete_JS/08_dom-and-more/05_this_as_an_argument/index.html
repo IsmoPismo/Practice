@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    h1 {
+      font-size: 6rem;
+    }
+    body {
+      height: 90vh; display: grid; align-items: center; justify-items: center;
+    }
+    input {
+      font-size: 2rem; color: blue;  padding: 38px; background-image: linear-gradient(lawngreen, hotpink);
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <input type="button" onclick="thisFunkey(this)" value="click 1">
+  <input type="button" onclick="thisFunkey(this)" value="click 2">
+  <input type="button" onclick="thisFunkey(this)" value="click 3">
+  <script>
+    function thisFunkey(t) {
+      console.dir(t);
+      document.querySelector('h1').innerHTML = t.value;
+    }
+  </script>
+</body>
+</html>
