@@ -67,7 +67,7 @@ h2 {
   font-family: 'Alice', serif;
   font-size: 60px;
   font-weight: 900;
-  align-self: end;
+  align-self: center;
 }
 
 a[href="https://squareup.com/store/fresnoradon"] {
@@ -79,9 +79,10 @@ a[href="https://squareup.com/store/fresnoradon"] {
 
 /* #Main */
 .main {
-  display: grid;
+  display: flex;
   align-items: center;
-  justify-items: center;
+  justify-content: center;
+  flex-flow: column;
   text-emphasis: disc;
   grid-template-rows: repeat(12, 1fr);
   grid-row-gap: 5px;
@@ -116,11 +117,18 @@ main h1, h2, p {
 
 /* List and House */
 #house {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin: 40px auto;
-  display: grid;
   font-size: 1.7rem;
-  grid-template-columns: minmax(240px, 1fr) 260px;
   font-family: 'Alice', serif;
+}
+
+@media (max-width: 30em) {
+  #house {
+    flex-flow: column;
+  }
 }
 
 img {
