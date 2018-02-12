@@ -1,0 +1,54 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Six Caps', sans-serif;
+  letter-spacing: 3px;
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0;}
+
+header {
+  height: 80px;
+  background-color: purple;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: mediumpurple;
+  font-size: 37px;
+}
+
+span {
+  color: white;
+  font-family: 'Six Caps', sans-serif;
+}
+
+#prompt {
+  padding: 5px;
+}
+
+#wrapper {
+  min-width: 480px;
+  max-width: 60vw;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 13px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.color {
+  width: 140px;
+  height: 140px;
+  border: 3px groove black;
+  border-radius: 14%;
+}
