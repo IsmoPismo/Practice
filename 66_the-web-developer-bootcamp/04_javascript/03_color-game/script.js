@@ -1,32 +1,83 @@
-var colors = creataRandomColors(6);
+var numSquares = 6;
+var colors = creataRandomColors(numSquares);
 
 var squares = document.querySelectorAll(".color");
 var pickCol = colors[colorPicker()];
 var titleCol = document.getElementById("current-color");
 var resetB = document.getElementById('reset-button')
-var easyHard = document.querySelectorAll('.button-slick');
+var easyHardMode = document.querySelectorAll('.mode');
 
-easyHard[1].addEventListener("click", function() {
-  easyHard[1].classList.add('selected');
-  easyHard[2].classList.remove('selected');
-});
+for (var i = 0; i < easyHardMode.length; i++){
+  easyHardMode[i].addEventListener("click", function() {
+    easyHardMode[0].classList.remove('selected');
+    easyHardMode[1].classList.remove('selected');
+    this.classList.add('selected');
+    if (this.textContent === "Easy") {
+      numSquares = 3;
+    } else {
+      numSquares = 6;
+    }
+    reset();
+  });
+}
 
-easyHard[2].addEventListener("click", function() {
-  easyHard[2].classList.add('selected');
-  easyHard[1].classList.remove('selected');
-
-});
-
-titleCol.textContent = pickCol;
-
-resetB.addEventListener("click", function() {
-  colors = creataRandomColors(6);
+function reset() {
+  document.getElementById("prompt").innerHTML = "Let's go!";
+  colors = creataRandomColors(numSquares);
   pickCol = colors[colorPicker()];
   titleCol.textContent = pickCol;
   document.body.style.backgroundColor = "mediumpurple"
   for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
+  squares[i].style.backgroundColor = colors[i];
+  if (colors[i]) {
+      squares[i].style.display = "block";
+    squares[i].style.display = colors[i]
+  }else {
+    squares[i].style.display = "none";
   }
+  }
+}
+// easyHard[1].addEventListener("click", function() {
+//   easyHard[1].classList.add('selected');
+//   easyHard[2].classList.remove('selected');
+//   numSquares = 3;
+//   colors = creataRandomColors(numSquares);
+//   var pickCol = colors[colorPicker()];
+//   titleCol.textContent = pickCol;
+//   for (var i = 0; i <= squares.length; i++) {
+//     if (colors[i]) {
+//     squares[i].style.backgroundColor = colors[i];
+//   } else {
+//       squares[i].style.display = "none";
+//     }
+//   }
+// });
+//
+// easyHard[2].addEventListener("click", function() {
+//   easyHard[2].classList.add('selected');
+//   easyHard[1].classList.remove('selected');
+//   numSquares = 6;
+//   colors = creataRandomColors(numSquares);
+//   var pickCol = colors[colorPicker()];
+//   titleCol.textContent = pickCol;
+//   for (var i = 0; i <= squares.length; i++) {
+//   squares[i].style.backgroundColor = colors[i];
+//   squares[i].style.display = "block";
+// }
+// });
+
+titleCol.textContent = pickCol;
+
+resetB.addEventListener("click", function() {
+  // document.getElementById("prompt").innerHTML = "Let's go!";
+  // colors = creataRandomColors(numSquares);
+  // pickCol = colors[colorPicker()];
+  // titleCol.textContent = pickCol;
+  // document.body.style.backgroundColor = "mediumpurple"
+  // for (var i = 0; i < squares.length; i++) {
+  //   squares[i].style.backgroundColor = colors[i];
+  // }
+  reset();
 });
 
 for (var i = 0; i < squares.length; i++) {
@@ -41,8 +92,9 @@ for (var i = 0; i < squares.length; i++) {
       for (var i = 0; i < squares.length; i++){
         squares[i].style.backgroundColor = clckCol;
       }
-      document.getElementById("prompt").innerHTML = "Correct!"
+
       document.querySelector('h1').style.backgroundColor = clckCol;
+      document.querySelector('#reset-button').textContent = "Reset?"
     } else {
       this.style.backgroundColor = "mediumpurple";
       document.getElementById("prompt").innerHTML = "Try again"
@@ -51,7 +103,7 @@ for (var i = 0; i < squares.length; i++) {
 }
 
 function colorPicker() {
-  var c = Math.floor(Math.random() * squares.length);
+  var c = Math.floor(Math.random() * numSquares);
   return c;
 }
 
