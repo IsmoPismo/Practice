@@ -10,10 +10,13 @@ h1 {
   letter-spacing: 3px;
   font-variant: small-caps;
   margin: 0;
-  padding: 0;}
+  padding: 0;
+  min-width: 450px;
+  }
 
 header {
   height: 80px;
+  min-width: 450px;
   background-color: purple;
   margin-bottom: 50px;
   display: flex;
@@ -26,17 +29,14 @@ body {
   font-size: 37px;
 }
 
-span {
+#prompt  {
   color: white;
   font-family: 'Six Caps', sans-serif;
 }
 
-#prompt {
-  padding: 5px;
-}
 
 #wrapper {
-  min-width: 480px;
+  min-width: 430px;
   max-width: 60vw;
   margin: auto;
   display: grid;
@@ -52,3 +52,20 @@ span {
   border: 3px groove black;
   border-radius: 14%;
 }
+
+nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+/* @media (max-width: 700px) {
+  #wrapper {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-items: center;
+  }
+  .color {
+    width: 95px;
+    height: 95px;
+  }
+} */
