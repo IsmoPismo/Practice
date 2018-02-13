@@ -11,12 +11,12 @@ h1 {
   font-variant: small-caps;
   margin: 0;
   padding: 0;
-  min-width: 450px;
+  min-width: 430px;
   }
 
 header {
   height: 80px;
-  min-width: 650px;
+  min-width: 430px;
   background-color: purple;
   margin-bottom: 50px;
   display: flex;
@@ -27,12 +27,6 @@ header {
 body {
   background-color: mediumpurple;
   font-size: 37px;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 100vw;
 }
 
 #prompt  {
@@ -91,6 +85,12 @@ nav {
   transition-property: all;
   transition-duration: 205ms;
   transition-timing-function: ease-out;
+}
+
+@media (max-width: 625px) {
+  .button-slick {
+    padding: 12px;
+  }
 }
 /* @media (max-width: 700px) {
   #wrapper {
