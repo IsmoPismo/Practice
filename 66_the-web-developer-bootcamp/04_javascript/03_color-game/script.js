@@ -3,8 +3,31 @@ var colors = creataRandomColors(6);
 var squares = document.querySelectorAll(".color");
 var pickCol = colors[colorPicker()];
 var titleCol = document.getElementById("current-color");
+var resetB = document.getElementById('reset-button')
+var easyHard = document.querySelectorAll('.button-slick');
+
+easyHard[1].addEventListener("click", function() {
+  easyHard[1].classList.add('selected');
+  easyHard[2].classList.remove('selected');
+});
+
+easyHard[2].addEventListener("click", function() {
+  easyHard[2].classList.add('selected');
+  easyHard[1].classList.remove('selected');
+
+});
 
 titleCol.textContent = pickCol;
+
+resetB.addEventListener("click", function() {
+  colors = creataRandomColors(6);
+  pickCol = colors[colorPicker()];
+  titleCol.textContent = pickCol;
+  document.body.style.backgroundColor = "mediumpurple"
+  for (var i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+  }
+});
 
 for (var i = 0; i < squares.length; i++) {
   // adds colors
@@ -13,7 +36,7 @@ for (var i = 0; i < squares.length; i++) {
   // adds events
   squares[i].addEventListener("click", function() {
     var clckCol = this.style.backgroundColor;
-    console.log(clckCol, pickCol);
+    // console.log(clckCol, pickCol);
     if (clckCol == pickCol) {
       for (var i = 0; i < squares.length; i++){
         squares[i].style.backgroundColor = clckCol;
