@@ -7,6 +7,12 @@ body, html, div, input, ul, h1 {
   font-variant: small-caps;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1 {
   font-weight: normal;
 }
@@ -79,6 +85,11 @@ div {
 }
 
 /* SVG */
+.icon-plus {
+  width: 2em;
+  height: 2em;
+}
+
 .icon-trash {
   width: 0em;
   height: 1em;

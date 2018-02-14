@@ -20,3 +20,8 @@ $('input[type="text"]').keypress(function(event){
     $('ul').append('<li><svg class="icon-trash"><use xlink:href="#trash"></use></svg>' + inputText + "</li>");
   }
 });
+
+// Toggle inputText
+$('.icon-plus').click(function() {
+  $('input[type="text"]').fadeToggle();
+});
