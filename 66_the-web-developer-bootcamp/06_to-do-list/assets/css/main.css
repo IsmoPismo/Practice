@@ -9,6 +9,8 @@ body, html, div, input, ul, h1 {
 
 li {
   list-style: none;
+  transition: all;
+  transition-duration: 550ms;
 }
 
 input {
@@ -38,4 +40,9 @@ div {
   padding-left: 10px;
   background-color: rgba(229, 255, 0, 0.5);
   font-size: 2rem;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: rgba(248, 248, 255, 0.6);
 }
