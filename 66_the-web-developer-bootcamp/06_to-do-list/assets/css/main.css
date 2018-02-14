@@ -25,6 +25,7 @@ input {
   background-color: transparent;
   border: 1px solid ghostwhite;
   border-radius: 11px;
+  margin: 9px;
 }
 
 body {
