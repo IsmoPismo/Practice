@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    h1 {
+      font-size: 6rem;
+    }
+    body {
+      height: 90vh; display: grid; align-items: center; justify-items: center;
+    }
+    input {
+      font-size: 2rem; color: blue;  padding: 38px; background-image: linear-gradient(lawngreen, hotpink);
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <input type="button" value="click 1">
+  <input id="input" type="button" value="click 2">
+  <input id="input2" type="button" value="click 3">
+  <script>
+    document.querySelector('input').onclick = myFun;
+    document.getElementById('input').onclick = myFun;
+    document.getElementById('input2').onclick = myFun;
+    function myFun() {
+      document.querySelector('h1').textContent = this.value;
+      this.value = "Click'd";
+    }
+  </script>
+</body>
+</html>
