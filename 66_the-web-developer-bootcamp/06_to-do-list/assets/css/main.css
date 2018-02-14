@@ -7,6 +7,10 @@ body, html, div, input, ul, h1 {
   font-variant: small-caps;
 }
 
+h1 {
+  font-weight: normal;
+}
+
 html {
   font-size: 1em;
 }
@@ -16,6 +20,7 @@ li {
   transition: all;
   transition-duration: 550ms;
   margin-bottom: 3px;
+  padding-left: 5px;
 }
 
 input {
@@ -26,6 +31,14 @@ input {
   border: 1px solid ghostwhite;
   border-radius: 11px;
   margin: 9px;
+  padding-left: 15px;
+  transition-property: all;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+}
+
+input:focus {
+  background-color: rgba(61, 17, 94, 0.4);
 }
 
 body {
@@ -62,26 +75,18 @@ div {
   transition-timing-function: ease-in-out;
   fill: transparent;
   color: transparent;
+  opacity: 0;
 }
 
 /* SVG */
 .icon-trash {
-  width: 1em;
+  width: 0em;
   height: 1em;
-}
-
-/* Button */
-input[type="button"] {
-  margin: 0 auto;
-  display: block;
-  padding: 5px;
-  line-height: 1.1;
   transition-property: all;
-  transition-duration: 444ms;
-  transition-timing-function: ease;
+  transition-duration: 690ms;
+  transition-duration: ease;
 }
 
-input:last-child:hover {
-  background-color: ghostwhite;
-  color: black;
+li:hover .icon-trash {
+  width: 1em;
 }

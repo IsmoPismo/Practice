@@ -19,4 +19,4 @@ $('input[type="text"]').keypress(function(event){
     $(this).val("");
     $('ul').append('<li><svg class="icon-trash"><use xlink:href="#trash"></use></svg>' + inputText + "</li>");
   }
-} )
+});
