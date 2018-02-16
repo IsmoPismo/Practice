@@ -2,6 +2,11 @@ html {
   overflow-y: scroll; overflow-x:hidden;
 }
 
+h1 {
+  text-decoration: underline;
+  margin: 22px;
+}
+
 header {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
@@ -68,6 +73,11 @@ h2 {
   font-size: 60px;
   font-weight: 900;
   align-self: center;
+  margin-top: 16px;
+}
+
+h1+h2 {
+  margin-top: -8px;
 }
 
 a[href="https://squareup.com/store/fresnoradon"] {
@@ -75,6 +85,7 @@ a[href="https://squareup.com/store/fresnoradon"] {
   border-radius: 18px;
   padding: 15px;
   font-variant: small-caps;
+  margin: 39px;
 }
 
 /* #Main */
@@ -140,16 +151,12 @@ thead {
   text-decoration: underline;
 }
 
-td {
-  text-indent: 5em;
-}
-
 @media (max-width: 600px) {
   #house {
     font-size: .7rem;
   }
 }
 
-#testing {
-  margin: 35px;
+p {
+  text-indent: 1em;
 }
