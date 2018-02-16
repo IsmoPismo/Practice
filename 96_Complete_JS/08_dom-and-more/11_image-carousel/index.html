@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    h1 { font-size: 6rem; text-align: center; }
+    body { height: 90vh; display: grid; align-items: center; justify-items: center; }
+    form { border-radius: 17%;font-size: 2rem; color: blue;  padding: 38px; display: flex; flex-flow: column; background-image: linear-gradient(lawngreen, hotpink); }
+    input[type="button"] { background: black; color: white; border: none; padding: 8px; font-size: 2rem; border-radius: 18%; }
+  </style>
+  <title>Image Ringi-spiel</title>
+</head>
+<body onload="startImg()">
+  <h1 id="wrapper"></h1>
+  <img id="myImage" src="" alt="javascript generated image">
+<script type="text/javascript">
+  var place = 0;
+  var images = ["1","2","3","4","5","6","7"];
+  var imagesC = ["111", "222", "FF0000", "00FF00", "0000FF", "000", "333"];
+
+  function startImg() {
+    swapImage();
+    setInterval(swapImage, 1600);
+  }
+
+  function swapImage () {
+    place++;
+    if (place >= images.length){
+      place = 0;
+    }
+    var myImage = document.getElementById('myImage');
+    myImage.src = "http://via.placeholder.com/350x150/"+imagesC[place]+"/fff?text=IMG-"+images[place]
+  }
+
+</script>
+</body>
+</html>

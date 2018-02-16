@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    label { font-size: 6rem; text-align: center; }
+    input { background: black; color: white; border: none; padding: 8px; font-size: 2rem; border-radius: 18%; }
+    form {display: flex; flex-flow: column;height: 88vh; justify-content: center;align-items: center;}
+  </style>
+  <title>Image Ringi-spiel</title>
+</head>
+<body>
+  <h1 id="wrapper">And no pasting please</h1>
+  <form action="get">
+    <label for="only-num">Only Numbers</label>
+    <input id="only-num" type="text" onkeypress="return numCheck()" onpaste="return false">
+    <label for="only-char">Only Characters</label>
+    <input id="only-char" type="text" onkeypress="return !numCheck()" onpaste="return false">
+  </form>
+<script type="text/javascript">
+
+  function numCheck() {
+    return !isNaN(event.key);
+  }
+
+</script>
+</body>
+</html>
