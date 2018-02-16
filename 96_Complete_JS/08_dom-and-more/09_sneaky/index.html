@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    h1 {
+      font-size: 6rem; text-align: center;
+    }
+    body {
+      height: 90vh; display: grid; align-items: center; justify-items: center;
+    }
+    form {
+      border-radius: 17%;font-size: 2rem; color: blue;  padding: 38px; display: flex; flex-flow: column; background-image: linear-gradient(lawngreen, hotpink);
+    }
+    input[type="button"] {
+      background: black; color: white; border: none; padding: 8px; font-size: 2rem; border-radius: 18%;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1>Moraš preko .innerHTML ić</h1>
+  <form> First Name :
+        <input type="text" name="e1" value="Moraš preko .innerHTML ić">
+        <br> Last Name :
+        <input type="text" name="e2" value="inače neće">
+        <br>
+        <input type="button" onClick="sendInfo()" value="Submit"> </form>
+<script type="text/javascript">
+  function sendInfo() {
+    var fName = event.target.parentElement.e1.value
+    var lName = event.target.parentElement.e2.value
+    var hOne = document.querySelector('h1');
+    hOne.innerHTML = fName + " " + lName
+  }
+</script>
+</body>
+</html>
