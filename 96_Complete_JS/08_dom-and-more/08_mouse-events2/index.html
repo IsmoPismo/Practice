@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    h1 {
+      font-size: 6rem;
+    }
+    body {
+      height: 90vh; display: grid; align-items: center; justify-items: center;
+    }
+    input {
+      font-size: 2rem; color: blue;  padding: 38px; background-image: linear-gradient(lawngreen, hotpink);
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <h1></h1>
+  <input type="button" value="click 1">
+  <a href="https://placeholder.com"><img onmouseout="blmg()" onmouseover="clmg(this)"></a>
+  <script>
+  var imgHolder = "http://via.placeholder.com/850x150"
+  window.onload = function(){
+    document.querySelector('img').src = imgHolder;
+  }
+
+  function clmg(t) {
+    message(t.src);
+    t.scr = "http://via.placeholder.com/480x800"
+  }
+
+  function blmg(t) {
+
+   }
+
+  function message(m) {
+    document.querySelector('h1').innerHTML = m
+  }
+
+
+  </script>
+</body>
+</html>
