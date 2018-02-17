@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();
+var bodyParser = require("body-parser")
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs")
 
 var friends = ["Peter", "Tony", "Bruce", "Deadpool", "Cat-Woman"];
@@ -14,7 +16,9 @@ app.get("/f", function(req, res){
 });
 
 app.post("/new", function(req, res){
-   res.send("You have reached the post route"); 
+    var add = req.body.newFriend;
+    friends.push(add);
+    res.redirect("/f");
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
