@@ -2,30 +2,20 @@ var express = require("express")
 var app = express();
 
 app.get("/", function(req, res){
-   res.send("Hi there") 
+   res.send("Hi there")
 });
 
 app.get("/sound/:animal", function(req, res) {
-    var animal = req.params.animal;
-    switch (animal) {
-        case 'dog':
-            res.send("Wau-Wau = Ruf-Ruf");
-            break;
-        case 'cat':
-            res.send("Mjau-Mjau = Meow-Meow");
-            break;
-        case 'rooster':
-            res.send("Kukuriku = Cock-a-Doodle-Doo");
-            break;
-        case 'monkey':
-            res.send("I-i = Eek-Eek");
-            break;
-        case 'fish':
-            res.send("... = ...");
-            break;
-        default:
-            res.send("Animal not i database");
+    var animalSounds = {
+        dog : "Wau-Wau = Ruf-Ruf",
+        cat : "Mjau-Mjau = Meow-Meow",
+        rooster : "Kukuriku = Cock-a-Doodle-Doo",
+        fish : "...",
+        monkey : "I-i=Eek-Eek"
     }
+    var animal = req.params.animal.toLowerCase();
+    var sound = animalSounds[animal];
+    res.send("The " + animal + " says " + sound);
 });
 
 app.get("/repeat/:word/:num", function(req, res){
@@ -35,7 +25,7 @@ app.get("/repeat/:word/:num", function(req, res){
     for (var i = 0; i < num; i++){
         string += " - " + word;
     }
-    console.log(string);
+    res.send(string);
 });
 
 app.get("*", function(req, res){
