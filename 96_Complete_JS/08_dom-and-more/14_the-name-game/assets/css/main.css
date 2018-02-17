@@ -2,6 +2,10 @@ input {
   outline: none;
 }
 
+h3 {
+  margin: 5px;
+}
+
 nav {
   display: flex;
   flex-flow: column;
