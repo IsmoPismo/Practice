@@ -9,10 +9,13 @@ app.get("/bye", function(req, res){
     res.send("Bye, bye");
 });
 
+app.get("/r/:subredit", function(req, res){
+    var sub = req.params.subredit;
+    res.send("Welcome to the " + sub + " subreddit.");
+});
 
-app.get("/cat", function(req, res){
-    console.log("Someone made a request for /cat")
-    res.send("Mjau");
+app.get("*", function(req, res){
+   res.send("You're a Rockstar-Programmer")
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){

@@ -1,0 +1,17 @@
+{
+  "name": "first_backend_challange",
+  "version": "1.0.0",
+  "description": "I'm loving this backend stuff",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "practice"
+  ],
+  "author": "Ismar Šaćirović",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
