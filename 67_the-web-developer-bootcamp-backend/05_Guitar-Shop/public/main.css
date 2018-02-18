@@ -1,0 +1,26 @@
+h1 {
+    background-color: blue;
+    color: white;
+}
+
+div {
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 95vw;
+    border: 2px solid hotpink;
+    background-image: url("http://jimmysmusic.net/wp-content/uploads/2016/11/Rockwood-Electric-Guitar-Red.jpg");
+    background-size: cover;
+}
+
+img {
+    height: 250px;
+}
+
+li {
+    font-size: 5rem;
+    list-style: none;
+}

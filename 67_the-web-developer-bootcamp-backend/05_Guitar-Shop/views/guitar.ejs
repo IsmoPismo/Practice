@@ -1,0 +1,11 @@
+<% include partials/header %>
+<h1>What we've got</h1>
+<div>
+<% models.forEach(function(model){ %>
+    <li>
+        <%= model.name %>
+        <img src=<%=model.image%>></img>
+    </li>
+<% });%>
+<% include partials/footer %>
+</div>
