@@ -62,7 +62,8 @@ Hands down the **best online teacher** Todd McLeod
 [The Web Developer Bootcamp](https://www.udemy.com/the-web-developer-bootcamp/learn/v4/content) - Full Stack Developer
 [MDN](https://developer.mozilla.org/bm/docs/Learn/Getting_started_with_the_web/JavaScript_basics) and Crazy Clapping Guy
 
-01. The Web Developer Bootcamp
+01. The Web Developer Bootcamp - Frontend
+01. The Web Developer Bootcamp - Backend
 01. Complete JS
 01. Javascript First-Steps
 ***
