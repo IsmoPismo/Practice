@@ -28,6 +28,19 @@ app.get("/campgrounds", function(req, res){
     res.render("campgrounds", {campgrounds: campgrounds})
 });
 
+app.post("/campgrounds", function(req, res){
+   var name = req.body.name;
+   var image = req.body.image;
+   var newCamp = {name: name, image: image};
+   console.log(name, image, newCamp);
+   campgrounds.push(newCamp);
+   res.redirect("/campgrounds");
+});
+
+app.get("/campgrounds/new", function(req, res){
+    res.render("new.ejs");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("Server running"); 
 });
