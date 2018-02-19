@@ -10,13 +10,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 //schema set-up
 var campgroundSchema = new mongoose.Schema({
    name: String,
-   image: String
+   image: String,
+   description: String
 });
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create( 
-//     {name: "Granite Hill", image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg"}, function(err, camps){
+//     {name: "Gradačac", image: "https://cdn3.acsi.eu/5/6/7/2/56727629b1934.jpeg", description: "I love eating birds like chicken"}, function(err, camps){
 //         if(err){
 //             console.log(err);
 //         } else {
@@ -37,17 +38,16 @@ app.get("/campgrounds", function(req, res){
        if(err){
            console.log(err);
        } else {
-            res.render("campgrounds", {campgrounds: allCamps});   
+            res.render("index", {campgrounds: allCamps});   
        }
     });
-    // res.render("campgrounds", {campgrounds: campgrounds})
-    
 });
 
 app.post("/campgrounds", function(req, res){
    var name = req.body.name;
    var image = req.body.image;
-   var newCamp = {name: name, image: image};
+   var desc = req.body.description;
+   var newCamp = {name: name, image: image, description: desc};
    Campground.create(newCamp, function(err, newlyCamp){
        if(err){
            console.log(err);
@@ -58,16 +58,26 @@ app.post("/campgrounds", function(req, res){
    
 });
 
-Campground.remove({name: "Granite Hill"}, function (err, mes) {
-    if(err){
-        console.log("Something went wrong")
-    } else {
-        console.log("Got it")
-    }
-});
+// Campground.remove({name: ""}, function (err, mes) {
+//     if(err){
+//         console.log("Something went wrong")
+//     } else {
+//         console.log("Got it")
+//     }
+// });
 
 app.get("/campgrounds/new", function(req, res){
     res.render("new.ejs");
+});
+
+app.get("/campgrounds/:id", function(req, res){
+    Campground.findById(req.params.id, function(err, foundCamp){
+        if(err){
+            console.log(err)
+        } else {
+            res.render("show", {camp: foundCamp});
+        }
+    });
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
