@@ -1,0 +1,1 @@
+> db.campgrounds.update({name: "Gradačac"}, {$set: {description: "Grad Građana"}})
