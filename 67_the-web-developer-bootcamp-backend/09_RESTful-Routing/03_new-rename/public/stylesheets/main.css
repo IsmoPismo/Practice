@@ -5,3 +5,7 @@ i.icon {
 h1 {
     margin-top: 70px;
 }
+
+.container.segment {
+    margin-top: 5em;
+}
