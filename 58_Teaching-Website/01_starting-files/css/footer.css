@@ -1,8 +1,14 @@
 section {
   display: flex;
   flex-flow: column;
+  font-family: 'Jura', sans-serif;
+  font-weight: lighter;
+  font-variant: small-caps;
 }
 
+section h2 {
+  font-size: 1.54rem;
+}
 nav {
   display: flex;
   flex-flow: row;
