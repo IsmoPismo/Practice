@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#atf-x {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+.new#atf-x {
+  justify-content: center;
+  margin: 82px;
+}
+
+input {
+  font-size: 2rem;
+  margin: 5px;
+  border: 8px;
+  border: 1px solid black;
+  border-radius: 18px;
+}
