@@ -1,19 +1,59 @@
-var express = require("express");
-var app = express();
+var bodyParser = require("body-parser"),
+mongoose       = require("mongoose"),
+express        = require("express"),
+app            = express();
 
+// App Config
+mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
+
+var guitarSchema = new mongoose.Schema({
+    model: String,
+    img: String,
+    created : {type: Date, default: Date.now}
+});
+
+var Guitar = mongoose.model("Guitar", guitarSchema);
 
 app.get("/", function(req, res){
     res.render("home");
 });
 
 app.get("/guitars", function(req, res){
-    var models = [
-        {name: "Standard Western", image: "https://s-media-cache-ak0.pinimg.com/originals/47/2f/b1/472fb10057400f812ee71a2e1f9c3c29.jpg"},
-        {name: "Fancy Bass", image: "https://i.pinimg.com/736x/cc/46/11/cc46113d2ac3e433758b6b94dd6e9e92--bass-guitar.jpg"}
-    ]
-    res.render("guitar", {models: models});
+    Guitar.find({}, function(err, guitarsToRender){
+       if(err){
+           res.redirect("/");
+       } else {
+res.render("guitar", {model: guitarsToRender})
+        }
+    });
+    });
+
+app.get("/guitars/new", function(req, res) {
+   res.render("new");
+});
+
+app.post("/guitars", function(req, res){
+    console.log(req.body);
+    Guitar.create(req.body.guitar, function(err, cat){
+    if(err){
+          console.log(err);
+    } else {
+         res.redirect("/guitars");
+    }
+    });
+});
+
+app.get("/guitars/:id", function(req, res){
+   Guitar.findById(req.params.id, function(err, oneGuitar){
+      if (err) {
+          res.redirect("/guitars");
+      } else {
+          res.render("show", {model: oneGuitar});
+      }
+   });
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){

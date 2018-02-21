@@ -1,0 +1,9 @@
+div {
+    margin: auto;
+    height: auto;
+    display: block;
+    width: auto;
+    border: none;
+    background-image: url("a");
+    background-size: cover;
+}

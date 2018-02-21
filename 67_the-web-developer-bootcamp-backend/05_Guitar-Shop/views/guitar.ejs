@@ -1,11 +1,15 @@
 <% include partials/header %>
 <h1>What we've got</h1>
+<h2>Besides this hideous layout</h2>
 <div>
-<% models.forEach(function(model){ %>
+<% model.forEach(function(model){ %>
     <li>
-        <%= model.name %>
-        <img src=<%=model.image%>></img>
+        <%= model.model %>
+        <img src=<%=model.img%>></img>
+        <a href="/guitars/<%=model._id%>">more or less less info</a>
     </li>
 <% });%>
-<% include partials/footer %>
+
 </div>
+
+<% include partials/footer %>

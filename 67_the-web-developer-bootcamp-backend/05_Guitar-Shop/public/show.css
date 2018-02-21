@@ -1,0 +1,11 @@
+div {
+    margin: auto;
+    height: auto;
+    width: auto;
+    border: none;
+    background-image: url("");
+}
+
+img {
+    width: 1000px;
+}

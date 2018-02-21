@@ -1,0 +1,15 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/show.css">
+<div class="ui main text container segment">
+    <div class="ui huge header"><%=model.model%></div>
+    <div class="ui top attachment">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=model.img%>" alt="one rose with wicked colors">
+            <div class="content">
+                <p align="center"><%=model.created.toDateString()%></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

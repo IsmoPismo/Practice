@@ -1,0 +1,17 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/form.css">
+<div class="ui main text container segment">
+    <div class="ui huge header">New Guitar</div>
+    <form class="ui form" action="/guitars" method="POST">
+        <div class="field">
+            <label>Model</label>
+            <input type="text" name="guitar[model]" placeholder="model">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="guitar[img]" placeholder="image url">
+        </div>
+        <input class="ui black massive button" type="submit">
+    </form>
+</div>
+<% include partials/footer %>
