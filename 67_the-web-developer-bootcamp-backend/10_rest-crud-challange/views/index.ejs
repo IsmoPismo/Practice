@@ -2,7 +2,10 @@
 
 <div id="atf-x">
   <h1 class="ui basic massive button">The Button adder site</h1>
-  <button class="ui basic xxx button" type="button" name="button">First one</button>
+  <% buttons.forEach(function(btn){ %>
+    <button class="ui basic <%= btn.color%> button" type="button" name="button">Btn</button>
+  <% }); %>
+  <a class="ui basic  green huge button" href="/new">Make new button</a>
 </div>
 
 <% include partials/header %>
