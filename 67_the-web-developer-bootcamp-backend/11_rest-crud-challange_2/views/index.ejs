@@ -1,6 +1,8 @@
 <% include partials/header %>
 <h1>Index Page of icons</h1>
+<div class="ui grid">
 <% icons.forEach(function(icon){ %>
-    <i class="<%= icon.icon %> icon">
+      <div class="four wide column"><i class="<%= icon.icon %> icon"></div>
 <% }); %>
+</div>
 <% include partials/header %>
