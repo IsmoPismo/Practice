@@ -2,7 +2,14 @@
 <h1>Index Page of icons</h1>
 <div class="ui grid">
 <% icons.forEach(function(icon){ %>
-      <div class="four wide column"><i class="<%= icon.icon %> icon"></div>
+    <div class="four wide column"><div class="ui inverted segment">
+  <div class="ui active inverted loader"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+<p>Fixing your problem...</p></div>
 <% }); %>
 </div>
 <% include partials/header %>
