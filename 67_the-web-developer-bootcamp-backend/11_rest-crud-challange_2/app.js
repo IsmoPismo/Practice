@@ -25,9 +25,9 @@ app.get("/", function(req, res){
 });
 
 app.post("/", function(req, res){
-    Icon.create({
-    problem: true
-});
+    Icon.create ({
+        problem: true
+    });
     res.redirect("/");
 });
 
