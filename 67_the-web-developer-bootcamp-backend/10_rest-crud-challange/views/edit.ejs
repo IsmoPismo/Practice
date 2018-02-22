@@ -1,0 +1,9 @@
+<% include partials/header %>
+
+<form action="/<%=button._id%>?_method=PUT" method="POST">
+  <div class="new" id="atf-x">
+    <input class="ui basic <%=button.color%> button" value="<%=button.color%>" type="text" name="form[color]" value="">
+    <input class="ui basic white button" type="submit" value="Submit Button">
+  </div>
+</form>
+<% include partials/header %>

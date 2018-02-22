@@ -1,0 +1,12 @@
+<% include partials/header %>
+<div id="atf-x">
+<a class="ui basic <%= button.color %> massive button" name="button" href="/">Back</a>
+<form id="delete" action="/<%=button._id%>?_method=DELETE" method="POST">
+<div class="ui buttons">
+  <a href="/<%=button._id%>/edit" class="ui button">Edit</a>
+  <div class="or"></div>
+  <button class="ui negative button">Delete</button>
+</div>
+</form>
+</div>
+<% include partials/footer %>
