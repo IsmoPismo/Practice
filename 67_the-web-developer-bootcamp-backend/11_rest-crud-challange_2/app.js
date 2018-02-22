@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 var iconSchema = new mongoose.Schema({
-    icon: String
+    problem: Boolean
 });
 
 var Icon = mongoose.model("Icon", iconSchema);
@@ -22,6 +22,13 @@ app.get("/", function(req, res){
            res.render("index", {icons: iconsRender});
            }
     });
+});
+
+app.post("/", function(req, res){
+    Icon.create({
+    problem: true
+});
+    res.redirect("/");
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
