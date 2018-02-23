@@ -8,7 +8,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-
 var postSchema = new mongoose.Schema({
     title: String,
     content: String
@@ -31,6 +30,13 @@ User.find({nickname: "Alex", posted: []}, function(err, found){
         console.log(found[0]);
         console.log(found[0].posted.push({title: "Something", content: "Something more"}));
         console.log(found[0]);
+        found[0].save(function(err, newUser){
+            if(err){
+                console.log(err)
+            } else {
+                console.log(newUser)
+            }
+        })
      }
 });
 
@@ -41,30 +47,3 @@ app.get("/", function(req, res){
 app.listen(process.env.PORT, process.env.IP, function(){
    console.log("App Running") 
 });
-
-
-
-// Post.create({
-//   title: "A Stroy from a Fairytail",
-//   content: "I'm a Disney Princess and this is my story..."
-// });
-
-// Post.create({
-//   title: "My Carrer as a frontman",
-//   content: "Arctic Monkeys are one of the best things in my life..."
-// });
-
-// Post.create({
-//   title: "I'm bob",
-//   content: "Just a regular Bob..."
-// });
-
-// User.create({
-//     nickname: "Cinderela"
-// }, function(err, user){
-//     if(err){
-//         console.log(err);
-//     } else {
-//         console.log(user);
-//     }
-// });
