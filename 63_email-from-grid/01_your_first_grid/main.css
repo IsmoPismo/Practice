@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px;
+  grid-gap: 1em;
+}
+
+.item {
+  border: 4px solid black;
+  background-image: linear-gradient(royalblue, deepskyblue);
+}
