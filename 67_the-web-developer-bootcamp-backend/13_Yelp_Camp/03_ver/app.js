@@ -1,13 +1,13 @@
 var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
-    mongoose    = require("mongoose");
-
+    mongoose    = require("mongoose"),
+    seedDB      = require("./seeds");
+    
+seedDB();
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 
-
-//schema set-up
 var campgroundSchema = new mongoose.Schema({
    name: String,
    image: String,
