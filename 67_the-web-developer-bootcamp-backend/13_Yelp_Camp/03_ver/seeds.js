@@ -6,17 +6,17 @@ var data = [
     {
         name: "Cloud's Rest", 
         image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-        description: "blah blah blah"
+        description: "You're floating in the clouds"
     },
     {
         name: "Desert Mesa", 
-        image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
-        description: "blah blah blah"
+        image: "https://i.pinimg.com/736x/22/ab/b3/22abb32dadfe0407ce9cb9931bc1becd--couples-weekend-getaway-ideas-weekend-getaways.jpg",
+        description: "Romantic views in the woods"
     },
     {
         name: "Canyon Floor", 
         image: "https://farm1.staticflickr.com/189/493046463_841a18169e.jpg",
-        description: "blah blah blah"
+        description: "Beautiful everything and the best everything"
     }
 ]
 

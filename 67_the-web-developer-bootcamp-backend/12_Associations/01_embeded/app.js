@@ -23,14 +23,14 @@ var userSchema = new mongoose.Schema({
 var User = mongoose.model("User", userSchema);
 
 
-User.find({nickname: "Alex", posted: []}, function(err, found){
+User.findOne({nickname: "Alex"}, function(err, found){
    if(err){
        console.log(err)
   } else {
-        console.log(found[0]);
-        console.log(found[0].posted.push({title: "Something", content: "Something more"}));
-        console.log(found[0]);
-        found[0].save(function(err, newUser){
+        console.log(found);
+        console.log(found.posted.push({title: "Something", content: "Something more"}));
+        console.log(found);
+        found.save(function(err, newUser){
             if(err){
                 console.log(err)
             } else {

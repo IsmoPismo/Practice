@@ -3,33 +3,13 @@ var express     = require("express"),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
     Campground  = require("./models/campground"),
-    seedDB      = require("./seeds");
+    seedDB      = require("./seeds"),
+    Comment     = require("./models/comment");
     
-seedDB();
-
 mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-
-// SCHEMA SETUP
-
-
-// Campground.create(
-//      {
-//          name: "Granite Hill", 
-//          image: "https://farm1.staticflickr.com/60/215827008_6489cd30c3.jpg",
-//          description: "This is a huge granite hill, no bathrooms.  No water. Beautiful granite!"
-         
-//      },
-//      function(err, campground){
-//       if(err){
-//           console.log(err);
-//       } else {
-//           console.log("NEWLY CREATED CAMPGROUND: ");
-//           console.log(campground);
-//       }
-//     });
-
+seedDB();
     
 app.get("/", function(req, res){
     res.render("landing");
