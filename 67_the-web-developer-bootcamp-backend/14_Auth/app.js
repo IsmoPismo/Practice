@@ -3,31 +3,29 @@ var mongoose                = require("mongoose");
 var passport                = require("passport");
 var bodyParser              = require("body-parser");
 var User                    = require("./models/user");
-var localStrategy           = require("passport-local");
+var LocalStrategy           = require("passport-local");
 var expressSession          = require("express-session");
 var passportLocalMongoose   = require("passport-local-mongoose");
 
 mongoose.connect("mongodb://localhost/auth_demo");
-
 var app     = express();
-
 app.use(expressSession({
     secret: "Ismar i Larisa",
     resave: false,
     saveUninitialized: false
 }));
-
 app.set("view engine", "ejs");
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
+passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Auth-Routes
 
+// SignIn
 app.get("/register", function(req, res){
    res.render("register"); 
 });
@@ -45,6 +43,22 @@ app.post("/register", function(req, res){
        });
    });
 });
+
+
+// Log-In
+app.get("/login", function(req, res){
+   res.render("login"); 
+});
+
+app.post("/login", passport.authenticate("local", {
+    successRedirect: "/secret",
+    failureRedirect: "/login"   
+}), function(req, res){
+    
+});
+
+
+// Log-Out
 
 //Routes
 app.get("/", function(req, res){
