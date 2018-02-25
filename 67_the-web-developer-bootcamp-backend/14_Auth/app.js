@@ -57,6 +57,11 @@ app.post("/login", passport.authenticate("local", {
     
 });
 
+app.get("/logout", function(req, res){
+   req.logout();
+   res.redirect("/");
+});
+
 
 // Log-Out
 
@@ -66,9 +71,16 @@ app.get("/", function(req, res){
 });
 
 
-app.get("/secret", function(req, res){
+app.get("/secret", isLoggedIn, function(req, res){
    res.render("secret"); 
 });
+
+function isLoggedIn(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Server started");
