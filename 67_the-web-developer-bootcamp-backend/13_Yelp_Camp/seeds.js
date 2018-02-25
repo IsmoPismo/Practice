@@ -6,17 +6,17 @@ var data = [
     {
         name: "Cloud's Rest", 
         image: "https://farm4.staticflickr.com/3795/10131087094_c1c0a1c859.jpg",
-        description: "blah blah blah"
+        description: "This is the best campgrounds in the whole white and length with th eradao. Terra is a new weillkommen ehiteago hahahah. Bis dan!"
     },
     {
         name: "Desert Mesa", 
-        image: "https://farm4.staticflickr.com/3859/15123592300_6eecab209b.jpg",
-        description: "blah blah blah"
+        image: "http://static.dudeiwantthat.com//img/outdoors/camping/lotus-belle-luxury-canvas-17193.jpg",
+        description: "I'm totali doing this. I'll write whatever come s into0 my header. Accounts addEventListener with the window in the back. Weedeemo se!"
     },
     {
         name: "Canyon Floor", 
         image: "https://farm1.staticflickr.com/189/493046463_841a18169e.jpg",
-        description: "blah blah blah"
+        description: "Ovtovere je radio koje će se umazati. Ja mislim da neću ovdje dolazit više jer ne mogu da izmišljam više stvari. ^_^"
     }
 ]
 
