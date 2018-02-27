@@ -16,6 +16,7 @@
                     <h4 class="pull-right">9.00$/night</h4>
                     <h4><a><%=campground.name%></a></h4>
                     <p><%= campground.description %></p>
+                    <p><em>Submited by </em><%= campground.author.username %></p>
                     <div class="well">
                         <div class="text-right">
                              <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
