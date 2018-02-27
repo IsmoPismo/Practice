@@ -1,6 +1,6 @@
 var express = require("express");
 var router  = express.Router();
-var Campground = require("../models/campground")
+var Campground = require("../models/campground");
 
 //INDEX - show all campgrounds
 router.get("/", function(req, res){
@@ -72,6 +72,16 @@ router.put("/:id", function(req, res){
            console.log(err);
        } else {
             res.redirect("/campgrounds");
+       }
+   });
+});
+
+router.delete("/:id", function(req, res){
+   Campground.findByIdAndRemove(req.params.id, function(err){
+       if(err){
+           console.log("F?#) off");
+       } else {
+            res.redirect("/")    
        }
    });
 });
