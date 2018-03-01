@@ -51,8 +51,7 @@ router.get("/:id", function(req, res){
         if(err){
             console.log(err);
         } else {
-            console.log(foundCampground)
-            //render show template with that campground
+            console.log(foundCampground);
             res.render("campgrounds/show", {campground: foundCampground});
         }
     });
@@ -61,6 +60,9 @@ router.get("/:id", function(req, res){
 // EDIT CAMPGROUND ROUTE
 router.get("/:id/edit", middleware.checkCampgroundOwnership, function(req, res){
     Campground.findById(req.params.id, function(err, foundCampground){
+        if (err){
+            req.flash("error", "No campground found")
+        }
         res.render("campgrounds/edit", {campground: foundCampground});
     });
 });
