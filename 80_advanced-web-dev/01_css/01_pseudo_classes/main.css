@@ -1,0 +1,55 @@
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #40D6FF;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 50vh;
+}
+
+h1 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-size: 5rem;
+  text-align: center;
+  align-self: end;
+  color: black;
+  font-weight: 300;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+button {
+  position: relative;
+  top: 0px;
+  grid-column: 2;
+  width: 80%;
+  height: 35%;
+  align-self: center;
+  justify-self: center;
+  background-color: #33FFBA;
+  outline: none;
+  border: none;
+  border-radius: 17px;
+  font-size: 2rem;
+  font-weight: 300;
+  font-variant: small-caps;
+  color: black;
+  box-shadow: 0 7px #2EE8DE;
+  font-family: 'PT Sans Narrow', sans-serif;
+  transition-property: all;
+  transition-duration: 140ms;
+  letter-spacing: 2px;
+}
+
+button:hover {
+  box-shadow: 0 4px #2EE8DE;
+  top: 3px;
+}
+
+button:active {
+  box-shadow: none;
+  top: 7px;
+}
