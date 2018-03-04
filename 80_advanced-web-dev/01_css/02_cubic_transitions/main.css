@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88vh;
+}
+
+button {
+  padding: 55px;
+  outline: none;
+  border: none;
+  background-color: tomato;
+  color: white;
+  transition: all 600ms cubic-bezier(0.835, 0.310, 0.455, 1.215);
+}
+
+button:hover {
+  transform: scale(5);
+}
