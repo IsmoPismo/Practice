@@ -1,5 +1,8 @@
 div {
   border-radius: 100%;
+  position: fixed;
+  bottom: -99px;
+  left: -99px;
   background-color: yellow;
   box-shadow: 0px 0px 25px 8px yellow;
   height: 100px;
@@ -9,6 +12,7 @@ div {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   filter: blur();
+  transform-origin: 50vw 50vh;
 }
 
 body {
@@ -38,13 +42,13 @@ body {
 
 @keyframes sun-animations {
   0% {
-    transform: translate(0, 105vh);
+    transform: rotate(0deg);
   }
   50% {
-    transform: translate(50vw, 30vh);
+    transform: rotate(90deg);
     box-shadow: 0px 0px 38px 18px yellow;
   }
   100% {
-    transform: translate(100vw, 105vh);
+    transform: rotate(180deg);
   }
 }
