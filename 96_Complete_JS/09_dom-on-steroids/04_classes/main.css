@@ -11,7 +11,6 @@ div {
 
 .crazy {
   animation: spin 310ms linear;
-  background-color: lawngreen;
 }
 
 @keyframes spin {
@@ -26,4 +25,8 @@ div {
     background-color: lawngreen;
     transform: rotate(360deg);
   }
+}
+
+.active {
+  background-color: LightGoldenRodYellow;
 }
