@@ -1,0 +1,29 @@
+div {
+  width: 290px;
+  height: 288px;
+  border-radius: 38%;
+  border: 4px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 400ms ease-out;
+}
+
+.crazy {
+  animation: spin 310ms linear;
+  background-color: lawngreen;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    background-color: lawngreen;
+  }
+  50% {
+    background-color: olive;
+  }
+  100% {
+    background-color: lawngreen;
+    transform: rotate(360deg);
+  }
+}
