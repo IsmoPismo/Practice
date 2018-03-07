@@ -28,7 +28,16 @@
 
     function build(){
       for (var x = 0; x < acc.length; x++){
-        table.innerHTML += '<tr style="color: hotpink;"><td >' + acc[x] + '</td><td></td><td></td></tr>';
+        table.innerHTML += '<tr style="color: hotpink;"><td >' + acc[x] + '</td><td class="box" style="padding: 18px;">'+ (x + 1) +'</td><td></td></tr>';
+      }
+    }
+
+    var elBox = document.querySelectorAll(".box");
+    console.log(elBox);
+    console.dir(elBox);
+    for (var i = 0; i < elBox.length; i++){
+      elBox[i].onclick = function(){
+        alert(this + " klicked");
       }
     }
   </script>
