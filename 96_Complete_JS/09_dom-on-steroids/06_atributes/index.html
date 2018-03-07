@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="message">
+    My acomplishments
+  </div>
+  <table>
+
+  </table>
+  <script type="text/javascript">
+    var message = document.getElementById("message");
+    var table = document.querySelector('table');
+
+    message.setAttribute("style","border: 5px solid blue; background-color: black; color: white; height: 39px; display: flex; align-items: center; justify-content: center; font-variant: small-caps; font-size: 2rem;");
+    table.setAttribute("style","flex-flow: column; border: 5px solid blue; background-color: black; color: white; display: flex; align-items: center; justify-content: center; font-variant: small-caps; font-size: 2rem;");
+
+    acc = ['guitarist', 'videographer', 'gym-wonder', 'coder'];
+
+    window.onload = build;
+
+    function build(){
+      for (var x = 0; x < acc.length; x++){
+        table.innerHTML += '<tr style="color: hotpink;"><td >' + acc[x] + '</td><td></td><td></td></tr>';
+      }
+    }
+  </script>
+</body>
+
+</html>
