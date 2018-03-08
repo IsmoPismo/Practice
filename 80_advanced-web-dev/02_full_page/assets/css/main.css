@@ -1,4 +1,4 @@
-html, body, div, h1, h2, h3, header {
+html, body, div, h1, h2, h3, header, button {
   border: 0;
   padding: 0;
   margin: 0;
@@ -34,12 +34,37 @@ header {
   align-items: center;
   height: 65px;
   padding: 50px 70px;
+  opacity: 0;
+  animation: 390ms ease-out 900ms headerFade forwards;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 350ms linear;
+}
+
+@media all and (max-width: 680px) {
+  nav {
+    flex-flow: column;
+    margin: 9px;
+  }
+
+  a {
+    margin: 5px;
+  }
 }
 
 a {
   color: white;
   text-decoration: none;
   padding: 0 35px;
+  opacity: .6;
+  transition: all 190ms linear;
+}
+
+a:hover {
+  opacity: 1;
 }
 
 #dummy {
@@ -60,22 +85,31 @@ button {
   font-family: "Quicksand", sans-serif;
   font-variant: small-caps;
   font-size: 24px;
+  transition: all 320ms ease-in;
+  border: 3px solid transparent;
 }
 
+button:hover {
+  border: 3px solid royalblue;
+  background-color: transparent;
+  cursor: pointer;
+}
 /* Animation */
 div#title {
   transform: translateY(100px);
   opacity: 0;
-  animation: 880ms ease 1s titleAnimation forwards;
+  animation: 880ms ease 1170ms titleAnimation forwards;
 }
 
 @keyframes titleAnimation {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
   100% {
-    transform: translateY(0);
+    transform: translateY(30px);
+    opacity: 1;
+  }
+}
+
+@keyframes headerFade {
+  100% {
     opacity: 1;
   }
 }
