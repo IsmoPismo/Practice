@@ -1,0 +1,42 @@
+body {
+  background: black;
+}
+
+div {
+  display: flex;
+  background-image: repeating-linear-gradient(royalblue, deepskyblue);
+  height: 97vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-flow: column;
+}
+
+h1 {
+  color: white;
+  font-weight: 900;
+  font-style: oblique;
+}
+
+input {
+  width: 30%;
+  height: 10%;
+  border-radius: 10px;
+  font-size: 28px;
+}
+
+input[type="button"]{
+  outline: none;
+  background-color: rgba(180, 2, 190, 0.5);
+  border: 5px solid white;
+  color: white;
+  margin: 18px;
+  text-decoration: overline;
+  font-variant: small-caps;
+}
+
+li{
+  color: white;
+  font-size: 35px;
+  list-style: armenian;
+}
