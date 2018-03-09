@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function Dog(n, a){
+      this.n = n;
+      this.a = a;
+      this.bark = function(){
+        console.log(n + " bark");
+      }
+    }
+
+    var rusty = new Dog("Rusty", 3);
+    var fifi  = new Dog("Fifka", 1);
+
+
+
+    rusty.bark();
+    fifi.bark();
+  </script>
+</body>
+</html>
