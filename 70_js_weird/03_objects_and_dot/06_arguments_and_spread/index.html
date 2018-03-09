@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function greet(fName, lName, city, ...other){
+      city = city || "Sarajevo";
+
+      if(arguments.length === 0){
+        console.log("No arguments passed...\n---------------");
+        return;
+      }
+
+      console.log(fName, lName);
+      for (x = 0; x < other.length; x++){
+        console.log(other[x]);
+        console.log(city);
+        console.log('------------');
+      }
+    }
+
+  greet("Ismar", "Šaćirović", "Odžak", "Sedata Karića", "BB");
+
+  </script>
+</body>
+</html>
