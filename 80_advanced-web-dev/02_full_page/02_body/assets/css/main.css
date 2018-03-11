@@ -242,6 +242,12 @@ footer {
   align-items: center;
 }
 
+@media (max-width: 800px) {
+  footer {
+    flex-flow: column;
+  }
+}
+
 footer ul, footer ul li {
   height: auto;
 }
