@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button>
+      Push me
+    </button>
+    <input type="button" name="" value="Close">
+  </div>
+  <script type="text/javascript">
+    var button = document.querySelector('button');
+    var wn;
+    button.addEventListener("click", function(){
+      var url = "index.html";
+      var opt = "top = 0, width = 550, height=900";
+      wn = window.open(url, "_blank", opt)
+    });
+    document.querySelector('input').addEventListener('click', function(){
+      wn.close();
+    });
+  </script>
+</body>
+</html>
