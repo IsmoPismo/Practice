@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+input {
+  margin: 14px;
+}
