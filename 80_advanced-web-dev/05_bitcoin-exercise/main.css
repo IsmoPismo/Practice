@@ -1,0 +1,12 @@
+span {
+  color: lawngreen;
+  text-shadow: 0px 0px 5px black;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
