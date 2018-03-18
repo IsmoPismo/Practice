@@ -6,7 +6,8 @@ body, html, div, h1, h2, h3, h4, button {
   outline: none;
   background-color: transparent;
   font-size: 1em;
-  font-family: 'Amita', cursive;
+  font-family: 'Limelight', cursive;
+  /* font-variant: small-caps; */
 }
 
 body {
@@ -34,6 +35,7 @@ p {
   display: flex;
   box-shadow: 2px 2px 5px gray;
   background-color: white;
+  padding: 18px;
 }
 
 #main img {
@@ -54,19 +56,21 @@ p {
 }
 
 #main address #nick {
-  margin-top: -15px;
   text-indent: 5px;
   font-size: .95em;
 }
 
 #main address h3{
+  text-indent: 3px;
+  margin-top: 20px;
   font-size: .9em;
+  color: gray;
 }
 
 #main address h4{
   font-size: .9em;
   line-height: .7;
-  margin-bottom: 15px;
+  color: gray;
 }
 
 
@@ -80,4 +84,5 @@ button {
   font-weight: 900;
   cursor: pointer;
   box-shadow: 2px 2px 5px gray;
+  padding: 5px;
 }
