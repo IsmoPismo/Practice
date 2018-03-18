@@ -1,0 +1,83 @@
+body, html, div, h1, h2, h3, h4, button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  font-size: 1em;
+  font-family: 'Amita', cursive;
+}
+
+body {
+  background-color: #dcebef;
+}
+
+p {
+  font-size: 1.5em;
+  margin: 5px;
+}
+
+#atf {
+  display: flex;
+  height: 100vh;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#main {
+  border-top-right-radius: 19px;
+  border-top-left-radius: 19px;
+  width: 400px;
+  display: flex;
+  box-shadow: 2px 2px 5px gray;
+  background-color: white;
+}
+
+#main img {
+  align-self: center;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+#main address {
+  align-self: flex-start;
+  text-align: left;
+  margin-left: 5px;
+}
+
+#main address #name {
+  color: #1ba391;
+  font-size: 1.18em;
+}
+
+#main address #nick {
+  margin-top: -15px;
+  text-indent: 5px;
+  font-size: .95em;
+}
+
+#main address h3{
+  font-size: .9em;
+}
+
+#main address h4{
+  font-size: .9em;
+  line-height: .7;
+  margin-bottom: 15px;
+}
+
+
+button {
+  border-bottom-left-radius: 19px;
+  border-bottom-right-radius: 19px;
+  width: 400px;
+  border-top: none;
+  background-color: #1ba391;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px gray;
+}
