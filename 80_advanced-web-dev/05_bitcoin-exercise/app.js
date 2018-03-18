@@ -9,10 +9,21 @@ function doAllStuff(){
   var XHR = new XMLHttpRequest();
 
   XHR.onreadystatechange = function(){
+    var currency;
+    var euro = document.getElementById('eur').checked;
+    var dollar = document.getElementById('usd').checked;
+    var pound = document.getElementById('gbp').checked;
+    if (euro){
+      currency = 'EUR';
+    } else if (dollar) {
+      currency = 'USD';
+    } else {
+      currency = 'GBP';
+    }
+    console.log(currency);
     if (XHR.readyState === 4 && XHR.status === 200){
-      var url = JSON.parse(XHR.response).bpi.EUR.rate;
-      val.textContent = url;
-      val.classList.add('span::first-letter');
+      var url = JSON.parse(XHR.response).bpi[currency].rate;
+      val.textContent = url + ' ' + currency;
     }
   };
 

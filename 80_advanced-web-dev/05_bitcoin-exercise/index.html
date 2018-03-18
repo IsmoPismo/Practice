@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,17 @@
   <link rel="stylesheet" href="main.css">
   <title>Document</title>
 </head>
-<body>
-  <h1>Bitcoin value: <span></span></h1>
-  <button type="button" name="button">Get Random Image</button>
-<script type="text/javascript" src="app.js">
 
-</script>
+<body>
+  <h1>Bitcoin value: <span ></span></h1>
+  <form action="doAllStuff()" method="get">
+    €<input type="radio" name="currency" value="EUR" id="eur">
+    $<input type="radio" name="currency" value="USD" id="usd">
+    &<input type="radio" name="currency" value="eur" id="gbp">
+  </form>
+  <button type="button" name="button">Refresh</button>
+  <script type="text/javascript" src="app.js">
+  </script>
 </body>
+
 </html>
