@@ -8,10 +8,12 @@
 </head>
 <body>
   <script type="text/javascript">
-    var str = 'agoaejIsmoPismoaieji iagjgiismopismoge ageojaeoj3q';
-    var pat = /ismopismo/g;
+    var str = 'agoaejIsmoPismoaieji ismopismo ismopismo , { depth: null })); iagjgiismopismoge ageojaeoj3q';
+    var pat = /ismopismo/ig;
     var res = str.match(pat);
-    console.log(res);
+    res.forEach(function(e){
+      console.log(e);
+    });
   </script>
 </body>
 </html>
