@@ -3,6 +3,11 @@ var btn2 = document.querySelector('#btn2');
 var btn3 = document.querySelector('#btn3');
 var btn4 = document.querySelector('#btn4');
 var stdO = document.querySelector('h1');
+var url = "http://ron-swanson-quotes.herokuapp.com/v2/quotes";
+
+function updateDisplay(u){
+  stdO.innerText = u || url;
+}
 
 // XHR
 btn1.addEventListener('click', function() {
@@ -11,10 +16,35 @@ btn1.addEventListener('click', function() {
   XHR.onreadystatechange = function() {
     if (XHR.status === 200 && XHR.readyState === 4) {
       var url = JSON.parse(XHR.response);
-      stdO.innerText = url;
+      updateDisplay(url);
     }
   };
 
-  XHR.open('GET', "http://ron-swanson-quotes.herokuapp.com/v2/quotes");
+  XHR.open('GET', url);
   XHR.send();
 });
+
+// FETCH
+btn2.addEventListener('click', function(){
+  fetch(url)
+  .then(handleErrors)
+  .then(parseJSON)
+  .then(updateDisplay)
+  .catch(printError);
+});
+
+function handleErrors(req){
+  if(!req.ok){
+    throw Error(req.status);
+  }
+  return req;
+}
+
+function parseJSON(res){
+  var json = (res.json());
+  return json;
+}
+
+function printError(err){
+  console.log(err);
+}
