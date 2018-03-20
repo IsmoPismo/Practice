@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Regex and Vanilla</title>
+</head>
+<body>
+  <h3>Regex and Vanilla-JS</h3>
+  Search for: <input id="search" type="text">
+  Replace with: <input id="replace" type="text">
+  <input id="submit" type="submit" value="Go!">
+  <script type="text/javascript">
+  var submitBtn = document.querySelector('#submit');
+  submitBtn.addEventListener('click', function(){
+    var text = document.querySelector('h3').innerText;
+    var search = document.querySelector('#search').value;
+    var replace = document.querySelector("#replace").value;
+    var regex = new RegExp(search, 'gi');
+
+      var result = search.match(regex);
+      if(result){
+        var rr = text.replace(regex, replace);
+        var text = document.querySelector('h3').innerText = rr;
+      }
+    });
+
+  </script>
+</body>
+</html>
