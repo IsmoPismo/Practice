@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Extracting E-Mail</title>
+</head>
+<body>
+  <h3>E-Mail extractor</h3>
+  <form name="myForm" action="index.html" method="post">
+    <textarea name="txtarea" rows="18" cols="180"></textarea>
+    <input type="button" value="get emails" onclick="lookUp()">
+  </form>
+  <ul>
+
+  </ul>
+  <script type="text/javascript">
+    var ul = document.querySelector('ul');
+    function lookUp(){
+      ul.innerHTML = "";
+      var rawText = document.myForm.txtarea.value;
+      var regE = /[a-z0-9]+[_a-z0-9\.-]*[a-z0-9]+@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})/ig;
+      var r = rawText.match(regE);
+      var holderArr = [];
+      for (var i = 0; i < r.length; i++){
+        if (holderArr.indexOf(r[i]) === -1){
+          holderArr.push(r[i]);
+        }
+      }
+      for (var i = 0; i < holderArr.length; i++){
+        var li = document.createElement('li');
+        li.innerText = holderArr[i];
+        ul.appendChild(li);
+      }
+    }
+
+  </script>
+</body>
+</html>
