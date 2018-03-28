@@ -9,6 +9,7 @@
 
 .btn:hover {
   background-color: crimson;
+  cursor: pointer;
 }
 
 .gameTile {
