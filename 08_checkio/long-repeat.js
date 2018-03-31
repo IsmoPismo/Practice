@@ -3,16 +3,20 @@
 function longRepeat(line) {
     // length the longest substring that consists of the same char
     // your code here
-    var arr = line.split('');
-    return arr.reduce(function(acc, nextV){
-      if(nextV in acc){
-        acc[nextV]++;
-      } else {
-        acc[nextV] = 1;
-      }
-      return acc;
-    }, {})
-}
+    if (line.length === 0){
+        return 0;
+    }
+    var substring;
+    var count = 1;
+    for (var o = 1; o < line.length; o++){
+        if(line[o] === line [o-1]){
+          count++;
+          substring = count;
+        } else {
+          count = 1;
+        }
+    }
+    }
 
 var assert = require('assert');
 
