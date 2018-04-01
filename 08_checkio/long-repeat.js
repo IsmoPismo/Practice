@@ -6,17 +6,22 @@ function longRepeat(line) {
     if (line.length === 0){
         return 0;
     }
-    var substring;
-    var count = 1;
-    for (var o = 1; o < line.length; o++){
-        if(line[o] === line [o-1]){
-          count++;
-          substring = count;
-        } else {
-          count = 1;
-        }
+    var c = 1;
+    var r = 0;
+    for (var i = 1; i < line.length; i++){
+      if (line[i] === line[i-1]){
+        c++;
+        r = c;
+      } else if (c > r) {
+          r = c;
+          c = 1;
+      } else {
+        c = 1;
+      }
     }
-    }
+    return r;
+}
+
 
 var assert = require('assert');
 
