@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    function specialMultiply(a, b){
+      if (arguments.legnth === 1){
+        return function (b){
+          return a*b;
+        }
+      }
+      return a*b;
+    }
+
+    function guessingGame(amount){
+      var answer = Math.floor(Math.random()*11);
+      var guesses = 0;
+      var completed = false;
+      return function(guess){
+        if(!completed){
+          guesses++
+          if(guess === answer){
+            completed = true;
+            return 'You have got what it takes!!!!!!';
+          }
+          else if (guess > answer) return 'Your guess is sooo high';
+          else if (guess < answer) return 'Your guess is sooo looo';
+          else if (guess === amount){
+            completed = true;
+            return 'You are out of guesses';
+          }
+        }
+        return 'All done playing!';
+      }
+    }
+  </script>
+</body>
+</html>
