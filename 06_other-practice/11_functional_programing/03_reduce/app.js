@@ -5,10 +5,13 @@ var orders = [
   {amount: 125}
 ];
 
-var larisa = orders.reduce(function(sum, order){
-  return sum + order.amount;
-}, 0);
-// 
+// var larisa = orders.reduce(function(sum, order){
+//   return sum + order.amount;
+// }, 0);
+
+var larisa = orders.reduce((sum, order) => sum + order.amount);
+
+//
 // var sum = 0;
 // for (var i = 0; i < orders.length; i++){
 //   sum += orders[i].amount;
