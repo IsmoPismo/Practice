@@ -53,3 +53,20 @@ console.log(onlyEvenValues([2,3,4,5]));
 console.log(showFirstAndLast(['džnj','klj','cvik']));
 console.log(addKeyAndValue([1,3,5,7], 'jey', 'valju'));
 console.log(vowelCount('Ismar'));
+
+// Implementation of forEach
+function forEach(arr, callback){
+  for (let i = 0; i < arr.length; i ++){
+    callback(arr[i], i, arr);
+  }
+}
+
+function polaVrijednosti(arr){
+  let noviArr = [];
+  arr.forEach(function(vri){
+    noviArr.push(vri / 2);
+  });
+  return noviArr;
+}
+
+console.log(polaVrijednosti([6, 8, 16, 26]));
