@@ -6,11 +6,17 @@
 //   return newArr;
 // }
 
-let obj1 = [{first: 'Ismar', last: 'Sac'}, {first: 'Lara', last: 'Sac'}];
+function duplo(arr){
+  return arr.map(function(val){
+    return val * 2;
+  });
+}
 
-let firstArray = obj1.map(function(v){
-  return v.first;
-});
+function valPutaInd(arr){
+  return arr.map(function(val, ind){
+    return val * ind;
+  });
+}
 
 function doubleValues(arr){
   return arr.map(function(val){
@@ -35,3 +41,11 @@ function extractFullName(arr){
     return val.first + ' ' + val.last;
   });
 }
+
+let a = [6, 3, 2, 19];
+let b = [{first: 'Ismar', last: 'Šaćirović'},{first: 'Larisa', last: 'Šaćirović'},{first: 'Aria', last: 'Šaćirović'}]
+
+console.log(duplo(a));
+console.log(valPutaInd(a));
+console.log(extractKey(b, 'first'));
+console.log(extractFullName(b));
