@@ -1,6 +1,8 @@
 let app = new Vue({
   el: "#vju-ep",
   data: {
+    name: '',
+    age: ''
   },
   methods : {
     logName: function(){

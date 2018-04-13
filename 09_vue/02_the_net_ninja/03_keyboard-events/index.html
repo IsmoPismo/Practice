@@ -11,9 +11,11 @@
 <body>
   <div id="vju-ep">
     <label for="name">Name</label>
-    <input type="text" name="name" @keyup.enter="logName">
+    <input type="text" name="name" v-model="name">
+    <div>{{ name }}</div>
     <label for="name">Age</label>
-    <input type="text" name="age" @keyup.alt.enter="logAge">
+    <input type="text" name="age" v-model="age">
+    <div>{{ age }}</div>
   </div>
   <script type="text/javascript" src="app.js">
 
