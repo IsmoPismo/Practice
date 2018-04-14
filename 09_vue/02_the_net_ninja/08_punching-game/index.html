@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Net Ninja</title>
+</head>
+<body>
+  <div id="vju-ep">
+    <div id='bag' v-bind:class="{burst: ended}"></div>
+    <div id="bag-health">
+      <div v-bind:style="{width: health + '%'}" style="transition: 150ms linear"></div>
+    </div>
+    <div id="controls">
+      <button @click="punch" v-show="!ended">Punch</button>
+      <button @click="reset">Reset</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="app.js">
+
+  </script>
+</body>
+</html>
