@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Net Ninja</title>
+</head>
+<body>
+  <div id="vju-ep">
+    <ol>
+      <li v-for="(char, i) in characters"> {{ char }} - Index ^ 4 = {{ Math.pow(i + 1, 4) }}</li>
+    </ol>
+    <ul>
+      <li v-for="ninja in ninjas">{{ ninja.name }} - {{ ninja.age }}</li>
+    </ul>
+    <template v-for="n in ninjas">
+      <template v-for="(k, v, i) in n">
+        <h3>{{ v }}</h3>
+        <p>{{ k }}</p>
+        <p>{{ i }}</p>
+      </template>
+    </template>
+  </div>
+  <script type="text/javascript" src="app.js">
+
+  </script>
+</body>
+</html>
