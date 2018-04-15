@@ -26,13 +26,15 @@ function addKeyAndValue(arr, key, val){
   }, arr);
 }
 
-function partition(arr, cb){
-  return arr.reduce(fucntion(acc, next){
-    if(cb(next)){
-      acc[0].push(next);
-    } else {
-      acc[1].push(next);
-    }
-    return acc;
-  }, [[], []]);
-}
+// function partition(arr, cb){
+//   return arr.reduce(fucntion(acc, next){
+//     if(cb(next)){
+//       acc[0].push(next);
+//     } else {
+//       acc[1].push(next);
+//     }
+//     return acc;
+//   }, [[], []]);
+// }
+
+console.log(extractValue([5, 4, 5, 3], 5));
