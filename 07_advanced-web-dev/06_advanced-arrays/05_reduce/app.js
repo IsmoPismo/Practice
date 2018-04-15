@@ -36,5 +36,3 @@ function addKeyAndValue(arr, key, val){
 //     return acc;
 //   }, [[], []]);
 // }
-
-console.log(extractValue([5, 4, 5, 3], 5));
