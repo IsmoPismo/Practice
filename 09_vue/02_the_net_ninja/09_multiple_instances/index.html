@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Multy-Vue Instances</title>
+</head>
+
+<body>
+  <div id="vue-one">
+    <h3>{{ title }}</h3>
+    <h5>{{ greet }}</h5>
+  </div>
+  <div id="vue-two">
+    <h3>{{ title }}</h3>
+    <h5>{{ greet }}</h5>
+    <button @click="punch">Punch number one</button>
+  </div>
+  <script type="text/javascript" src="app.js">
+  </script>
+</body>
+
+</html>
