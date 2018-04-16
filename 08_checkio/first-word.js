@@ -1,10 +1,9 @@
 "use strict";
 
 function firstWord(a, b) {
-    // returns the first word in a given text.
     let regEx = /[.]/g;
-    a = a.trim().replace(regEx, '').split(' ')[0];
-    console.log(a);
+    a = a.replace(regEx, ' ');
+    a = a.trim().split(' ')[0];
     if (a[a.length - 1] === ','){
         return a.slice(0, a.length - 1)
     }
