@@ -17,6 +17,15 @@
       return a*b;
     }
 
+    function outer(){
+	let a = "A!";
+	let b = "B!";
+	return function (){
+		debugger;
+		return a;
+	}
+    }
+
     function guessingGame(amount){
       var answer = Math.floor(Math.random()*11);
       var guesses = 0;
