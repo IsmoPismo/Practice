@@ -1,0 +1,18 @@
+body {
+  display: grid;
+  justify-items: center;
+  font-size: 1.7em;
+}
+
+
+
+button {
+  outline: none;
+  border: 2px solid blue;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+button:active {
+  border: 2px dashed skyblue;
+}
