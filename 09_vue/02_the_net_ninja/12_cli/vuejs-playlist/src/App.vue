@@ -24,7 +24,7 @@ export default {
 <style>
   body {background-color: black;display: flex;height: 95vh;justify-content: center;align-items: center;}
   h1, h2, h3 {
-    font-size: 55px;
+    font-size: 42px;
     text-align: center;
     margin-top: 28px;
     color: white;
