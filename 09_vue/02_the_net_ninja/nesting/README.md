@@ -1,4 +1,4 @@
-# nesting
+# cli-project
 
 > A Vue.js project
 
