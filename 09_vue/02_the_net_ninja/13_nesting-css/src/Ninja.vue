@@ -1,5 +1,6 @@
 <template>
   <ul>
+    <h1>Not Scoped</h1>
     <li v-for="ninja in ninjas">
       {{ ninja }}
     </li>

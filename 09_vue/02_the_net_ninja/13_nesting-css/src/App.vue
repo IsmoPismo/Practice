@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h1>Scoped</h1>
     <ninjas></ninjas>
   </div>
 </template>
@@ -19,5 +20,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  h1 {
+    font-size: 8rem;
+  }
 </style>
