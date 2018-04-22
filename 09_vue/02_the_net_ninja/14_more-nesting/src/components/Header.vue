@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  data () {
-    return {
-      title: 'Ninja Vue App'
+  props: {
+    title: {
+      type: String
     }
   }
 }

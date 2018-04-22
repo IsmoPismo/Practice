@@ -1,10 +1,10 @@
 <template>
   <div>
-    <app-header>
+    <app-header v-bind:title="title">
     </app-header>
     <app-ninjas v-bind:ninjas="ninjas">
     </app-ninjas>
-    <app-footer>
+    <app-footer v-bind:title="title">
     </app-footer>
   </div>
 </template>
@@ -52,7 +52,8 @@ export default {
           speciality: 'Data Diggin',
           show: false
         }
-      ]
+      ],
+      title: "Vue Ninjas"
     }
   }
 }

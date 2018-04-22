@@ -1,14 +1,19 @@
 <template>
   <footer>
-    <address>{{ contact }}</address>
+    <address>{{ contact }} {{ title }}</address>
   </footer>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data () {
     return {
-      contact: 'My Github username: IsmoPismo'
+      contact: 'This app was made with'
     }
   }
 }
