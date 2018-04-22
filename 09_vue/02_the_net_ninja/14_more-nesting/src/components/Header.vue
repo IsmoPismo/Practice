@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 @click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
@@ -9,6 +9,11 @@ export default {
   props: {
     title: {
       type: String
+    }
+  },
+  methods: {
+    changeTitle(){
+      this.$emit('changeTitle', 'Vue Wizards')
     }
   }
 }

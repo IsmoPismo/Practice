@@ -1,10 +1,10 @@
 <template>
   <div>
-    <app-header v-bind:title="title">
+    <app-header v-bind:title="title" @changeTitle='updateTitle($event)'>
     </app-header>
     <app-ninjas v-bind:ninjas="ninjas">
     </app-ninjas>
-    <app-footer v-bind:title="title">
+    <app-footer v-bind:title="title" @changeTitle='updateTitle($event)'>
     </app-footer>
   </div>
 </template>
@@ -54,6 +54,11 @@ export default {
         }
       ],
       title: "Vue Ninjas"
+    }
+  },
+  methods: {
+    updateTitle(newTitle){
+      this.title = newTitle;
     }
   }
 }
