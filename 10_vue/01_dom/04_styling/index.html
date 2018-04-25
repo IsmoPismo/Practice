@@ -12,7 +12,10 @@
   <div id="app">
     <div class="demo" @click="setRed = !setRed" :class="divClasses"></div>
     <div class="demo" :class="{red: setRed}"></div>
-    <div class="demo"></div>
+    <div class="demo" :class="color"></div>
+    <div class="demo" :class="[color, {red: setRed}, 'blue']"></div>
+    <hr>
+    <input type="text" v-model="color">
   </div>
   <script src="app.js">
 
