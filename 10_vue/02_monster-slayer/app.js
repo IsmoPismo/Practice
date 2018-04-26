@@ -39,7 +39,7 @@ new Vue({
     },
     checkGame: function() {
       if (this.monsterHealth < 1) {
-        this.monsterHealth = 0;
+        // this.monsterHealth = 0;
         if(confirm('You won! Do you want to play a new game?')){
           this.startGame();
         } else {
@@ -47,7 +47,7 @@ new Vue({
         }
         return true;
       } else if (this.playerHealth < 1) {
-        this.playerHealth = 0;
+        // this.playerHealth = 0;
         if(confirm('You lost... Do you want to play a new game?')){
           this.startGame();
         } else {
