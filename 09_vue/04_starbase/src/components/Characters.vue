@@ -1,30 +1,38 @@
 <template lang="html">
-  <div @click="switchCharacter">
-    <h4>{{ character }}</h4>
+  <div class="col-md-4"@click="switchCharacter">
+    <div class="character-card">
+      <div class="card-block">
+        <h4 class='card-title'>{{ character.name }}</h4>
+        <p class="card-text">Height: {{character.height}}cm</p>
+        <p class="card-text">Mass: {{character.mass}}kg</p>
+        <p class="card-text">Hair Color: {{character.hair_color}}</p>
+        <p class="card-text">Eye Color: {{character.eye_color}}</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: ['id'],
-  data(){
+  data() {
     return {
       character: {}
     }
   },
   methods: {
-    fetchCharacter(id){
+    fetchCharacter(id) {
       fetch(`https://swapi.co/api/people/${id}`, {
-        method: 'GET'
-      }).then(response => response.json())
+          method: 'GET'
+        }).then(response => response.json())
         .then(json => this.character = json)
     },
-    switchCharacter(){
+    switchCharacter() {
       let random_id = Math.ceil(Math.random() * 83)
       this.fetchCharacter(random_id)
     }
   },
-  created(){
+  created() {
     this.fetchCharacter(this.id);
   }
 }
