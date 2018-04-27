@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  background-color: #666;
+}
+
+#app {
+  font-family: 'Black Han Sans', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3rem;
+  -webkid-font-smoothing: antialiased;
+  -mos-osx-font-smoothing: grayscale;
+}
