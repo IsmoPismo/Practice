@@ -39,11 +39,12 @@
             <button id="give-up" @click="gameIsRunning = false">GIVE UP</button>
         </div>
     </section>
-    <section class="row log">
+    <section class="row log" v-if="damageLog.length > 0">
         <div class="small-12 columns">
             <ul>
-                <li v-for="damage in damageLog">
-                  {{ damage }}
+                <li v-for="damage in damageLog"
+                    :class="{'player-turn': damage.isPlayer, 'monster-turn': !damage.isPlayer}">
+                  {{ damage.text }}
                 </li>
             </ul>
         </div>

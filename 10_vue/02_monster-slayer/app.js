@@ -11,10 +11,13 @@ new Vue({
       this.gameIsRunning = true;
       this.playerHealth = 100;
       this.monsterHealth = 100;
+      this.damageLog = [];
     },
     attack: function() {
       let dmg = this.calculateDamage(2, 10);
-      this.damageLog.unshift('Player hits monster for ' + dmg);
+      this.damageLog.unshift({
+        isPlayer: true,
+        text: 'Player hits monster for ' + dmg});
       this.monsterHealth -= dmg;
       if(this.checkGame()){
         return;
@@ -23,7 +26,9 @@ new Vue({
     },
     specialAttack: function() {
       let dmg = this.calculateDamage(12, 22);
-      this.damageLog.unshift('Player\'s Special attack causes ' + dmg + ' damage!')
+      this.damageLog.unshift({
+        isPlayer: true,
+        text: 'Player\'s Special attack causes ' + dmg + ' damage!'});
       this.monsterHealth -= dmg;
       if(this.checkGame()){
         return;
@@ -33,10 +38,14 @@ new Vue({
     heal: function() {
       if (this.playerHealth >=90){
         this.playerHealth = 100;
-        this.damageLog.unshift('Player heals to full health');
+        this.damageLog.unshift({
+          isPlayer: true,
+          text: 'Player heals to full health'});
       } else {
         this.playerHealth += 10;
-        this.damageLog.unshift('Player heals himself for 10HP')
+        this.damageLog.unshift({
+          isPlayer: true,
+          text: 'Player heals himself for 10'});
       }
       this.monsterAttack();
     },
@@ -48,7 +57,9 @@ new Vue({
     },
     monsterAttack: function(){
       let dmg = this.calculateDamage(4, 11);
-      this.damageLog.unshift('Monster hits player for ' + dmg);
+      this.damageLog.unshift({
+        isPlayer: false,
+        text: 'Monster hits player for ' + dmg});
       this.playerHealth -= dmg;
       this.checkGame();
     },
