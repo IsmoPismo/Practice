@@ -13,14 +13,18 @@ new Vue({
       this.monsterHealth = 100;
     },
     attack: function() {
-      this.monsterHealth -= this.calculateDamage(2, 10);
+      let dmg = this.calculateDamage(2, 10);
+      this.damageLog.unshift('Player hits monster for ' + dmg);
+      this.monsterHealth -= dmg;
       if(this.checkGame()){
         return;
       }
       this.monsterAttack();
     },
     specialAttack: function() {
-      this.monsterHealth -= this.calculateDamage(12, 22);
+      let dmg = this.calculateDamage(12, 22);
+      this.damageLog.unshift('Player\'s Special attack causes ' + dmg + ' damage!')
+      this.monsterHealth -= dmg;
       if(this.checkGame()){
         return;
       }
@@ -29,8 +33,10 @@ new Vue({
     heal: function() {
       if (this.playerHealth >=90){
         this.playerHealth = 100;
+        this.damageLog.unshift('Player heals to full health');
       } else {
         this.playerHealth += 10;
+        this.damageLog.unshift('Player heals himself for 10HP')
       }
       this.monsterAttack();
     },
@@ -41,7 +47,9 @@ new Vue({
       return Math.max(Math.ceil(Math.random() * max), min)
     },
     monsterAttack: function(){
-      this.playerHealth -= this.calculateDamage(4, 11);
+      let dmg = this.calculateDamage(4, 11);
+      this.damageLog.unshift('Monster hits player for ' + dmg);
+      this.playerHealth -= dmg;
       this.checkGame();
     },
     checkGame: function() {
