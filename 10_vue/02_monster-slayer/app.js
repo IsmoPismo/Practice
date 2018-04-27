@@ -83,5 +83,13 @@ new Vue({
       }
       return false;
     }
+  },
+  beforeUpdate: function(){
+    if(this.playerHealth < 0){
+      this.playerHealth = 0;
+    }
+    if(this.monsterHealth < 0){
+      this.monsterHealth = 0;
+    }
   }
-})
+});
