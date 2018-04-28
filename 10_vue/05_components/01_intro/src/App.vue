@@ -1,15 +1,8 @@
 <template>
-  <h1>Hi dude, your server status: {{ status }}</h1>
+  <ismar></ismar>
 </template>
 
 <script>
-export default {
-  data(){
-    return {
-      status: 'CRITICAL!'
-    }
-  }
-}
 </script>
 
 <style>
