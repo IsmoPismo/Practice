@@ -12,13 +12,11 @@
     <h1 ref="heading">{{ title }}</h1>
     <button @click="show">Show Paragraph</button>
     <p v-if="showParagraph">This is not always visible</p>
-    <script src="app.js"></script>
   </div>
+  <hr>
   <div id="app2">
-    <h1 ref="heading">{{ title }}</h1>
-    <button @click="show">Show Paragraph</button>
-    <p v-if="showParagraph">This is not always visible</p>
-    <script src="app.js"></script>
+    <button @click="changeVm1">Change the VM1 title</button>
   </div>
+  <script src="app.js"></script>
 </body>
 </html>

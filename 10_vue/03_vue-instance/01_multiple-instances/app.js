@@ -1,4 +1,4 @@
-new Vue({
+let vm1 = new Vue({
   el: '#app1',
   data: {
     title: 'The VueJS Instance',
@@ -25,9 +25,18 @@ new Vue({
   }
 });
 
+setTimeout(function(){
+  vm1.title = "Title changed by timer"
+}, 3333)
+
 new Vue({
   el: '#app2',
   data: {
     title: 'Second Vue instance'
+  },
+  methods: {
+    changeVm1(){
+      vm1.title = "We changed the title from another vue instance"
+    }
   }
 })
