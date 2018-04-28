@@ -10,6 +10,7 @@ let vm1 = new Vue({
     show: function() {
       this.showParagraph = true;
       this.updateTitle('The VueJS Instance (Updated)');
+      this.$refs.myButton.innerText = 'Change by $ref'
     },
     updateTitle: function(title) {
       this.title = title;
@@ -38,3 +39,8 @@ console.log(vm1.$data === data); // ==> true
 // You can do both
 console.log(vm1.title); // or
 console.log(vm1.$data.title); // ==> 'The VueJS Instance'
+
+
+// Accessing $refs from outside
+vm1.$refs.heading.innerText = 'Change from outside';
+// but this is not reactive and your changes might be overritten by the vue instance

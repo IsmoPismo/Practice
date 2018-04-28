@@ -10,7 +10,8 @@
 <body>
   <div id="app1">
     <h1 ref="heading">{{ title }}</h1>
-    <button @click="show">Show Paragraph</button>
+    <!-- ref will be recognised by vue.js but we can use it outside the vue instance -->
+    <button @click="show" ref="myButton">Show Paragraph</button>
     <p v-if="showParagraph">This is not always visible</p>
   </div>
   <script src="app.js"></script>
