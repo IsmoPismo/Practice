@@ -1,5 +1,5 @@
 <template>
-  <ismar></ismar>
+  <globaly-registered></globaly-registered>
 </template>
 
 <script>
