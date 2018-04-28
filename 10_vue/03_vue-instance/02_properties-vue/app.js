@@ -44,3 +44,5 @@ console.log(vm1.$data.title); // ==> 'The VueJS Instance'
 // Accessing $refs from outside
 vm1.$refs.heading.innerText = 'Change from outside';
 // but this is not reactive and your changes might be overritten by the vue instance
+
+// visit https://vuejs.org/v2/api/ for more info
