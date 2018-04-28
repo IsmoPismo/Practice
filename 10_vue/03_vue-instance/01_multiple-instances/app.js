@@ -20,14 +20,21 @@ let vm1 = new Vue({
   },
   watch: {
     title: function(value) {
-      alert('Title changed, new value: ' + value);
+      // Anoying alert
+      // alert('Title changed, new value: ' + value);
     }
   }
 });
 
+//
 setTimeout(function(){
-  vm1.title = "Title changed by timer"
+  vm1.title = "Title changed by timer";
 }, 3333)
+
+// We can access vm1.properties but vue.js will not recognise:
+vm1.newPropertie = "I AM USELESS"
+// open up the console
+console.log(vm1);
 
 new Vue({
   el: '#app2',
