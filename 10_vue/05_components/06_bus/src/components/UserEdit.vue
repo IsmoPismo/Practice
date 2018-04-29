@@ -10,7 +10,11 @@
 import { eventBus } from '../main'
 
 export default {
-  props: ['userAge'],
+  data(){
+    return {
+      userAge: 100,
+    }
+  },
   created(){
     eventBus.$on('ageWasChanged', age => {
       this.userAge = age;

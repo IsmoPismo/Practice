@@ -24,11 +24,6 @@ import UserDetail from './UserDetail.vue';
 import UserEdit from './UserEdit.vue';
 
 export default {
-  data() {
-    return {
-      age: 29
-    }
-  },
   components: {
     appUserDetail: UserDetail,
     appUserEdit: UserEdit
