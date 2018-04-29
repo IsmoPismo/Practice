@@ -18,8 +18,13 @@ export default {
       }
   },
   methods: {
-    changeAge() {
-      eventBus.$emit('ageWasChanged', this.userAge)
+    // Outsourced to the BUS
+    // changeAge() {
+    //   eventBus.$emit('ageWasChanged', this.userAge)
+    // }
+    // So we can write:
+    changeAge(){
+      eventBus.changeAge(this.userAge);
     }
   }
 }
