@@ -4,6 +4,12 @@
 
 <script>
 export default {
+  deactivated(){
+    console.log('DEACTIVATED');
+  },
+  activated(){
+    console.log('ACTIVATED');
+  }
 }
 </script>
 

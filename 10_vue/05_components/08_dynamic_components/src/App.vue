@@ -4,7 +4,9 @@
   <button @click="selectedComponent = 'SlideTwo'">Two</button>
   <button @click="selectedComponent = 'SlideThree'">Three</button>
   <p>Selected: {{ selectedComponent }}</p>
-  <components :is="selectedComponent"></components>
+  <keep-alive>
+    <components :is="selectedComponent"></components>
+  </keep-alive>
 </div>
 </template>
 
