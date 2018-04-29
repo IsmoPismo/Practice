@@ -4,16 +4,17 @@
         <p>Many Details</p>
         <p>User name: <strong>{{ myName }}</strong></p>
         <button @click="changeName">Change name again</button>
+        <button @click="myFunc()">Executes a callback in the parent</button>
     </div>
 </template>
 
 <script>
   export default {
-    // Case sensitive works only in single file projects
     props: {
       myName: {
-          type: String,
-      }
+          type: String
+      },
+      myFunc: Function
     },
     methods: {
       changeName(){
