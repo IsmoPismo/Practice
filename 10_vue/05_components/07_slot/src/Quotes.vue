@@ -1,6 +1,10 @@
 <template lang="html">
-  <div class="">
-    <slot></slot>
+  <div>
+    <slot name="first-slot"></slot>
+    <span><slot name="subtitle">Default Text Here will get overwriten</slot></span>
+    <div>
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -25,5 +29,7 @@ export default {
   p {
     font-variant: small-caps;
     font-size: 2rem;
+    line-height: 2;
+    letter-spacing: 1.2px;
   }
 </style>

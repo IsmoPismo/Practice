@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-xs-12">
               <Quotes>
-                <h1>A beautiful Quote</h1>
+                <h1 slot="first-slot">A beautiful Quote</h1>
+                <!-- This will be the default slot -->
                 <p>{{ quote }}</p>
               </Quotes>
             </div>
