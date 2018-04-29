@@ -9,7 +9,13 @@
 <script>
   export default {
     // Case sensitive works only in single file projects
-    props: ['myName'],
+    props: {
+      myName: {
+          type: String,
+          required: true,
+          default: 'Doesn\'t make sense to use required AND default'
+      }
+    },
     methods: {
       switchName(){
         return this.myName.split('').reverse().join('');
