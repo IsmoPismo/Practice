@@ -4,7 +4,7 @@
             <div class="col-xs-12">
               <Quotes>
                 <h1>A beautiful Quote</h1>
-                <p>To be or not to be... That's the question</p>
+                <p>{{ quote }}</p>
               </Quotes>
             </div>
         </div>
@@ -15,6 +15,12 @@
 import Quotes from './Quotes.vue'
 
     export default {
+      data(){
+        return {
+          // We can pass data through slots
+          quote: 'To be or not to be... That\'s the question'
+        }
+      },
       components: {
         Quotes
       }
