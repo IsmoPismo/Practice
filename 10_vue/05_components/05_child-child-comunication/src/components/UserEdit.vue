@@ -4,13 +4,15 @@
         <p>Edit me!</p>
         <p>User Age is: {{ userAge }}</p>
         <button @click="changeAge">Change Age</button>
+        <button @click="changeAgeFunc()">Passing data with callback</button>
     </div>
 </template>
 
 <script>
   export default {
     props: {
-      userAge: Number
+      userAge: Number,
+      changeAgeFunc: Function
     },
     methods: {
       changeAge(){

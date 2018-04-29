@@ -12,13 +12,15 @@
                   :myName='name'
                   @nameWasChanged="name = $event"
                   :myFunc='resetName'
-                  :userAgePassed="age"></app-user-detail>
+                  :userAgePassed="age">
+                </app-user-detail>
             </div>
             <div class="col-xs-12 col-sm-6">
                 <app-user-edit
                   :userAge="age"
                   @emitingAge="age = $event"
-                ></app-user-edit>
+                  :changeAgeFunc="changeAge">
+                </app-user-edit>
             </div>
         </div>
     </div>
@@ -42,6 +44,9 @@
           // This function gets executed from the child
           resetName(){
             this.name = 'Ismar';
+          },
+          changeAge(){
+            this.age = 30;
           }
         },
         components: {
