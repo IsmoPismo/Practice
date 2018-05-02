@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import { bus } from '../main'
+
 export default {
   props: {
     title: {
@@ -15,6 +17,11 @@ export default {
     return {
       contact: 'This app was made with'
     }
+  },
+  created(){
+    bus.$on('busMethod', (newTitle) => {
+      this.title = newTitle;
+    })
   }
 }
 </script>
