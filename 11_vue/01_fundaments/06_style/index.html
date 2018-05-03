@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>Style</title>
+</head>
+<body>
+  <div id="app">
+    <div class="shape" :style="shapeStyles" @click="changeShape"></div>
+    <table border="1">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Title</td>
+          <td>Company</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(e, i) in employees" :class="{high: i % 2 === 0}">
+          <td>{{ e.name }}</td>
+          <td>{{ e.job }}</td>
+          <td>{{ company }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="vue.js"></script>
+</body>
+</html>
