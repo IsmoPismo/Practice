@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+  <title>Event Modifiers</title>
+</head>
+<body>
+  <div id="app">
+    <input type="password" placeholder="pass" v-model="pass">
+    <p v-if="pass.length>8">Awesome!</p>
+    <p v-else-if="pass.length>0">Password has to be min 8 chars long</p>
+    <p v-else>You have to enter a password</p>
+    <br>
+    <ol>
+      <li v-for="c in categories">
+        {{ c.name }}
+        <ul>
+          <li v-for="item in c.list">{{ item }}</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  <script src="vue.js"></script>
+</body>
+</html>
