@@ -12,15 +12,19 @@
         <div class="container">
             <br>
             <nav id="top-navigation" class="well well-sm flex flex-row align-center">
-                <a href="#"><strong>E-commerce Inc.</strong></a>
+                <a href="#" @click.prevent="isShowingCart = false"><strong>E-commerce Inc.</strong></a>
 
                 <div class="text-right pull-right cart-info">
-                    <span class="stats">X items in cart, totalling $Y</span>
-                    <button class="btn btn-primary">View Cart</button>
+                    <span class="stats">{{ cardItemsCount }}
+                      <template v-if="cardItemsCount == 1"> item</template>
+                      <template v-else> items</template>
+                       in cart, totalling {{ cardTotal | currency }}
+                     </span>
+                    <button class="btn btn-primary" @click="isShowingCart = true">View Cart</button>
                 </div>
             </nav>
 
-            <div id="products" class="row list-group">
+            <div v-if="!isShowingCart" id="products" class="row list-group">
                 <div class="item col-xs-4" v-for="product in products">
                     <div class="thumbnail">
                         <img class="group list-group-image" :src="product.image">
@@ -44,6 +48,11 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div v-else>
+              <h1>Cart</h1>
+              <h5>Cart will be displayed here</h5>
             </div>
         </div>
     </div>

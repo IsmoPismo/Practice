@@ -1,6 +1,7 @@
 new Vue({
     el: '#app',
     data: {
+        isShowingCart: false,
         card: {
           items: []
         },
@@ -58,9 +59,22 @@ new Vue({
     methods: {
       addProduct(p){
         this.card.items.push({
-          product,
+          product: p,
           quantity: 1
         });
+        p.inStock--;
+      }
+    },
+    computed: {
+      cardTotal(){
+        var total = 0;
+        this.card.items.forEach(function(item){
+          total += item.product.price * item.quantity;
+        });
+        return total;
+      },
+      cardItemsCount(){
+        return this.card.items.length;
       }
     },
     filters: {
