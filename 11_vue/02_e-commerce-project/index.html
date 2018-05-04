@@ -61,8 +61,13 @@
                     </tr>
                     <tr v-for="item in card.items">
                       <td>{{ item.product.name }}</td>
-                      <td>{{ item.quantity }}</td>
+                      <td>
+                        {{ item.quantity }} &nbsp;
+                        <button @click="addQuantity(item)" class="btn btn-success">+</button>
+                        <button @click="removeQuantity(item)" class="btn btn-danger">-</button>
+                      </td>
                       <td>{{ item.quantity * item.product.price | currency }}</td>
+
                     </tr>
                     <tr>
                       <td class="text-right" colspan="2">

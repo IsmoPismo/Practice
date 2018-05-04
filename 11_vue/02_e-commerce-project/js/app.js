@@ -78,7 +78,16 @@ new Vue({
           }
         }
         return null;
-      }
+      },
+      addQuantity(p){
+        p.product.inStock--;
+        p.quantity++;
+      },
+
+      removeQuantity(p){
+        p.product.inStock++;
+        p.quantity--;
+      },
     },
     computed: {
       cardTotal(){
