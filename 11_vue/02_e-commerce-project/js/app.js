@@ -96,6 +96,11 @@ new Vue({
           this.removeItemsFromCard(p);
         }
       },
+      checkOut(){
+        if(confirm('Please submit your purchase')){
+          this.card.items = [];
+        }
+      }
     },
     computed: {
       cardTotal(){
