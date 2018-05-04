@@ -75,6 +75,9 @@ new Vue({
       },
       cardItemsCount(){
         return this.card.items.length;
+      },
+      taxAmount(){
+        return Math.round(this.cardTotal * 0.17);
       }
     },
     filters: {
