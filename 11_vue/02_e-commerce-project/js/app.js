@@ -1,6 +1,9 @@
 new Vue({
     el: '#app',
     data: {
+        card: {
+          items: []
+        },
         products: [
             {
                 id: 1,
@@ -51,6 +54,14 @@ new Vue({
                 image: "https://icdn2.digitaltrends.com/image/oneplus-3-display-720x720.jpg?ver=1.jpg"
             }
         ]
+    },
+    methods: {
+      addProduct(p){
+        this.card.items.push({
+          product,
+          quantity: 1
+        });
+      }
     },
     filters: {
       currency(value){
