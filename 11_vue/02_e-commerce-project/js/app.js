@@ -58,11 +58,26 @@ new Vue({
     },
     methods: {
       addProduct(p){
-        this.card.items.push({
-          product: p,
-          quantity: 1
-        });
+        let cardItem = this.checkInStock(p);
+
+        if (cardItem != null){
+          cardItem.quantity++;
+        }
+        else {
+          this.card.items.push({
+            product: p,
+            quantity: 1
+          });
+        }
         p.inStock--;
+      },
+      checkInStock(p){
+        for (let i = 0; i < this.card.items.length; i++){
+          if (this.card.items[i].product.id === p.id){
+            return this.card.items[i];
+          }
+        }
+        return null;
       }
     },
     computed: {
