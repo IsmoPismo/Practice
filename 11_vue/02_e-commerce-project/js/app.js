@@ -83,10 +83,18 @@ new Vue({
         p.product.inStock--;
         p.quantity++;
       },
-
+      removeItemsFromCard(p){
+        var index = this.card.items.indexOf(p);
+        if (index !== -1){
+          this.card.items.splice(index, 1);
+        }
+      },
       removeQuantity(p){
         p.product.inStock++;
         p.quantity--;
+        if (p.quantity == 0){
+          this.removeItemsFromCard(p);
+        }
       },
     },
     computed: {
