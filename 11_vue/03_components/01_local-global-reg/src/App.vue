@@ -5,13 +5,12 @@
                 <announcement></announcement>
             </div>
         </div>
+        <app-article></app-article>
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>
