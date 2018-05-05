@@ -1,8 +1,7 @@
 <template>
     <div class="alert alert-info">
-      {{ title }}
-      <template v-if="social!==''"> was shared on </template>
-      {{ social }}
+      <p v-if="title==''"">No Announcements</p>
+      <p v-else>{{ title }} <template v-if="social!==''"> was shared on </template> {{ social }} </p>
     </div>
 </template>
 
@@ -13,16 +12,14 @@
     export default {
         data() {
             return {
-                title: 'No title has been shared yet',
-                social: ''
+                title: "",
+                social: ""
             };
         },
         created(){
-            eventBus.$on('articleShared', function(data){
-              console.log(data);
+            eventBus.$on('articleShared', (data) => {
               this.title = data.articleTitle;
-              this.socila = data.media;
-              console.log(this.title);
+              this.social = data.media;
             })
         }
     }
