@@ -1,4 +1,4 @@
-# 02_e-commerce
+# sample-project
 
 > A Vue.js project
 
