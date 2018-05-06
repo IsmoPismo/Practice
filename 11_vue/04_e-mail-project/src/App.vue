@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="mail-box">
-      <app-sidebar></app-sidebar>
-      <app-content></app-content>
+      <app-sidebar :messages="messages"></app-sidebar>
+      <app-content :messages="messages"></app-content>
     </div>
   </div>
 </template>
@@ -15,9 +15,9 @@ import Messages from './data/messages'
 export default {
   data(){
     return {
-      messages
+      messages: Messages
     }
-  }
+  },
   components: {
     appSidebar: Sidebar,
     appContent: Content
