@@ -1,5 +1,21 @@
 <template>
 <div class="inbox-body">
+  <button class="btn btn-primary"
+          @click="navigateBack">
+    <i class="fa fa-arrow-left" aria-hidden="true">
+    </i>&nbsp; Back
+  </button>
+  <button class="btn btn-danger"
+          @click="data.message.isDeleted = true"
+          :disabled="data.message.isDeleted">
+    <i class="fa fa-trash-o" aria-hidden="true">
+    </i>&nbsp; {{ data.message.isDeleted ? 'Deteled' : 'Delete' }}
+  </button>
+  <template v-if="typeof data.message.isRead !== 'undefined'">
+    <button class="btn btn-primary" @click="data.message.isRead = !data.message.isRead">
+      <i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp; {{ data.message.isRead ? 'Mark as unread' : 'Mark as read' }}
+    </button>
+  </template>
   <p><strong>Time: </strong> {{ data.message.date.fromNow() }}</p>
   <p><strong>From: </strong> {{ data.message.from.name }}
     <{{ data.message.from.email }}>
@@ -18,11 +34,22 @@
 </template>
 
 <script>
+import { eventBus } from './main'
 export default {
   props: {
     data: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    navigateBack(){
+      let previousView = this.$parent.previousView;
+      eventBus.$emit('changeView', {
+        tag: previousView.tag,
+        title: previousView.title,
+        data: previousView.data
+      })
     }
   },
   activated(){
