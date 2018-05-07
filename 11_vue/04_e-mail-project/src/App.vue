@@ -11,12 +11,21 @@
 import Sidebar from './Sidebar.vue'
 import Content from './Content.vue'
 import Messages from './data/messages'
+import RandomMessages from './data/random-messages'
+import { eventBus } from './main'
 
 export default {
   data(){
     return {
       messages: Messages
     }
+  },
+  created(){
+    eventBus.$on('refreshMessages', () => {
+      let randomIndex = Math.floor(Math.random() * RandomMessages.length);
+      let temp = [RandomMessages[randomIndex]];
+      this.messages = temp.concat(this.messages.slice(0));
+    });
   },
   components: {
     appSidebar: Sidebar,
