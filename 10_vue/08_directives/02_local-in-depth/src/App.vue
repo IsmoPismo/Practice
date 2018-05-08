@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Custom Local Directives</h1>
-                <p v-highlight:background.blink="'red'">Some highlighted text</p>
+                <p v-highlight:background.blink="{mainColor: 'gray', secondColor: 'black', interval: 300}">Some highlighted text</p>
             </div>
         </div>
     </div>
@@ -19,8 +19,8 @@
               delay = 2000;
             }
             if (binding.modifiers['blink']){
-              let mainCol = binding.value;
-              let secCol = 'blue';
+              let mainCol = binding.value.mainColor;
+              let secCol = binding.value.secondColor;
               let currentColor = mainCol;
               setTimeout(() => {
                 setInterval(() => {
@@ -30,7 +30,7 @@
                   } else {
                     el.style.color = currentColor;
                   }
-                }, 1000)
+                }, binding.value.interval)
               }, delay)
             } else {
               setTimeout(() => {
