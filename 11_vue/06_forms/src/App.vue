@@ -4,17 +4,17 @@
             <div class="col-xs-12">
                 <h1>Add Blog Post</h1>
 
-                <form>
+                <form @submit.prevent="isSubmitted = true">
                   <div class="form-group">
                     <label for="title">Title</label>
-                    <input  v-model="post.title"
+                    <input  v-model.trim="post.title"
                             type="text"
                             id="title"
                             class="form-control">
                   </div>
                   <div class="form-group">
                     <label for="content">Content</label>
-                    <textarea v-model="post.content"
+                    <textarea v-model.lazy.trim="post.content"
                               id="content"
                               class="form-control"></textarea>
                   </div>
@@ -55,11 +55,12 @@
                       <option v-for="selected in formData.series" :value="selected">{{ selected }}</option>
                     </select>
                   </div>
+                    <input type="submit" class="btn btn-primary">
                 </form>
 
                 <hr>
 
-                <table class="table table-striped">
+                <table class="table table-striped" v-if="isSubmitted">
                     <thead>
                         <tr>
                             <td class="col-xs-6"><strong>Field</strong></td>
@@ -121,7 +122,8 @@
                         'Vue.js: From Beginner to Professional',
                         'Complete Guide to Elasticsearch'
                     ]
-                }
+                },
+                isSubmitted: false
             };
         }
     }
