@@ -27,3 +27,10 @@ const sym = Symbol(); // Symbol
 const hobbies = ['movies', 'music']; // Array
 const address = {city: 'Boston', state: 'MA'} // Object literal
 const today = new Date(); // Date object
+
+
+// TYPE CONVERSION
+(new Date()).toString();
+String(new Date());
+parseInt('100.30'); // 100
+(parseFloat('100.305')).toFixed(5); // 100.30500
