@@ -34,3 +34,8 @@ const today = new Date(); // Date object
 String(new Date());
 parseInt('100.30'); // 100
 (parseFloat('100.305')).toFixed(5); // 100.30500
+const val1 = String(5); // Convert to string
+const val2 = 6;
+const sum = Number(val1 + val2); // Add => Convert to Number
+console.log(sum); // 56
+console.log(typeof sum);
