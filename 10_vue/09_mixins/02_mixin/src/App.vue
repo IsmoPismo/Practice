@@ -8,18 +8,27 @@
                 <ul>
                   <li v-for="fruit in filteredFuits">{{ fruit }}</li>
                 </ul>
+                <list></list>
             </div>
+
         </div>
     </div>
 </template>
 
 <script>
+import list from './List.vue';
+import { fruitMixin } from './fruitMixin';
+
     export default {
       data(){
         return {
           text: 'Hello, dude!'
         }
-      }
+      },
+      components: {
+        list
+      },
+      mixins: [fruitMixin]
     }
 </script>
 
