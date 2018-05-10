@@ -3,6 +3,7 @@
   <h2 v-once>
       {{ title }}
     </h2>
+
   <h3>
       {{ aMethod() }}
     </h3>
