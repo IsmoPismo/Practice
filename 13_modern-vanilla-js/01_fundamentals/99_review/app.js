@@ -37,7 +37,9 @@ parseInt('100.30'); // 100
 const val1 = String(5); // Convert to string
 const val2 = 6;
 const sum = Number(val1 + val2); // Add => Convert to Number
+const sum2 = Number(val2 + val1);
 console.log(sum); // 56
+console.log(sum2); // 65
 console.log(typeof sum);
 
 
@@ -71,12 +73,24 @@ str.includes('my'); // true
 
 
 // TEMPLATE LITERALS
-
 const html = `
   <ul>
     <li>Name: ${name}</li>
     <li>${2 + 2}</li>
-    <li>${hello()}</li>
     <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
   </ul>
 `;
+
+
+// ARRAYS
+const numbers = [1,2,3,8,5,123,7,8,9];
+
+Array.isArray(numbers); // true
+numbers.push(250);
+numbers.unshift(120);
+numbers.pop();
+numbers.shift();
+numbers.splice(1,2); // (starting index, how many items)
+numbers.reverse();
+const howYouSortNumbers = numbers.sort((x, y) =>  x - y);
+numbers.find((x) => x > 8); // 9
