@@ -68,3 +68,15 @@ tags.split(',');
 
 str.replace('Brad', 'Jack');
 str.includes('my'); // true
+
+
+// TEMPLATE LITERALS
+
+const html = `
+  <ul>
+    <li>Name: ${name}</li>
+    <li>${2 + 2}</li>
+    <li>${hello()}</li>
+    <li>${age > 30 ? 'Over 30' : 'Under 30'}</li>
+  </ul>
+`;
