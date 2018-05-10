@@ -94,3 +94,18 @@ numbers.splice(1,2); // (starting index, how many items)
 numbers.reverse();
 const howYouSortNumbers = numbers.sort((x, y) =>  x - y);
 numbers.find((x) => x > 8); // 9
+
+
+// OBJECT LITERALS
+const person = {
+  name: 'Ismo',
+  age: 29,
+  hobbies: ['vue', 'gym', 'youtube'],
+  address: {
+    city: 'Džako',
+    state: 'BiH'
+  },
+  getBirthYear(){
+    return 2017 - this.age;
+  }
+}
