@@ -142,3 +142,25 @@ if(typeof id !== 'undefined')
   console.log(`The ID is ${id}`);
 else
   console.log('NO ID');
+
+
+// FUNCTION-
+// -DECLARATION
+function greet(firstName = 'John', lastName = 'Doe'){
+  return 'Hello ' + firstName + ' ' + lastName;
+}
+// -EXPRESION
+const square = function(x = 3){
+  return x*x;
+};
+// -IIFE
+(function(){
+  console.log('IIFE Ran..');
+})();
+// PROPERTY METHODS
+const todo = {
+  add: function(){
+    console.log('Add todo..');
+  },
+}
+todo.add();
