@@ -39,3 +39,32 @@ const val2 = 6;
 const sum = Number(val1 + val2); // Add => Convert to Number
 console.log(sum); // 56
 console.log(typeof sum);
+
+
+//STRING METHODS
+const nameStr = 'William';
+const lastName = "Smith"
+const str = 'Hello there my name is Brad';
+const tags = 'web design,web development,programming';
+
+nameStr.concat(' ', lastName); // William Smith
+
+nameStr.toUpperCase();
+nameStr.toLowerCase();
+
+nameStr.indexOf('l');
+nameStr.lastIndexOf('l');
+
+nameStr.charAt('2'); // 'l'
+nameStr.charAt(nameStr.length - 1); // 'm'
+
+nameStr.substring(0, 4); // Will
+
+nameStr.slice(0,4); // Will
+nameStr.slice(-3); // iam
+
+str.split(' ');
+tags.split(',');
+
+str.replace('Brad', 'Jack');
+str.includes('my'); // true
