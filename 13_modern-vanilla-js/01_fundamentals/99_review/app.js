@@ -109,3 +109,27 @@ const person = {
     return 2017 - this.age;
   }
 }
+
+
+// DATE OBJECT
+const thisMoment = new Date();
+let bDay = new Date('05-26-1988'); // or
+bDay = new Date('May 26 1988'); // or
+bDay = new Date('05/26/1988');
+
+thisMoment.getDay() // 4 - čet
+thisMoment.getDate(); // 10 - 10
+thisMoment.getMonth(); // 4 - May (zero-based)
+thisMoment.getFullYear(); // 2018
+thisMoment.getHours(); // 19
+thisMoment.getMinutes(); // 55
+thisMoment.getSeconds(); // 11
+thisMoment.getMilliseconds(); // 605
+thisMoment.getTime() // Trippy
+
+bDay.setFullYear('1994');
+bDay.setMonth(10);
+bDay.setDate(9);
+bDay.setHours(15);
+bDay.setMinutes(30);
+bDay.setSeconds(30);
