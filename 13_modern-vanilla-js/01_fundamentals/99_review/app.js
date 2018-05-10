@@ -133,3 +133,12 @@ bDay.setDate(9);
 bDay.setHours(15);
 bDay.setMinutes(30);
 bDay.setSeconds(30);
+
+
+// CONDITIONALS
+const id = 100
+
+if(typeof id !== 'undefined')
+  console.log(`The ID is ${id}`);
+else
+  console.log('NO ID');
