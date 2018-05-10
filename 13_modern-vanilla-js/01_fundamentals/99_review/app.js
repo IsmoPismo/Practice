@@ -164,3 +164,22 @@ const todo = {
   },
 }
 todo.add();
+
+
+// LOOPS
+const user = {
+  firstName: 'John',
+  lastName: 'Doe',
+  age: 40
+}
+
+for(let x in user){
+  console.log(`${x} : ${user[x]}`);
+}
+
+
+// WINDOW
+window.outerHeight; // but we don't have to use WINDOW
+outerWidth === window.outerWidth; // true
+[innerWidth, innerHeight, scrollX, scrollY, location, navigator];
+window.history.go(-2);
