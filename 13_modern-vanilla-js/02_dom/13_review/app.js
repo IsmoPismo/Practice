@@ -83,3 +83,18 @@ list.parentElement; // same
 list.nextSibling; // NODE
 list.nextElementSibling;
 list.previousElementSibling;
+
+
+// CREATING ELEMENTS
+const li = document.createElement('li');
+li.className = 'collection-item';
+li.id = "ajdi";
+li.setAttribute('title', 'This is America');
+li.appendChild(document.createTextNode('Hover over me'));
+
+const link = document.createElement('a');
+link.className = 'delete-item secondary-content';
+link.innerHTML = '<i class="fa fa-remove"></i>';
+
+li.appendChild(link);
+document.querySelector('ul').appendChild(li);
