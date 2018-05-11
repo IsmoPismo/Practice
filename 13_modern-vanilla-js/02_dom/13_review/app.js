@@ -117,3 +117,33 @@ classAndAttr.classList.add('america');
 classAndAttr.classList.remove('delete-item', 'secondary-content');
 classAndAttr.hasAttribute('href'); // true
 classAndAttr.href = 'seted';
+
+
+// EVENTS
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+function onClick(event){
+  event.target;
+  event.type;
+  event.timeStamp;
+  event.clientX;
+  event.offsetX;
+
+  event.preventDefault();
+}
+
+
+// MOUSE
+const card = document.querySelector('.card');
+
+// card.addEventListener('click', runEvent);
+// card.addEventListener('dblclick', runEvent);
+// card.addEventListener('mousedown', runEvent);
+// card.addEventListener('mouseup', runEvent);
+// card.addEventListener('mouseenter', runEvent);
+// card.addEventListener('mouseleave', runEvent);
+// card.addEventListener('mouseover', runEvent);
+// card.addEventListener('mouseout', runEvent);
+
+card.addEventListener('mousemove', function(e){
+  card.style.backgroundColor = `rgb(40, ${e.offsetX}, ${e.offsetY})`
+})
