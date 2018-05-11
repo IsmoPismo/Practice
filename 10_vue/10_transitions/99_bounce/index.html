@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to Vue</title>
+  <script src="https://unpkg.com/vue"></script>
+  <style media="screen">
+    button {
+      padding: 55px;
+      background-color: #657687;
+      color: white;
+      font-family: cursive;
+      font-size: 2rem;
+      display: grid;
+    }
+
+    .bounce-enter-active {
+      transition: transform 530ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .bounce-leave-active {
+      transition: transform 380ms cubic-bezier(1, 0, 0, 1);
+    }
+
+    .bounce-enter, .bounce-leave-to {
+      transform: scale(0);
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <button @click="show = !show">Ćiribu Ćiriba</button>
+    <transition name="bounce">
+      <img v-show="show" src="https://vuejs.org/images/logo.png" alt="Vue logo">
+    </transition>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        show: true
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+            .replace(/^https?:\/\//, '')
+            .replace(/\/$/, '')
+        }
+      }
+    })
+  </script>
+</body>
+</html>
