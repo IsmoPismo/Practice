@@ -22,3 +22,19 @@ document.scripts[1].getAttribute('src');
 arrayFromCollection = Array.from(document.scripts);
 
 arrayFromCollection.map( x => x.namespaceURI); // map over array
+
+
+// SINGLE ELEMENT SELECTOR
+
+arrayFromTokens = document.getElementById('task-title');
+Array.from(arrayFromTokens.classList).map(x => x);
+
+arrayFromTokens.style.color = 'red';
+arrayFromTokens.innerText = 'red text'
+
+document.querySelector('#tast-title');
+document.querySelector('.card-title');
+document.querySelector('h5');
+
+document.querySelector('ul li').style.fontSize = '19px';
+document.querySelector('li:nth-child(3)').style.margin = '12px';
