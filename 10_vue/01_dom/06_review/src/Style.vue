@@ -1,9 +1,12 @@
 <template lang="html">
   <div>
-    <h4 :class="classObject">
-      this div's gonna change
-    </h4>
-    <button type="button" @click="darkify">Darken</button>
+    <!-- Single class names have to be in quotes -->
+    <div  class="demo"
+          @click="attachBlack = !attachBlack"
+          :class="['white', {darkness: attachBlack}]"></div>
+    <!-- We can attach objects with computed properties -->
+    <div  class="demo"
+          :class="classObject"></div>
   </div>
 </template>
 
@@ -11,21 +14,14 @@
 export default {
   data() {
     return {
-      isDark: false,
-      lightLetters: false
-    }
-  },
-  methods: {
-    darkify() {
-      this.isDark = !this.isDark;
-      this.lightLetters = !this.lightLetters;
+      attachBlack: false
     }
   },
   computed: {
-    classObject() {
+    classObject(){
       return {
-        darkness: this.isDark,
-        white: this.lightLetters
+        darkness: this.attachBlack,
+        white: this.attachBlack
       }
     }
   }
@@ -37,9 +33,6 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  h4 {
     transition: all 400ms;
   }
 
@@ -48,8 +41,13 @@ export default {
   }
 
   .white {
-    color: white;
+    width: 500px;
     padding: 19px;
-    transform: scale3d(4,4,4) scale(55, 2);
+  }
+
+  .demo {
+    width: 200px;
+    height: 150px;
+    border: 1px solid black;
   }
 </style>

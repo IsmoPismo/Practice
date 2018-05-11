@@ -1,7 +1,9 @@
 <template>
 <div>
   <app-data></app-data>
+  <hr>
   <app-event></app-event>
+  <hr>
   <app-style></app-style>
 
 </div>
