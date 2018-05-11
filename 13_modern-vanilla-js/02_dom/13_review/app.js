@@ -38,3 +38,17 @@ document.querySelector('h5');
 
 document.querySelector('ul li').style.fontSize = '19px';
 document.querySelector('li:nth-child(3)').style.margin = '12px';
+
+
+// MULTY ELEMENTS SELECTOR
+const arrayFromSomething = Array.from(document.getElementsByClassName('collection-item'));
+arrayFromSomething.map(x => x.textContent = "CHANGED");
+
+const arrayFromUlFromLi = Array.from(document.querySelector('ul').getElementsByTagName('li'));
+arrayFromUlFromLi.map((x, i) => x.textContent = `List item number ${i + 1}`);
+
+const arrayWithoutConverting = document.querySelectorAll('ul.collection li.collection-item');
+// arrayWithoutConverting.map((x, i) => x.textContent = `Pointless Li number ${Math.ceil(Math.random() * 5)}`);
+arrayWithoutConverting.forEach((x, i) => x.textContent = `Pointless Li number ${Math.ceil(Math.random() * 5)}`); // NODE LIST can be looped over with forEach
+
+console.log(arrayWithoutConverting);
