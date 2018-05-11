@@ -26,9 +26,6 @@ export default {
   props: {
     player: Number,
     monster: Number
-  },
-  created(){
-    eventBus.$on('attack', data => this.player -= data)
   }
 }
 </script>

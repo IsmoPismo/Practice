@@ -12,14 +12,26 @@
 import { eventBus } from './main'
 
 export default {
-  data(){
-    return {
-      dmg: 30
-    }
-  },
   methods: {
     attack(){
-      eventBus.$emit('attack', this.dmg);
+      let dmg = this.calculateDamage(8, 15);
+      let monsterDamage = this.monsterDamage();
+      eventBus.$emit('attack', dmg, monsterDamage);
+    },
+    specialAttack(){
+      let dmg = this.calculateDamage(13, 35);
+      let monsterDamage = this.monsterDamage();
+      eventBus.$emit('special', dmg, monsterDamage);
+    },
+    heal(){
+      let monsterDamage = this.monsterDamage();
+      eventBus.$emit('heal', 11, monsterDamage);
+    },
+    calculateDamage(min, max){
+      return Math.max(Math.ceil(Math.random() * max), min)
+    },
+    monsterDamage(){
+      return this.calculateDamage(10, 16);
     }
   }
 }
