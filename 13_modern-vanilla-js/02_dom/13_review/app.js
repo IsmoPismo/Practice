@@ -98,3 +98,22 @@ link.innerHTML = '<i class="fa fa-remove"></i>';
 
 li.appendChild(link);
 document.querySelector('ul').appendChild(li);
+
+// REPLACE
+const newH2 = document.createElement('h2');
+newH2.innerText = 'This is the NEW header';
+const oldH2 = document.getElementById('task-title');
+oldH2.parentElement.replaceChild(newH2, oldH2);
+
+// REMOVE
+const lis = document.querySelectorAll('li');
+const ul = document.querySelector('ul');
+lis[1].remove();
+ul.removeChild(lis[2]);
+
+// CLASS AND ATTR
+let classAndAttr = lis[0].children[0];
+classAndAttr.classList.add('america');
+classAndAttr.classList.remove('delete-item', 'secondary-content');
+classAndAttr.hasAttribute('href'); // true
+classAndAttr.href = 'seted';
