@@ -145,7 +145,7 @@ const card = document.querySelector('.card');
 // card.addEventListener('mouseout', runEvent);
 
 card.addEventListener('mousemove', function(e){
-  card.style.backgroundColor = `rgb(40, ${e.offsetX}, ${e.offsetY})`
+  card.style.backgroundColor = `rgb(40, ${e.offsetX / 7}, ${e.offsetY / 7})`
 });
 
 
@@ -162,3 +162,12 @@ card.addEventListener('mousemove', function(e){
 // select.addEventListener('change', function(e){
 //   console.log(`Event type: ${e.type}`);
 // });
+
+
+// EVENT DELEGATION
+document.body.addEventListener('click', doSmth);
+function doSmth(e){
+  if(e.target.parentElement.classList.contains('delete-item')){
+    e.target.parentElement.parentElement.remove();
+  }
+}
