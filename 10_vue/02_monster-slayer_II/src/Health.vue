@@ -5,7 +5,7 @@
           <div class="healthbar">
               <div  class="healthbar text-center"
                     style="background-color: green; margin: 0; color: white;"
-                    :style="{width: playerHealth + '%'}"></div>
+                    :style="{width: player + '%'}"></div>
           </div>
       </div>
       <div class="small-6 columns">
@@ -13,19 +13,22 @@
           <div class="healthbar">
               <div  class="healthbar text-center"
               style="background-color: green; margin: 0; color: white;"
-              :style="{width: monsterHealth + '%'}"></div>
+              :style="{width: monster + '%'}"></div>
           </div>
       </div>
   </section>
 </template>
 
 <script>
+import { eventBus } from './main'
+
 export default {
-  data () {
-    return {
-      playerHealth: 100,
-      monsterHealth: 100
-    }
+  props: {
+    player: Number,
+    monster: Number
+  },
+  created(){
+    eventBus.$on('attack', data => this.player -= data)
   }
 }
 </script>

@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-      <app-health></app-health>
-      <component :is="!gameIsRunning ? 'appStart' : 'appButtons'" :startFunc="startNewGame"></component>
+      <app-health :player="playerHealth" :monster="monsterHealth"></app-health>
+      <component  :is="!gameIsRunning ? 'appStart' : 'appButtons'"
+                  :startFunc="startNewGame"></component>
       <app-log></app-log>
   </div>
 </template>
@@ -15,7 +16,9 @@ import Log from './Log.vue'
 export default {
   data(){
     return {
-      gameIsRunning: false
+      gameIsRunning: false,
+      playerHealth: 100,
+      monsterHealth: 100
     }
   },
   components: {
@@ -27,6 +30,8 @@ export default {
   methods: {
     startNewGame(){
       this.gameIsRunning = true;
+      this.playerHealth = 100;
+      this.monsterHealth = 100;
     }
   }
 }
