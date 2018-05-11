@@ -31,14 +31,16 @@
   </div>
 
   <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
+    const allData = {
         greeting: 'Welcome to your Vue.js app!',
         docsURL: 'http://vuejs.org/guide/',
         discordURL: 'https://chat.vuejs.org',
         forumURL: 'http://forum.vuejs.org/'
-      },
+      }
+
+    var app = new Vue({
+      el: '#app',
+      data: allData,
       methods: {
         humanizeURL: function (url) {
           return url
@@ -52,7 +54,6 @@
     const ei = app.$refs.target;  // <a href="http://forum.vuejs.org/" target="_blank">forum</a>
     ei.innerText = 'WHAT DO YOU THINK YOU\'RE DOIN\' HERE';
     ei.setAttribute('href', 'https://habitica.com/');
-
   </script>
 </body>
 </html>
