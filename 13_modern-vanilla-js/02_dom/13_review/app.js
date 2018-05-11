@@ -3,13 +3,13 @@ let val;
 // DOCUMENT
 
 document;
-document.all; // Array
+document.all;
 document.head; // <head></head>
 document.domain; // 127.0.0.1
 document.URL // http://127.0.0.1:3000/
 document.contentType; // text/HTML
 
-document.forms; // HTML Collection[0]
+document.forms; // HTML Collection
 document.forms[0].method; // get
 
 document.links[0].className; // delete-item secondary-content
@@ -42,13 +42,44 @@ document.querySelector('li:nth-child(3)').style.margin = '12px';
 
 // MULTY ELEMENTS SELECTOR
 const arrayFromSomething = Array.from(document.getElementsByClassName('collection-item'));
-arrayFromSomething.map(x => x.textContent = "CHANGED");
+// arrayFromSomething.map(x => x.textContent = "CHANGED");
 
 const arrayFromUlFromLi = Array.from(document.querySelector('ul').getElementsByTagName('li'));
-arrayFromUlFromLi.map((x, i) => x.textContent = `List item number ${i + 1}`);
+// arrayFromUlFromLi.map((x, i) => x.textContent = `List item number ${i + 1}`);
 
 const arrayWithoutConverting = document.querySelectorAll('ul.collection li.collection-item');
 // arrayWithoutConverting.map((x, i) => x.textContent = `Pointless Li number ${Math.ceil(Math.random() * 5)}`);
-arrayWithoutConverting.forEach((x, i) => x.textContent = `Pointless Li number ${Math.ceil(Math.random() * 5)}`); // NODE LIST can be looped over with forEach
+// arrayWithoutConverting.forEach((x, i) => x.textContent = `Pointless Li number ${Math.ceil(Math.random() * 5)}`); // NODE LIST can be looped over with forEach
 
 console.log(arrayWithoutConverting);
+
+
+// TRAVERSING
+const list = document.querySelector('ul.collection');
+const listItem = document.querySelector('li.collection-item:first-child');
+
+// Get child nodes
+list.childNodes; // node list with more than just the children (text nodes, comments and stuff)
+list.children; // HTML collection!
+list.childNodes[0].nodeType; // 3 =>
+// 1 - Element
+// 2 - Attribute (deprecated)
+// 3 - Text node
+// 8 - Comment
+// 9 - Document itself
+// 10 - Doctype
+
+list.children[1].children[0].children[0]; // <i class="fa fa-remove"></i>
+
+list.lastChild // Node (text, comment, element) but =>
+list.lastElementChild // element
+list.childElementCount // 5
+
+// Get parrent nodes
+list.parentNode; // <div...
+list.parentElement; // same
+
+// Siblings
+list.nextSibling; // NODE
+list.nextElementSibling;
+list.previousElementSibling;
