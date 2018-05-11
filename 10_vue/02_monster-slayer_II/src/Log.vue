@@ -2,9 +2,11 @@
   <section class="row log">
       <div class="small-12 columns">
           <ul>
-              <li v-for="turn in log">
+            <transition-group name='fade'>
+              <li v-for="turn in log" :key="turn">
                 {{ turn }}
               </li>
+            </transition-group>
           </ul>
       </div>
   </section>
@@ -16,7 +18,7 @@ import { eventBus } from './main'
 export default {
   data(){
     return {
-      log: ['player fucks up monster for x', 'monster fucks up player for x']
+      log: []
     }
   },
   created(){
@@ -37,5 +39,17 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped lang="css">
+  .fade-enter{
+    opacity: 0;
+    transform: rotate(10deg) translateX(-100px);
+  }
+
+  .fade-enter-active{
+    transition: all 580ms;
+  }
+
+  .fade-move {
+    transition: transform 500ms;
+  }
 </style>
