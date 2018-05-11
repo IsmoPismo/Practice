@@ -146,4 +146,19 @@ const card = document.querySelector('.card');
 
 card.addEventListener('mousemove', function(e){
   card.style.backgroundColor = `rgb(40, ${e.offsetX}, ${e.offsetY})`
-})
+});
+
+
+// KEYBOARD
+// form.addEventListener('submit', runEvent);
+//taskInput.addEventListener('keydown', runEvent);
+// taskInput.addEventListener('keyup', runEvent);
+// taskInput.addEventListener('keypress', runEvent);
+// taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('blur', runEvent);
+// taskInput.addEventListener('cut', runEvent);
+// taskInput.addEventListener('paste', runEvent);
+// taskInput.addEventListener('input', runEvent);
+// select.addEventListener('change', function(e){
+//   console.log(`Event type: ${e.type}`);
+// });
