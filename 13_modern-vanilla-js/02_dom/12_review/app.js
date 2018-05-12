@@ -13,7 +13,13 @@ document.forms; // HTML Collection
 document.forms[0].method; // get
 
 document.links[0].className; // delete-item secondary-content
-document.links[0].classList; // ["delete-item", "secondary-content", value: "delete-item secondary-content"]
+// document.links[0].classList; // ["delete-item", "secondary-content", value: "delete-item secondary-content"]
+// alert(Array.from(document.links[0].classList).map(x => console.log(`${x}
+//
+//   yo
+//
+//   `)));
+
 
 document.images; // HTML Collecion
 document.scripts[1].src; // or
@@ -144,9 +150,9 @@ const card = document.querySelector('.card');
 // card.addEventListener('mouseover', runEvent);
 // card.addEventListener('mouseout', runEvent);
 
-card.addEventListener('mousemove', function(e){
-  card.style.backgroundColor = `rgb(40, ${e.offsetX / 7}, ${e.offsetY / 7})`
-});
+// card.addEventListener('mousemove', function(e){
+//   card.style.backgroundColor = `rgb(40, ${e.offsetX / 7}, ${e.offsetY / 7})`
+// });
 
 
 // KEYBOARD
@@ -171,3 +177,12 @@ function doSmth(e){
     e.target.parentElement.parentElement.remove();
   }
 }
+
+
+// STORAGE
+localStorage.setItem('ime', 'Ismar');
+// localStorage.removeItem('ime');
+// localStorage.getItem('ime');
+// localStorage.clear();
+
+// Look at the 11_storage lecture for a example
