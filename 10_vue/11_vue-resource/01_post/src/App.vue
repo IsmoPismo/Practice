@@ -23,20 +23,22 @@ export default {
         username: '',
         email: ''
       },
-      fetchedUsers: []
+      fetchedUsers: [],
+      resource: {}
     }
   },
   methods: {
     submit(){
-      this.$http.post('', this.user)
-      .then(response => {
-        console.warn(response);
-      }, error => {
-        console.error(error);
-      });
+      // this.$http.post('/podatci.json', this.user)
+      // .then(response => {
+      //   console.warn(response);
+      // }, error => {
+      //   console.error(error);
+      // });
+      this.resource.save({}, this.user);
     },
     fetchData(){
-      this.$http.get('')
+      this.$http.get('podatci.json')
       .then(response => response.json())
       .then(data => {
         const resultArr = [];
@@ -46,6 +48,9 @@ export default {
         this.fetchedUsers = resultArr;
       })
     }
+  },
+  created(){
+    this.resource = this.$resource('podatci.json')
   }
 }
 </script>
