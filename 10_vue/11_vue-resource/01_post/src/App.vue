@@ -8,6 +8,8 @@
       <input type="email" v-model="user.email">
       <input type="submit" @click.prevent="submit" value="Submit">
     </form>
+    <label for="db">Choose Database</label>
+    <input id="db" type="text" v-model="node">
     <button @click="fetchData">Fetch Data</button>
     <ul>
       <li v-for="u in fetchedUsers">{{ u.username }} - {{ u.email }}</li>
@@ -24,7 +26,8 @@ export default {
         email: ''
       },
       fetchedUsers: [],
-      resource: {}
+      resource: {},
+      node: 'podatci'
     }
   },
   methods: {
@@ -41,7 +44,16 @@ export default {
       this.resource.saveAlt(this.user)
     },
     fetchData(){
-      this.$http.get('podatci.json')
+      // this.$http.get('podatci.json')
+      // .then(response => response.json())
+      // .then(data => {
+      //   const resultArr = [];
+      //   for (let key in data){
+      //     resultArr.push(data[key]);
+      //   }
+      //   this.fetchedUsers = resultArr;
+      // })
+      this.resource.getData({node: this.node})
       .then(response => response.json())
       .then(data => {
         const resultArr = [];
@@ -54,9 +66,10 @@ export default {
   },
   created(){
     const customAction = {
-      saveAlt: {method: 'POST', url: 'alternative.json'}
+      saveAlt: {method: 'POST', url: 'alternative.json'},
+      getData: {method: 'GET'}
     };
-    this.resource = this.$resource('podatci.json', {}, customAction)
+    this.resource = this.$resource('{node}.json', {}, customAction)
   }
 }
 </script>
