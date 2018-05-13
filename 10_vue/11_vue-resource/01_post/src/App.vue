@@ -35,7 +35,10 @@ export default {
       // }, error => {
       //   console.error(error);
       // });
-      this.resource.save({}, this.user);
+
+      // this.resource.save({}, this.user);
+
+      this.resource.saveAlt(this.user)
     },
     fetchData(){
       this.$http.get('podatci.json')
@@ -50,7 +53,10 @@ export default {
     }
   },
   created(){
-    this.resource = this.$resource('podatci.json')
+    const customAction = {
+      saveAlt: {method: 'POST', url: 'alternative.json'}
+    };
+    this.resource = this.$resource('podatci.json', {}, customAction)
   }
 }
 </script>
