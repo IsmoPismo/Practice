@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="wrapper">
-    <h1>Blog added</h1>
-    <form>
+    <h1>Blogs and stuff</h1>
+    <form  v-if="!submitted">
       <label for="title">Blog Title</label>
       <input type="text" id="title" v-model="blog.title">
       <label for="content">Content</label>
@@ -20,9 +20,10 @@
         <option>Ismar</option>
         <option>Larisa</option>
       </select>
+      <button type="submit" @click.prevent="postBlog">Submit</button>
     </form>
-    <section>
-      <h2>Preview</h2>
+    <section v-else>
+      <h2>Submitted Succesfully</h2>
       <p>Title: {{ blog.title }}</p>
       <p>Content: </p>
       <p>{{ blog.content }}</p>
@@ -44,7 +45,20 @@ export default {
         content: '',
         categories: [],
         author: ''
-      }
+      },
+      submitted: false
+    }
+  },
+  methods: {
+    postBlog(){
+        this.$http.post('http://jsonplaceholder.typicode.com/posts', {
+            title: this.blog.title,
+            body: this.blog.content,
+            userId: 1
+        }).then(function(data){
+            console.log(data);
+            this.submitted = true;
+        });
     }
   }
 }
