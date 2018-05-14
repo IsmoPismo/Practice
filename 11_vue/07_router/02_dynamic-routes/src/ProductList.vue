@@ -6,7 +6,7 @@
                 <div class="caption">
                   <router-link
                     tag="h4"
-                    :to="'/products/' + product.id"
+                    :to="{ name: 'viewProduct', params: { productId: product.id }}"
                     class="group inner list-group-item-heading">
                       <a>{{ product.name }}</a></router-link>
                     <p class="group inner list-group-item-text">{{ product.description }}</p>
