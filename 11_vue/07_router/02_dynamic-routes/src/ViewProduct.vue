@@ -25,6 +25,11 @@
         created() {
             this.product = this.getProduct(this.productId);
         },
+        watch: {
+          productId(oldVal, newVal){
+            this.product = this.getProduct(newVal);
+          }
+        },
         methods: {
             getProduct(productId) {
                 let match = null;

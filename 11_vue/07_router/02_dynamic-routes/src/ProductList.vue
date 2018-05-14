@@ -2,7 +2,7 @@
     <div id="products" class="row list-group">
         <div v-for="product in products" class="item col-xs-4">
             <div class="thumbnail">
-                <img class="group list-group-image" src="http://placehold.it/400x250/000/fff">
+                <img @click="clickedImage(product)" class="group list-group-image" src="http://placehold.it/400x250/000/fff">
                 <div class="caption">
                   <router-link
                     tag="h4"
@@ -46,6 +46,14 @@
                     product: product,
                     quantity: quantity
                 });
+            },
+            clickedImage(product){
+              this.$router.push({
+                name: 'vuewProduct',
+                params: {
+                  productId: product.id
+                }
+              });
             }
         }
     }
