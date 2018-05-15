@@ -3,7 +3,8 @@ let min = 3,
     winningNum = 4,
     guessesLeft = 3;
 
-const UImin = document.querySelector('.min-num'),
+const game = document.querySelector('#game'),
+      UImin = document.querySelector('.min-num'),
       UImax = document.querySelector('.max-num'),
       UIinput = document.querySelector('#guess-input'),
       UIbutton = document.querySelector('#guess-value'),
@@ -12,11 +13,17 @@ const UImin = document.querySelector('.min-num'),
 UImin.innerText = min;
 UImax.innerText = max;
 
+game.addEventListener('mousedown', function(e) {
+  if(e.target.className == 'game-over'){
+    location.reload();
+  }
+});
+
 UIbutton.addEventListener('click', () => {
   let guess = parseInt(UIinput.value);
 
   // Validate
-  if(isNaN(guess) || guess <= min || guess >= max){
+  if(isNaN(guess) || guess < min || guess > max){
     displayMessage(`Please enter a number between ${min} and ${max}`, 'red');
   }
 
@@ -45,4 +52,9 @@ function gameOver (won, msg, dis) {
   UIinput.disabled = dis;
   UIinput.style.borderColor = col;
   displayMessage(msg, col);
+
+  if(dis){
+    UIbutton.value = 'Play Again';
+    UIbutton.className += 'game-over';
+  }
 }
