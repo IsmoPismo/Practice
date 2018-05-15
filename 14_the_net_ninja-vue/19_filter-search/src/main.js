@@ -4,18 +4,12 @@ import VueResource from 'vue-resource'
 
 Vue.use(VueResource)
 
-Vue.directive('rainbow', {
-  bind(el, binding, vNode){
-    if(binding.arg == 'background'){
-      el.style.backgroundColor = `#${Math.random().toString().slice(2,8)}`;
-      el.style.color = "white"
-    } else {
-        el.style.color = `#${Math.random().toString().slice(2,8)}`;}
+Vue.filter('capitalize', function(val){
+  return val[0].toUpperCase() + val.slice(1);
+});
 
-      if(binding.value.marg > 8){
-        el.style.marginTop = "20px"
-      }
-  }
+Vue.filter('shorten', function(val){
+  return val[0].toUpperCase() + val.slice(1,180) + '...';
 });
 
 new Vue({
