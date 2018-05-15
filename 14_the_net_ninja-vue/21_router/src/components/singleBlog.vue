@@ -1,9 +1,13 @@
 <template>
-  <div class="">
+  <div class="main">
     <h3>{{ blog.title }}</h3>
     <article class="main-article">
-      {{ blog.body }}
+      {{ blog.content }}
     </article>
+    <p>{{ blog.author }}</p>
+    <ul>
+      <li v-for="cat in blog.categories">{{ cat }}</li>
+    </ul>
   </div>
 </template>
 
@@ -16,16 +20,17 @@
       }
     },
     created() {
-        this.$http.get('http://jsonplaceholder.typicode.com/posts/' + this.id).then(function(data){
-            // console.log(data);
-            this.blog = data.body;
-        });
+        this.$http.get('https://postreq-4f157.firebaseio.com/blogs/' + this.id + '.json').then(function(data){
+            return data.json();
+        }).then(function(jsonData){
+          this.blog = jsonData;
+        })
     }
   }
 </script>
 
 <style media="screen">
-  .main-article, h3 {
+  .main {
     max-width: 590px;
     margin: 45px auto;
   }
