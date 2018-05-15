@@ -28,7 +28,7 @@ UIbutton.addEventListener('click', () => {
   }
 
   // Check if player won/lost
-  if(guess === winningNum){
+  else if(guess === winningNum){
     gameOver(true, `You won! ${winningNum} was the right number`, true)
   } else {
       guessesLeft -=1
