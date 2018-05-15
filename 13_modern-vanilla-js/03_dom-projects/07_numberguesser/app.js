@@ -16,21 +16,33 @@ UIbutton.addEventListener('click', () => {
   let guess = parseInt(UIinput.value);
 
   // Validate
-  if(isNaN(guess) || guess < min || guess > max){
+  if(isNaN(guess) || guess <= min || guess >= max){
     displayMessage(`Please enter a number between ${min} and ${max}`, 'red');
   }
 
   // Check if player won/lost
   if(guess === winningNum){
-    UIinput.disabled = true;
-    UIinput.style.borderColor = 'green';
-    displayMessage(`You won! ${winningNum} was the right number`, 'green');
+    gameOver(true, `You won! ${winningNum} was the right number`, true)
   } else {
-
+      guessesLeft -=1
+      if(guessesLeft === 0){
+        gameOver(false, `No more guesses left.
+Correct number was: ${winningNum}`, true);
+      }
+      else {
+        gameOver(false, `Wrong, ${guessesLeft} guesses left`, false)
+      }
   }
 });
 
 function displayMessage(msg, col){
   UImessage.innerText = msg;
   UImessage.style.color = col;
+}
+
+function gameOver (won, msg, dis) {
+  let col = won ? 'green' : 'red';
+  UIinput.disabled = dis;
+  UIinput.style.borderColor = col;
+  displayMessage(msg, col);
 }
