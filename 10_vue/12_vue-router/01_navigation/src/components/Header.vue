@@ -15,5 +15,5 @@
                   active-class="active"
                   exact
                   tag="li"><a class="nav-link">User 222</a></router-link>
-</ul>
+  </ul>
 </template>

@@ -20,4 +20,11 @@ import Header from './components/Header.vue'
 </script>
 
 <style>
+  body {
+    margin: 0;
+    background: #b0b0b0;
+  }
+  body {
+    color: white;
+  }
 </style>
