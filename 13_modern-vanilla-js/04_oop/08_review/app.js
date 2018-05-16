@@ -4,14 +4,6 @@ function Person(name, dob) {
   this.birthday = new Date(dob);
 }
 
-// Useless constructors
-const name2 = new String('Jeff'); // you can do stuff like: >> name2.foo = 'bar'; <<
-const num2 = new Number(5);
-const getSum2 = new Function('x','y', 'return 1 + 1');
-const john2 = new Object({name: "John"});
-const arr2 = new Array(1,2,3,4);
-const re2 = new RegExp('\\w+');
-
 
 // Prototypes
 Person.prototype.calculateAge = function(){
@@ -35,3 +27,21 @@ function Customer(name, dob, number){
 Customer.prototype = Object.create(Person.prototype);
 // Make customer.prototype return Customer()
 Customer.prototype.constructor = Customer;
+
+
+
+// Object.create
+const personPrototypes = {
+  greeting: function(){
+    console.log(`Hello there ${this.firstName} ${this.lastName}`);
+  },
+  getsMarried: function(newLastName){
+    this.lastName = newLastName;
+  }
+}
+
+const larisa = Object.create(personPrototypes, {
+  firstName: {value: 'Larisa'}
+});
+larisa.lastName = 'Brkić';
+larisa.getsMarried('Šaćirović');
