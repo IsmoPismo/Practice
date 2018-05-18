@@ -4,10 +4,14 @@ body {
 }
 
 #app, h3 {
-  font-family: 'Black Han Sans', sans-serif;
+  font-family: 'Maven Pro', sans-serif;
   color: white;
   text-align: center;
   margin-top: 50px;
   -webkid-font-smoothing: antialiased;
   -mos-osx-font-smoothing: grayscale;
+}
+
+.link, .link:hover, .link:active, .link:visited {
+  color: #4FC08D;
 }
