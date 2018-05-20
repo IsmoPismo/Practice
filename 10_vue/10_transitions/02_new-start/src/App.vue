@@ -1,6 +1,7 @@
 <template>
 <div>
   <nav class="navbar navbar-dark bg-dark p-3 mb-5">
+    <router-link to='/' tag='button' class='btn btn-outline-success'>Home</router-link>
     <router-link to='/transition' tag='button' class='btn btn-outline-success'>Transitions</router-link>
     <router-link to='/animation' tag='button' class='btn btn-outline-success'>Animation</router-link>
     <router-link to='/transitionanimation' tag='button' class='btn btn-outline-success'>Transition/Animation</router-link>

@@ -10,7 +10,8 @@
               <transition name="fade">
                 <div  class="alert alert-info"
                       v-if="show"
-                >Some random text here to read...</div>
+                      style="white-space: pre"
+                >{{ css }}</div>
               </transition>
           </div>
       </div>
@@ -21,7 +22,20 @@
     export default {
         data() {
             return {
-              show: true
+              show: true,
+              css: `
+              style="white-space: pre"
+
+              .fade-enter {
+                opacity: 0;
+              }
+              .fade-enter-active {
+                transition: opacity 250ms ease-out;
+              }
+              .fade-leave-active {
+                transition: opacity 290ms ease-in;
+                opacity: 0;
+              }`
             }
         }
     }
