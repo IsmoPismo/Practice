@@ -5,6 +5,7 @@
     <router-link to='/transition' tag='button' class='btn btn-outline-success'>Transitions</router-link>
     <router-link to='/animation' tag='button' class='btn btn-outline-success'>Animation</router-link>
     <router-link to='/transitionanimation' tag='button' class='btn btn-outline-success'>Transition/Animation</router-link>
+    <router-link to='/customclasses' tag='button' class='btn btn-outline-success'>Custom Classes</router-link>
   </nav>
   <div class="container">
   <transition name="appslide" mode="out-in">
