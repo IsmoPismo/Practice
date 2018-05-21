@@ -3,6 +3,31 @@ class UI {
     this.profile = document.getElementById('profile');
   }
 
+  clearProfile(){
+    this.profile.innerHTML = ``
+  }
+
+  showAlert(msg, cls){
+    this.clearAlert();
+    const div = document.createElement('div');
+    div.className = cls;
+    div.innerText = msg;
+    const container = document.querySelector('.search-container');
+    const search = document.querySelector('.search');
+    container.insertBefore(div, search)
+
+    setTimeout(() =>  {
+      this.clearAlert()
+    }, 3400);
+  }
+
+  clearAlert(){
+    const alert = document.querySelector('.alert');
+    if(alert){
+      alert.remove();
+    }
+  }
+
   showProfile(user){
     this.profile.innerHTML = `
       <div class="card card-body mb-3">

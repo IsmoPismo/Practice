@@ -9,13 +9,12 @@ searchUser.addEventListener('keyup', (e) => {
     github.getUser(userName)
     .then(data => {
       if(data.profile.message === 'Not Found'){
-        // Show alert
+        ui.showAlert('User not Found', 'alert');
       } else {
-        // Show profile
-        ui.showProfile(data.profile)
+        ui.showProfile(data.profile);
       }
     })
   } else {
-    // Clear ui
+    ui.clearProfile();
   }
 });
