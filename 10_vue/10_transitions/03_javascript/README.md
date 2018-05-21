@@ -1,4 +1,4 @@
-# 01_intro
+# 03_javascript
 
 > A Vue.js project
 
