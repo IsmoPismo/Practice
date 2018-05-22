@@ -12,6 +12,7 @@ searchUser.addEventListener('keyup', (e) => {
         ui.showAlert('User not Found', 'alert');
       } else {
         ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
       }
     })
   } else {
