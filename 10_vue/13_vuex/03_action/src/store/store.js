@@ -10,16 +10,21 @@ export const store = new Vuex.Store({
     incrementC: state => state.counter++
   },
   mutations: {
-    removeFive: state => {
-      state.counter -= 5;
+    removeFive: (state, payload) => {
+      state.counter -= payload;
     }
   },
   actions: {
     // addFive: context => {
     //   context.commit('removeFive');
     // } => We can destructure the object
-    addFive: ({commit}) => {
-      commit('removeFive')
+    addFive: ({commit}, payload) => {
+      commit('removeFive', payload)
+    },
+    asyncFive: ({commit}, payload) => {
+      setTimeout(function() {
+        commit('removeFive', payload.by)
+      }, payload.delay);
     }
   }
 })
