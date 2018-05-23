@@ -1,10 +1,10 @@
 <template id="">
-<div>
-  <Item
+<div class="col-md-12">
+  <app-item
       v-for="(item, index) in items"
       key="index"
-      :items="items"
-  />
+      :item="item"
+  ></app-item>
 </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       type: this.$route.params.type,
-      items: []
+      item: []
     }
   },
   watch: {
@@ -23,18 +23,17 @@ export default {
   },
   methods: {
     fetchItems() {
-      this.items = [];
+      this.item = [];
       this.type = this.$route.params.type;
       let initial_ids = [5, 15, 2];
 
       for (let i in initial_ids) {
         let id = initial_ids[i]
-        console.log('id', id)
         fetch(`https://swapi.co/api/${this.type}/${id}`, {
             method: 'GET'
           })
           .then(response => response.json())
-          .then(json => this.items.push(json))
+          .then(json => this.item.push(json))
       }
     }
   },
@@ -42,7 +41,7 @@ export default {
     this.fetchItems();
   },
   components: {
-    Item
+    'app-item': Item
   }
 }
 </script>

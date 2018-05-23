@@ -15,6 +15,6 @@
 
 <script type="text/javascript">
   export default {
-    props: ['items']
+    props: ['item']
   }
 </script>
