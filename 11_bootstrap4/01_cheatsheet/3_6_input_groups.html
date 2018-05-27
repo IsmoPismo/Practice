@@ -83,52 +83,69 @@
         <!--####################START HERE#####################-->
 
         <div class="input-group">
-            <span class="input-group-addon">@</span>
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
             <input type="text" class="form-control" placeholder="Username">
         </div>
         <br>
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Email address">
-            <span class="input-group-addon">@something.com</span>
+            <div class="input-group-append">
+              <span class="input-group-text">@something.com</span>
+            </div>
         </div>
         <br>
         <label for="profile-url">Choose profile URL</label>
         <div class="input-group">
-            <span class="input-group-addon">https://something.com/member/</span>
+          <div class="input-group-prepend">
+            <span class="input-group-text">https://something.com/member/</span>
+          </div>
             <input type="text" class="form-control" id="profile-url">
         </div>
         <br>
         <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <input type="text" class="form-control">
-            <span class="input-group-addon">.00</span>
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input type="text" class="form-control">
+          <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div>
         </div>
         <br>
         <div class="input-group input-group-lg">
-            <span class="input-group-addon">@</span>
+          <div class="input-group-prepend">
+            <span class="input-group-text">@</span>
+          </div>
             <input type="text" placeholder="Username" class="form-control">
         </div>
         <br>
-        <div class="input-group">
-            <span class="input-group-addon">
-                <input type="checkbox">
-            </span>
+        <div class="input-group input-group-lg">
+          <div class="input-group-prepend">
+            <div class="input-group-text">
+              <input type="checkbox">
+            </div>
+          </div>
             <input type="text" class="form-control">
         </div>
         <br>
         <div class="input-group">
-            <span class="input-group-addon">
-                <input type="radio">
-            </span>
-            <span class="input-group-addon">$5.00</span>
+          <div class="input-group-prepend">
+          <div class="input-group-text">
+              <input type="radio">
+            </div>
+              <span class="input-group-text">$5.00</span>
+          </div>
+
             <input type="text" class="form-control">
         </div>
         <br>
          <div class="input-group">
             <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
+            <div class="input-group-append">
                 <button class="btn btn-primary" type="button">Search</button>
-            </span>
+            </div>
         </div>
 
     </div><!-- ./container -->
