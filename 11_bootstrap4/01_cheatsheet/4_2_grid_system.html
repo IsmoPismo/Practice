@@ -84,20 +84,22 @@
 
     <!-- RESPONSIVE GRID -->
     <div class="row">
-      <div class="col-sm-6 col-md-8 col-lg-9 col-xl-10" style="border:1px solid #333">
+      <div class="col-sm-6 col-md-8" style="border:1px solid #333">
         <ul>
-          <li>6 column on small screens</li>
-          <li>8 column on medium screen</li>
-          <li>9 column on large screen</li>
-          <li>10 column on xlarge screen</li>
+          <li class="d-sm-none d-block">Stacked at xsml</li>
+          <li class="d-none d-sm-block d-md-none">6 column on small screens</li>
+          <li class="d-none d-md-block d-lg-none">8 column on medium screen</li>
+          <li class="d-none d-lg-block d-xl-none">9 column on large screen</li>
+          <li class="d-none d-xl-block">10 column on xlarge screen</li>
         </ul>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2" style="border:1px solid #333">
+      <div class="col-sm-6 col-md-4" style="border:1px solid #333">
         <ul>
-          <li>6 column on small screens</li>
-          <li>8 column on medium screen</li>
-          <li>3 column on large screen</li>
-          <li>2 column on xlarge screen</li>
+          <li class="d-sm-none d-block">Stacked at xsml</li>
+          <li class="d-none d-sm-block d-md-none">6 column on small screens</li>
+          <li class="d-none d-md-block d-lg-none">4 column on medium screen</li>
+          <li class="d-none d-lg-block d-xl-none">3 column on large screen</li>
+          <li class="d-none d-xl-block">2 column on xlarge screen</li>
         </ul>
       </div>
     </div>
@@ -121,9 +123,9 @@
 
     <!-- AUTO LAYOUT -->
     <div class="row">
+      <div class="col-5" style="border:1px solid #333">Auto Layout</div>
       <div class="col" style="border:1px solid #333">Auto Layout</div>
-      <div class="col-6" style="border:1px solid #333">Auto Layout</div>
-      <div class="col-4" style="border:1px solid #333">Auto Layout</div>
+      <div class="col-5" style="border:1px solid #333">Auto Layout</div>
     </div>
 
     <!-- EQUAL WIDTH STACKED -->
@@ -135,10 +137,10 @@
 
     <!-- ORDERING -->
     <div class="row">
-      <div class="col order-3" style="border:1px solid #333">
+      <div class="col order-2" style="border:1px solid #333">
         First
       </div>
-      <div class="col order-2" style="border:1px solid #333">
+      <div class="col order-3" style="border:1px solid #333">
         Second
       </div>
       <div class="col order-1" style="border:1px solid #333">
@@ -164,10 +166,10 @@
       <div class="col-sm-9" style="border:1px solid #333">
         Level 1: .col-sm-9
         <div class="row">
-          <div class="col-sm-6" style="border:1px solid red">
+          <div class="col-8" style="border:1px solid red">
             Level 2: .col-8 .col-sm-6
           </div>
-          <div class="col-sm-6" style="border:1px solid red">
+          <div class="col-4" style="border:1px solid red">
             Level 2: .col-4 .col-sm-6
           </div>
         </div>
