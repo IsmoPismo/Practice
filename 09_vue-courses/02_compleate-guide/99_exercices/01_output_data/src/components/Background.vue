@@ -13,5 +13,7 @@
     background-image: url('../assets/cherry.jpg');
     height: 100vh;
     z-index: -1;
+    background-size: cover;
+    background-position: 0% 10%;
   }
 </style>
