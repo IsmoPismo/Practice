@@ -1,0 +1,25 @@
+.navbar .nav-link {
+  font-size: 15px;
+  font-variant: small-caps;
+  padding-left: 1em !important;
+  padding-right: 1em !important; }
+
+.navbar .nav-item.active {
+  border-left: #444 3px solid; }
+
+.carousel-item {
+  height: 88vh; }
+
+.carousel-image-1 {
+  background-image: url("../img/image1.jpg");
+  background-size: cover;
+  background-position: center 80%; }
+
+.carousel-image-2 {
+  background-image: url("../img/image2.jpg");
+  background-size: cover; }
+
+.carousel-image-3 {
+  background-image: url("../img/image3.jpg");
+  background-size: cover;
+  background-position: 40% 40%; }
