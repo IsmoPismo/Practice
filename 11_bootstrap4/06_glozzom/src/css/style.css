@@ -8,7 +8,7 @@
   border-left: #444 3px solid; }
 
 .carousel-item {
-  height: 88vh; }
+  height: 80vh; }
 
 .carousel-image-1 {
   background-image: url("../img/image1.jpg");
@@ -23,3 +23,14 @@
   background-image: url("../img/image3.jpg");
   background-size: cover;
   background-position: 40% 40%; }
+
+#icons .fa {
+  font-size: 58px; }
+
+#home-heading {
+  background-image: url("../img/lights.jpg");
+  background-attachment: fixed;
+  height: 270px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
