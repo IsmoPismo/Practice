@@ -7,6 +7,7 @@
   <title>Glozzom</title>
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"/>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,7 +40,7 @@
             <div class="carousel-caption d-none d-md-block text-right mb-5">
               <h1 class="display-3">Hey There<h1>
                 <p class="lead">Sit amet, consectetur adipisicing elit. Nulla non odit obcaecati, fugit dolores quaerat nesciunt officia recusandae debitis deserunt, ex iste error ipsum quas itaque sint odio labore quia! Et minima tempore voluptatibus, consequatur iste autem</p>
-                <button class="btn btn-outline-primary btn-lg">I'm pointless</button>
+                <button class="btn btn-primary btn-lg">I'm pointless</button>
             </div>
           </div>
         </div>
@@ -51,7 +52,7 @@
                 <p class="lead">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla non odit obcaecati, fugit dolores quaerat nesciunt officia recusandae debitis deserunt, ex iste error ipsum quas itaque sint odio labore quia! Et minima tempore voluptatibus, consequatur iste autem.
                 </p>
-                <button class="btn btn-outline-danger btn-lg">Delete</button>
+                <button class="btn btn-danger btn-lg">Delete</button>
             </div>
           </div>
         </div>
@@ -117,8 +118,122 @@
     </div>
   </div>
 
+  <!-- INFO SECTION -->
+  <div id="info" class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center align-self-center">
+          <h3>Awesome Laptop</h3>
+          <p class="lead">Make awesome animations on this beautiful machine!</p>
+          <p>Ullam eveniet optio necessitatibus expedita maiores eligendi? Incidunt, dolore. Lepsum dolor sit. Čipsum dolor sit. Lepsum dolor sit. Čipsum dolor sit. maiores eligendi?  maiores eligendi? Lepsum dolor sit. Čipsum dolor sit.</p>
+          <a href="#" class="btn btn-outline-danger btn-lg">Buy This Laptop</a>
+        </div>
+        <div class="col-md-6">
+          <img src="../img/laptop.png" alt="laptop" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO PLAYER -->
+  <div id="video-player">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a  href="#"
+                class="video"
+                data-video="https://www.youtube.com/embed/beIFkYn5stw"
+                data-toggle="modal"
+                data-target="#videoModal">
+              <i class="fa fa-play"></i>
+            </a>
+            <h1>See What You Can Do</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGE GALLERY -->
+  <div id="gallery" class="py-5">
+    <div class="container text-center">
+      <h1>Check this out</h1>
+      <p class="lead">Cool looking photos ipsum dolor sit amet, consectetur adipisicing.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <a  href="img/busi (1).jpg"
+              data-toggle="lightbox"
+              data-gallery="img-gallery">
+            <img src="img/busi (1).jpg"
+                 alt="businessman giving a presentation"
+                 class="img-fluid m-4">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a  href="http://www.lorempixel.com/560/560/business/2"
+              data-toggle="lightbox"
+              data-gallery="img-gallery">
+            <img  src="img/busi (2).jpg"
+                  alt="guy with tie and shirt"
+                  class="img-fluid m-4">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a  href="http://www.lorempixel.com/560/560/business/3"
+              data-toggle="lightbox"
+              data-gallery="img-gallery">
+            <img  src="img/busi (3).jpg"
+                  alt="business meeting"
+                  class="img-fluid m-4">
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <a  href="http://www.lorempixel.com/560/560/business/4"
+              data-toggle="lightbox"
+              data-gallery="img-gallery">
+            <img  src="img/busi (4).jpg"
+                  alt="people working in the office"
+                  class="img-fluid m-4">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a  href="http://www.lorempixel.com/560/560/business/5"
+              data-toggle="lightbox"
+              data-gallery="img-gallery">
+            <img  src="img/busi (5).jpg"
+                  alt="people working in the office"
+                  class="img-fluid m-4">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-galery="img-gallery">
+                <img src="img/busi (6).jpg" class="img-fluid">
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL -->
+  <div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <iframe src="" height="270" width="100%" frameborder="0" allowfullscreen>
+            <button class="close" data-dismiss="modal"><span>&times;</span></button>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
