@@ -65,3 +65,7 @@ body {
 #galery img.img-fluid {
   height: 200px !important;
   width: 100% !important; }
+
+#main-footer {
+  background-color: black;
+  color: white; }
