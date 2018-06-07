@@ -88,3 +88,11 @@ body {
 #services button {
   border-top-left-radius: 0;
   border-top-right-radius: 0; }
+
+#faq .card {
+  border: #555; }
+  #faq .card a {
+    text-decoration: none;
+    color: #eee; }
+  #faq .card .card-body, #faq .card .card-header {
+    background-color: #333; }
