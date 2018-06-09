@@ -1,16 +1,21 @@
-const weather = new Weather;
-const ui_location = document.querySelector('#w-location');
-const ui_temp = document.querySelector('#w-desc');
-
-// weather.changeLocation('Odzak');
+const storage = new Storage();
+const weatherLocation = storage.getLocationData();
+const weather = new Weather(weatherLocation.city);
+const ui = new UI();
 document.addEventListener('DOMContentLoaded', getWeather);
+document.querySelector('#w-change-btn').addEventListener('click', e => {
+  const city = document.querySelector('#city').value;
+  weather.changeLocation(city);
+  storage.setLocationData(city);
+  getWeather();
+  $('#locModal').modal('hide');
+});
 
 function getWeather(){
   weather.getWeather()
     .then(result => {
       console.log(result);
-      // ui_temp.innerText = `${result.main.temp - 272.15}°`;
-      // ui_location.innerText = result.name;
+      ui.paint(result);
     })
     .catch(err => console.log(err));
 }

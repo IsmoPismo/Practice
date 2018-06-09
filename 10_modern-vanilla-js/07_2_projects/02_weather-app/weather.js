@@ -1,7 +1,7 @@
 class Weather {
   constructor(city, api_key){
     this.api_key = "70a054b8fea95b5f7a0d2366eed79ca1";
-    this.city = 'Banja Luka';
+    this.city = city;
   }
 
   async getWeather(){
