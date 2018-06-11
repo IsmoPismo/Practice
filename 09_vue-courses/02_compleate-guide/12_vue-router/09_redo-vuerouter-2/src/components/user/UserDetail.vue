@@ -5,7 +5,7 @@
       <p class="text-muted">User has ID : {{ $route.params.id }}</p>
       <router-link  tag="button"
                     class="btn btn-outline-info btn-lg"
-                    :to="{name: 'editUser', params: { id: $route.params.id}}">
+                    :to="{name: 'editUser', params: { id: $route.params.id}, query: {locale: 'en', q: 101}}">
                     Edit User
       </router-link>
     </div>

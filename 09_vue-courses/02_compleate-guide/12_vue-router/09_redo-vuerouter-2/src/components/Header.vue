@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-danger">
     <div class="container">
       <a href="/" class="navbar-brand">Routing</a>
         <ul class="navbar-nav ml-auto">
