@@ -28,7 +28,22 @@ re = /Hel{2,}o/; // must occur at least {n} times
 // Parantheses
 re = /^([0-9]x){3}$/;
 
-const str = '8x5x6x';
+// Shorthand
+re = /\w/; // word char - alpha or num
+re = /\w+/; // one or more
+re = /\W/; // Non-word char
+re = /\d/; // digit
+re = /\d+/; // one or more
+re = /\D/; // Non-digit
+re = /\s/; // space or tab
+re = /\S/; // No space or tab
+re = /Hell\b/;
+
+// Assertions
+re = /x(?=y)/; // x followed by y
+re = /x(?!y)/; // x followed by y
+
+const str = 'Hello, welcome to Hell';
 const result = re.exec(str);
 
 console.log(result);
