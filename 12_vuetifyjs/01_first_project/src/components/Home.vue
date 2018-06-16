@@ -2,19 +2,22 @@
   <v-container>
     <v-layout row wrap>
       <v-flex xs12 sm6 class="text-xs-center text-sm-right">
-        <v-btn large router to="/meetups" class="info">Explore Meetups</v-btn>
+        <v-btn large router to="/meetups" class="secondary">Explore Meetups</v-btn>
       </v-flex>
       <v-flex xs12 sm6 class="text-xs-center text-sm-left">
-        <v-btn large router to="/meetup/new" class="info">Organize Meetups</v-btn>
+        <v-btn large router to="/meetup/new" class="secondary">Organize Meetups</v-btn>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12>
-        <v-carousel>
+        <v-carousel class="mt-3">
           <v-carousel-item
             v-for="meetup in meetups"
             :src="meetup.imageUrl"
             :key="meetup.id">
+            <div class="title" >
+              {{ meetup.title }}
+            </div>
           </v-carousel-item>
         </v-carousel>
       </v-flex>
@@ -31,11 +34,24 @@
     data () {
       return {
         meetups: [
-          {imageUrl: 'https://cdn.pixabay.com/photo/2015/03/11/12/31/new-york-668616_960_720.jpg', id: 'r65bha1h68a8', title: 'New York'},
-          {imageUrl: 'https://c1.staticflickr.com/4/3810/11753289395_ab7be4e12d_b.jpg', id: 'r65bhaaffh6a8', title: 'Tokyo'},
-          {imageUrl: 'https://cdn.pixabay.com/photo/2014/11/13/23/34/london-530055_960_720.jpg', id: 'r65bha1678aw8', title: 'London'}
+          {imageUrl: '/static/assets/new_york.jpg', id: 'r65bha1h68a8', title: 'New York'},
+          {imageUrl: '/static/assets/tokyo.jpg', id: 'r65bhaaffh6a8', title: 'Tokyo'},
+          {imageUrl: '/static/assets/london.jpg', id: 'r65bha1678aw8', title: 'London'}
         ]
       }
     }
   }
 </script>
+
+<style scoped>
+  .title {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+  }
+</style>
