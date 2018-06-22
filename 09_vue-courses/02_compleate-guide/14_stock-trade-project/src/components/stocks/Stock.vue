@@ -12,10 +12,11 @@
       <input  type="number"
               class="form-control mr-2"
               placeholder="Quantity"
-              v-model="quantity">
+              v-model="quantity"
+              :class="{danger: insufficientFunds}">
       <button class="btn btn-success px-4"
               @click="buyStock"
-              :disabled="quantity <= 0">Buy</button>
+              :disabled="insufficientFunds || quantity <= 0">Buy</button>
     </div>
   </div>
 </template>
@@ -32,15 +33,26 @@ export default {
     buyStock(){
       const order = {
         stockId: this.stock.id,
-        stockPrica: this.stock.price,
+        stockPrice: this.stock.price,
         quantity: this.quantity
       };
-      console.log(order);
+      this.$store.dispatch('buyStocks', order);
       this.quantity = 0;
+    }
+  },
+  computed: {
+    funds(){
+      return this.$store.getters.funds;
+    },
+    insufficientFunds(){
+      return this.quantity * this.stock.price > this.funds;
     }
   }
 }
 </script>
 
-<style lang="css">
+<style scoped>
+  .danger {
+    border: 2px solid red;
+  }
 </style>
