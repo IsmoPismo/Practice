@@ -1,7 +1,13 @@
 "use strict";
 
 function evenLast(data) {
-    return 0;
+    if (data.length === 0)
+        return 0;
+    let sum = 0;
+    for (let i = 0; i < data.length; i += 2){
+      sum += data[i];
+    }
+    return sum * data[data.length - 1];
 }
 
 var assert = require('assert');
