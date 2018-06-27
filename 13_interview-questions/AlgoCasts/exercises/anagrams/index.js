@@ -9,10 +9,7 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB){
-  if (helper(stringA) === helper(stringB)){
-    return true
-  }
-  return false
+  return helper(stringA) === helper(stringB)
 }
 
 function helper(s){
