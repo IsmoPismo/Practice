@@ -9,10 +9,8 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-  if(n === 0)
-    return 0
   let r = parseInt(n.toString().split('').reverse().join(''));
-  return Math.sign(n) > 0 ? r : -r
+  return r * Math.sign(n);
 }
 
 module.exports = reverseInt;
