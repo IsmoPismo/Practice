@@ -8,30 +8,40 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {
-  let mapA = mapString(stringA);
-  let mapB = mapString(stringB);
-
-  if (Object.keys(mapA).length !== Object.keys(mapB).length){
-    return false
+function anagrams(stringA, stringB){
+  if (helper(stringA) === helper(stringB)){
+    return true
   }
-
-  for (let char in mapA){
-    if(mapA[char] !== mapB[char]){
-      return false
-    }
-  }
-
-  return true
+  return false
 }
 
-function mapString(s){
-  s = s.replace(/[^\w]/g, '').toLowerCase();
-  let obj = {}
-  for (let i of s){
-    obj[i] = obj[i] + 1 || 1
-  }
-  return obj
+function helper(s){
+  return s.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
 }
 
 module.exports = anagrams;
+
+// function anagrams(stringA, stringB) {
+//   let mapA = mapString(stringA);
+//   let mapB = mapString(stringB);
+//
+//   if (Object.keys(mapA).length !== Object.keys(mapB).length){
+//     return false
+//   }
+//
+//   for (let char in mapA){
+//     if(mapA[char] !== mapB[char]){
+//       return false
+//     }
+//   }
+//   return true
+// }
+//
+// function mapString(s){
+//   s = s.replace(/[^\w]/g, '').toLowerCase();
+//   let obj = {}
+//   for (let i of s){
+//     obj[i] = obj[i] + 1 || 1
+//   }
+//   return obj
+// }
