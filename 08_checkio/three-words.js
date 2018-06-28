@@ -1,18 +1,19 @@
 "use strict";
 
 function threeWords(data) {
-    let count = 1;
-    let arr = data.split(' ');
-    let re = /\D/;
-    for (let i = 0; i < arr.length; i++){
-        if (re.test(arr[i])){
-             count++;
-             console.log(`${arr[i]} - ${re.source}`);
-         } else {
-           count = 1;
-         }
+    let count = 0;
+    let re = /[A-Za-z]/;
+    for (let word of data.split(' ')){
+      if(re.test(word)){
+        count++
+        if (count >2) {
+          return true
+        }
+      } else {
+        count = 0;
+      }
     }
-    return count > 2 ? true : false
+    return false
 }
 
 var assert = require('assert');
