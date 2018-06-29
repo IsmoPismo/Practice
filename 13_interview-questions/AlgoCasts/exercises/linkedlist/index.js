@@ -54,8 +54,49 @@ class LinkedList {
     this.head = null;
   }
 
+  // Removes the first node
   removeFirst(){
     this.head = this.head.next || null
+  }
+
+  // Removes the last node
+  removeLast(){
+    // Checks for list of length 0 and 1...
+    if (!this.head) {return}
+    if (this.head.next === null){
+      this.head = null;
+      return
+    }
+
+    // ... Loops through other cases
+    let prev = this.head;
+    let curr = this.head.next;
+    while(curr.next !== null){
+      prev = curr
+      curr = curr.next
+    }
+    prev.next = null
+  }
+
+  // Inserts a node at end
+  insertLast(data){
+    if (this.head === null) {return}
+    this.getLast().next = new Node(data);
+  }
+
+  // Gets a node at n-th index
+  getAt(index) {
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === index) {
+        return node;
+      }
+
+      counter++;
+      node = node.next;
+    }
+    return null;
   }
 }
 
