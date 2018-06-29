@@ -30,28 +30,28 @@ function matrix(n) {
   }
 
   while (startCol <= endCol && startRow <= endRow){
-    // Loop through column in incrementing order
+    // Top Row: Loop through column in incrementing order
     for (let f1 = startCol; f1 < endCol; f1++){
       result[startRow][f1] = counter;
       counter++;
     }
     startRow++; // narrow the boundary
 
-    // Loop through last column (in boundary)
+    // Right Column: Loop through last column (in boundary)
     for (let f2 = startRow; f2 < endRow; f2++){
       result[f2][endCol - 1] = counter;
       counter++
     }
     endCol--; // narrow the boundary
 
-    // Loop through column in decrementing order
+    // Bottom Row: Loop through column in decrementing order
     for (let f3 = endCol - 1; f3 >= startCol; f3--){
       result[endRow - 1][f3] = counter;
       counter++;
     }
     endRow--; // narrow the boundary
 
-    // Loop through row in decrementing order
+    // Left Column: Loop through row in decrementing order
     for (let f4 = endRow - 1; f4 >= startRow; f4--){
       result[f4][startCol] = counter;
       counter++;
