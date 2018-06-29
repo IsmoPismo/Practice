@@ -29,7 +29,7 @@ function matrix(n) {
     result.push([])
   }
 
-  for (let baby = 0; baby < n; baby++){
+  while (startCol <= endCol && startRow <= endRow){
     // Loop through column in incrementing order
     for (let f1 = startCol; f1 < endCol; f1++){
       result[startRow][f1] = counter;
@@ -51,12 +51,13 @@ function matrix(n) {
     }
     endRow--; // narrow the boundary
 
+    // Loop through row in decrementing order
     for (let f4 = endRow - 1; f4 >= startRow; f4--){
       result[f4][startCol] = counter;
       counter++;
     }
-    startCol++;
-}
+    startCol++; // narrow the boundary
+  }
   return result
 }
 
