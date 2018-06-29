@@ -14,20 +14,39 @@ class LinkedList {
     this.head = null;
   }
 
+  // Inserts a element as the first node
   insertFirst(data){
     this.head = new Node(data, this.head);
   }
 
+  // Returns the number of nodes
   size(){
+    // Initialize counter and first node
     let counter = 0;
     let node = this.head;
 
+    // Loops through list while there are nodes to count
     while (node){
       counter++;
       node = node.next;
     }
-
     return counter
+  }
+
+  // Returns the first node
+  getFirst(){
+    return this.head;
+  }
+
+  // Returns the last node
+  getLast(){
+    let node = this.head;
+    while(node){
+      if(node.next === null){
+        return node
+      }
+      node = node.next
+    }
   }
 }
 
