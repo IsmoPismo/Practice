@@ -8,7 +8,7 @@
 //   vowels('Why?') --> 0
 
 function vowels(str){
-  return str.toLowerCase().replace(/[^aeiou]/g, '').length
+  return str.replace(/[^aeiou]/ig, '').length
 }
 
 // function vowels(str) {
