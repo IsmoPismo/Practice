@@ -92,12 +92,25 @@ class LinkedList {
       if (counter === index) {
         return node;
       }
-
       counter++;
       node = node.next;
     }
     return null;
   }
+
+  // removeAt(index){
+  //   if(!this.head){
+  //     return
+  //   }
+  //
+  //   if(index === 0){
+  //     this.head = this.head.next
+  //     return
+  //   }
+  //
+  //   const previous = this.getAt(index - 1);
+  //   previous.next = previous.next.next;
+  // }
 }
 
 module.exports = { Node, LinkedList };
