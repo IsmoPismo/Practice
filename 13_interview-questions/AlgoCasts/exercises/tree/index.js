@@ -33,9 +33,18 @@ class Tree {
   traverseBF(fn){
     let arr = [this.root];
     while(arr.length){
-      let first = arr.shift();
-      arr.push(...first.children);
-      fn(first);
+      let node = arr.shift();
+      arr.push(...node.children);
+      fn(node);
+    }
+  }
+
+  traverseDF(fn){
+    let arr = [this.root];
+    while(arr.length){
+      let node = arr.shift();
+      arr.unshift(...node.children)
+      fn(node);
     }
   }
 }
