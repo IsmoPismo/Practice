@@ -1,15 +1,31 @@
-function commonWords(first, second) {
-    let resultArray = [];
-    for (let word of first.split(',')){
-        if (second.includes(word)){
-            resultArray.push(word);
+function absoluteSorting(numbers){
+
+    for (let i = 0; i < numbers.length; i++){
+      for (let j = 0; j < (numbers.length - i - 1); j++){
+        if (numbers[j] > numbers[j+1]){
+          let lesser = numbers[j+1];
+          let numbers[j+1] = numbers[j];
+          let numbers[j] = lesser
         }
-        console.log(resultArray);
+      }
     }
-    return resultArray.sort().join(',');
+    return numbers
 }
 
-commonWords('zaba,ljuba,kruba', 'zaba,kruba')
+absoluteSorting([3, 2, 1, 5])
+
+// function commonWords(first, second) {
+//     let resultArray = [];
+//     for (let word of first.split(',')){
+//         if (second.includes(word)){
+//             resultArray.push(word);
+//         }
+//         console.log(resultArray);
+//     }
+//     return resultArray.sort().join(',');
+// }
+//
+// commonWords('zaba,ljuba,kruba', 'zaba,kruba')
 
 // function mostNumbers(numbers){
 //   let arr = Object.values(arguments).map(num => parseFloat(num))
