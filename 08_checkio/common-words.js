@@ -3,7 +3,7 @@
 function commonWords(first, second) {
     let resultArray = [];
     for (let word of first.split(',')){
-        if (second.includes(word)){
+        if (second.split(',').includes(word)){
             resultArray.push(word);
         }
     }
