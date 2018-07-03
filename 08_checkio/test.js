@@ -1,18 +1,47 @@
-function absoluteSorting(numbers){
-
-    for (let i = 0; i < numbers.length; i++){
-      for (let j = 0; j < (numbers.length - i - 1); j++){
-        if (numbers[j] > numbers[j+1]){
-          let lesser = numbers[j+1];
-          let numbers[j+1] = numbers[j];
-          let numbers[j] = lesser
-        }
-      }
+function hammingDistance(n, m){
+  if (n === m){
+      return 0
+  }
+  let larger = toBin(n > m ? n : m);
+  let smaller = toBin(m < n ? m : n);
+  let counter = 0;
+  for (let i = 0; i < larger.length - smaller.length + 1; i++){
+    if (larger.length === smaller.length){
+      continue
     }
-    return numbers
+    smaller = '0' + smaller;
+  }
+  for (let i = 0; i < larger.length; i++){
+    if (larger.split('')[i] !== smaller.split('')[i]){
+      counter++
+    }
+  }
+  console.log(larger, smaller);
+  return counter
+
 }
 
-absoluteSorting([3, 2, 1, 5])
+function toBin(x){
+  let binary = parseInt(x, 10);
+  return binary.toString(2);
+}
+
+hammingDistance(204,157)
+// function absoluteSorting(numbers){
+//
+//     for (let i = 0; i < numbers.length; i++){
+//       for (let j = 0; j < (numbers.length - i - 1); j++){
+//         if (numbers[j] > numbers[j+1]){
+//           let lesser = numbers[j+1];
+//           let numbers[j+1] = numbers[j];
+//           let numbers[j] = lesser
+//         }
+//       }
+//     }
+//     return numbers
+// }
+//
+// absoluteSorting([3, 2, 1, 5])
 
 // function commonWords(first, second) {
 //     let resultArray = [];
