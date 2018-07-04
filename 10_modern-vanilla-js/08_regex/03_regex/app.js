@@ -41,7 +41,7 @@ re = /Hell\b/;
 
 // Assertions
 re = /x(?=y)/; // x followed by y
-re = /x(?!y)/; // x followed by y
+re = /x(?!y)/; // not x followed by y
 
 const str = 'Hello, welcome to Hell';
 const result = re.exec(str);
