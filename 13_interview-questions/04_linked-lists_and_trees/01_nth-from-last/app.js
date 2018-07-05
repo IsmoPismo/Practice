@@ -42,6 +42,19 @@ class LinkedList {
     let index = this.size() - fromLastIndex;
     return this.getAt(index)
   }
+
+  getFromLastTwo(index){
+    let slow = this.head;
+    let fast = this.head;
+    for (let step = 0; step < index; step++){
+      fast = fast.next;
+    }
+    while(!fast === null){
+      slow = slow.next;
+      fast = fast.next;
+    }
+    return slow
+  }
 }
 
 let list = new LinkedList();
@@ -49,7 +62,7 @@ list.insertFirst(5)
 list.insertFirst(8)
 list.insertFirst(12)
 list.insertFirst('fucker')
-console.log(list);
-console.log(list.size());
-console.log(list.getAt(2));
-console.log(list.getFromLast(2));
+// console.log(list);
+// console.log(list.size());
+// console.log(list.getAt(2));
+console.log(list.getFromLastTwo(0));
