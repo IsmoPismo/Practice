@@ -49,11 +49,11 @@ class LinkedList {
     for (let step = 0; step < index; step++){
       fast = fast.next;
     }
-    while(!fast === null){
+    while(!fast.next === null){
       slow = slow.next;
       fast = fast.next;
     }
-    return slow
+    return fast
   }
 }
 
@@ -65,4 +65,4 @@ list.insertFirst('fucker')
 // console.log(list);
 // console.log(list.size());
 // console.log(list.getAt(2));
-console.log(list.getFromLastTwo(0));
+console.log(list.getFromLastTwo(2).data);
