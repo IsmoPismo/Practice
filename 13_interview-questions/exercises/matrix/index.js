@@ -52,11 +52,8 @@ function matrix(n) {
       matrix[i][bound.l] = count
     }
     bound.l++
-}
-
+  }
   return matrix
 }
-
-console.log(matrix(3));
 
 module.exports = matrix;
