@@ -12,6 +12,18 @@
 //   c.next = b;
 //   circular(l) // true
 
-function circular(list) {}
+function circular(list) {
+  let node = list.head;
+  let seek = node.next;
+  
+  while(seek.next.next){
+    if(node === seek){
+      return true
+    }
+    node = node.next
+    seek = seek.next.next
+  }
+  return false
+}
 
 module.exports = circular;
