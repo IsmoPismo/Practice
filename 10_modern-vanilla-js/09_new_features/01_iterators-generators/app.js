@@ -14,60 +14,31 @@ function nameIterator(names){
 const namesArr = ['Aria', 'Pinđa', 'Šnjufka', 'Vrtirep']
 const listanje = nameIterator(namesArr)
 
-console.log(listanje.next().value);
+// console.log(listanje.next().value);
 
 
-// Iterator Example
-// function nameIterator(names) {
-//   let nextIndex = 0;
+// Generator
+function* sayNames(){
+  yield 'Aria'
+  yield 'Pinđa'
+  yield 'Maza'
+  yield 'Beba'
+  yield 'Bjelka'
+}
 
-//   return {
-//     next: function() {
-//       return nextIndex < names.length ?
-//       { value: names[nextIndex++], done: false } :
-//       { done: true }
-//     }
-//   }
-// }
-
-// // Create an array of names
-// const namesArr = ['Jack', 'Jill', 'John'];
-// // Init iterator and pass in the names array
-// const names = nameIterator(namesArr);
+const names = sayNames()
 
 // console.log(names.next().value);
-// console.log(names.next().value);
-// console.log(names.next().value);
-// console.log(names.next().value);
 
-// Generator Example
-// function* sayNames() {
-//   yield 'Jack';
-//   yield 'Jill';
-//   yield 'John';
-// }
+function* getNewId(){
+  let id = 19
 
-// const name = sayNames();
+  while(true){
+    yield id++
+  }
+}
 
-// console.log(name.next().value);
-// console.log(name.next().value);
-// console.log(name.next().value);
-// console.log(name.next().value);
+const gen = getNewId()
 
-// ID Creator
-// function* createIds() {
-//   let index = 1;
-//
-//   while(true) {
-//     yield index++;
-//   }
-// }
-//
-// const gen = createIds();
-//
-// console.log(gen.next().value);
-// console.log(gen.next().value);
-// console.log(gen.next().value);
-// console.log(gen.next().value);
-// console.log(gen.next().value);
-// console.log(gen.next().value);
+const first = gen.next().value // 19
+const second = gen.next().value // 20
