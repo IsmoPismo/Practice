@@ -19,11 +19,12 @@ myObj.key4 = 'Prop4';
 //   console.log(`${i}: ${myObj[i]}`);
 // }
 
+// Symbols are ignored by JSON.stringify
+// console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // => {}
+
 const symObj = Object.getOwnPropertySymbols(myObj)
 console.log(symObj);
 console.log(Object.values(myObj));
 
-
-
-// Symbols are ignored by JSON.stringify
-// console.log(JSON.stringify({[Symbol('sym1')]: 'prop'})); // => {}
+let globalSym = Symbol.for('VALUE') // new global Symbol
+console.log(Symbol.keyFor(globalSym)); // VALUE
