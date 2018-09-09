@@ -146,6 +146,10 @@ const App = (function(ItemCtrl, UICtrl){
       } else {
         UICtrl.populateItemList(items);
       }
+
+      // Calculate and Display Total calories than it loads Event Listeners
+      const totalCalories = ItemCtrl.getTotalCalories();
+      UICtrl.showTotalCalories(totalCalories);
       loadEventListeners();
     }
   }
