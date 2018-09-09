@@ -36,6 +36,14 @@ const ItemCtrl = (function(){
       data.items.push(newItem);
       return newItem
     },
+    getTotalCalories: function(){
+      let total = 0;
+      data.items.forEach(item => {
+        total += item.calories
+      })
+      data.totalCalories = total;
+      return total
+    },
     logData: function(){
       return data
     }
@@ -48,7 +56,8 @@ const UICtrl = (function(){
     itemList: '#item-list',
     addBtn: '.add-btn',
     itemNameInput: '#item-name',
-    itemCaloriesInput: '#item-calories'
+    itemCaloriesInput: '#item-calories',
+    totalCalories: '.total-calories'
   }
   // PUBLIC METHODS
   return {
@@ -78,6 +87,7 @@ const UICtrl = (function(){
     addListItem: function(item){
       // Go from hidden to shown list
       document.querySelector(UISelector.itemList).style.display = 'block'
+
       const li = document.createElement('li');
       li.className = 'collection-item';
       li.id = `item-${item.id}`
@@ -87,6 +97,9 @@ const UICtrl = (function(){
         <i class="edit-item fa fa-pencil"></i>
       </a>`;
       document.querySelector(UISelector.itemList).insertAdjacentElement('beforeend', li)
+    },
+    showTotalCalories: function(){
+      document.querySelector(UISelector.totalCalories).innerText = ItemCtrl.getTotalCalories()
     },
     clearInput: function(){
       document.querySelector(UISelector.itemNameInput).value = '';
@@ -110,8 +123,12 @@ const App = (function(ItemCtrl, UICtrl){
     const input = UICtrl.getItemInput();
 
     if(input.name !== '' && input.calories !== ''){
-      const newItem = ItemCtrl.addItem(input.name, input.calories);
-      UICtrl.addListItem(newItem);
+      // Adding a new Item to the UI
+      UICtrl.addListItem(ItemCtrl.addItem(input.name, input.calories));
+      // Calculate and Display Total calories
+      const totalCalories = ItemCtrl.getTotalCalories();
+      UICtrl.showTotalCalories(totalCalories);
+
       UICtrl.clearInput();
     }
     e.preventDefault()
