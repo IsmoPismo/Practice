@@ -8,11 +8,7 @@ const ItemCtrl = (function(){
 
   //Initializing
   const data = {
-    items: [
-      // {id: 0, name: 'Dinner', calories: 1000},
-      // {id: 1, name: 'Snack', calories: 500},
-      // {id: 2, name: 'Doručak', calories: 700}
-    ],
+    items: [],
     currentItem: null,
     totalCalories: 0
   }
@@ -66,6 +62,17 @@ const ItemCtrl = (function(){
     getCurrentItem: function(){
       return data.currentItem
     },
+    deleteItem: function(id){
+      const ids = data.items.map(item => item.id)
+      const index = ids.indexOf(id);
+      if(index !== -1){
+        data.items.splice(index, 1);
+      }
+      UICtrl.clearEditState();
+    },
+    clearAllItems: function(){
+      data.items = [];
+    },
     logData: function(){
       return data
     }
@@ -84,7 +91,8 @@ const UICtrl = (function(){
     itemNameInput: '#item-name',
     itemCaloriesInput: '#item-calories',
     totalCalories: '.total-calories',
-    listItems: '#item-list li'
+    listItems: '#item-list li',
+    clearBtn: '.clear-btn'
   }
   // PUBLIC METHODS
   return {
@@ -94,7 +102,7 @@ const UICtrl = (function(){
       items.forEach((item) => {
         html += `<li class="collection-item" id="item-${item.id}">
           <strong>${item.name}: </strong>
-          <em>${item.calories}kCal</em>
+          <em>${item.calories} kCal</em>
           <a href="#" class="secondary-content">
             <i class="edit-item fa fa-pencil"></i>
           </a>
@@ -119,7 +127,7 @@ const UICtrl = (function(){
       li.className = 'collection-item';
       li.id = `item-${item.id}`
       li.innerHTML = `<strong>${item.name}: </strong>
-      <em>${item.calories}</em>
+      <em>${item.calories} kCal</em>
       <a href="#" class="secondary-content">
         <i class="edit-item fa fa-pencil"></i>
       </a>`;
@@ -130,7 +138,6 @@ const UICtrl = (function(){
     },
     updateListItem: function(item){
       let listItems = document.querySelectorAll(UISelectors.listItems);
-      console.log('SHIT');
       // Turn Node list into array
       listItems = Array.from(listItems);
 
@@ -145,6 +152,11 @@ const UICtrl = (function(){
           </a>`;
         }
       });
+    },
+    deleteListItem: function(id){
+      const itemID = `#item-${id}`
+      const item = document.querySelector(itemID);
+      item.remove();
     },
     clearInput: function(){
       document.querySelector(UISelector.itemNameInput).value = '';
@@ -171,6 +183,11 @@ const UICtrl = (function(){
     },
     getUISelector: function(){
       return UISelector
+    },
+    clearAllItems: function(){
+      document.querySelectorAll(UISelector.listItems).forEach(item => {
+        item.remove();
+      })
     }
   }
 })()
@@ -184,6 +201,12 @@ const App = (function(ItemCtrl, UICtrl){
     document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
     document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
     document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
+    document.querySelector(UISelectors.deleteBtn).addEventListener('click', itemDeleteSubmit);
+    document.querySelector(UISelectors.clearBtn).addEventListener('click', clearAll);
+    document.querySelector(UISelectors.backBtn).addEventListener('click', (e) => {
+      e.preventDefault();
+      UICtrl.clearEditState();
+    });
 
     //disable 'enter' on Input
     document.addEventListener('keypress', e => {
@@ -242,6 +265,28 @@ const App = (function(ItemCtrl, UICtrl){
     UICtrl.showTotalCalories(totalCalories);
     UICtrl.clearEditState();
     e.preventDefault();
+  }
+
+  const itemDeleteSubmit = function(e){
+    const currentItem = ItemCtrl.getCurrentItem();
+    ItemCtrl.deleteItem(currentItem.id);
+    UICtrl.deleteListItem(currentItem.id)
+
+    //Updates the total
+    const totalCalories = ItemCtrl.getTotalCalories();
+    UICtrl.showTotalCalories(totalCalories);
+    e.preventDefault()
+  }
+
+  const clearAll = function(e){
+    ItemCtrl.clearAllItems();
+    UICtrl.clearAllItems();
+    UICtrl.hideList();
+
+    //Updates the total
+    const totalCalories = ItemCtrl.getTotalCalories();
+    UICtrl.showTotalCalories(totalCalories);
+    e.preventDefault()
   }
 
   // PUBLIC METHODS
