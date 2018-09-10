@@ -1,5 +1,3 @@
-// Storage Conroller
-
 // -- Item Conroller --
 const ItemCtrl = (function(){
   const Item = function(id, name, calories){
@@ -47,6 +45,21 @@ const ItemCtrl = (function(){
     getItemById: function(id){
       return data.items.find(item => item.id === id)
     },
+    updateItem: function(name, calories){
+      // Calories to number
+      calories = parseInt(calories);
+
+      let found = null;
+
+      data.items.forEach(function(item){
+        if(item.id === data.currentItem.id){
+          item.name = name;
+          item.calories = calories;
+          found = item;
+        }
+      });
+      return found;
+    },
     setCurrentItem: function(item){
       data.currentItem = item
     },
@@ -59,6 +72,7 @@ const ItemCtrl = (function(){
   }
 })()
 
+
 // -- UI Conroller --
 const UICtrl = (function(){
   const UISelector = {
@@ -69,7 +83,8 @@ const UICtrl = (function(){
     backBtn: '.back-btn',
     itemNameInput: '#item-name',
     itemCaloriesInput: '#item-calories',
-    totalCalories: '.total-calories'
+    totalCalories: '.total-calories',
+    listItems: '#item-list li'
   }
   // PUBLIC METHODS
   return {
@@ -113,6 +128,24 @@ const UICtrl = (function(){
     showTotalCalories: function(){
       document.querySelector(UISelector.totalCalories).innerText = ItemCtrl.getTotalCalories()
     },
+    updateListItem: function(item){
+      let listItems = document.querySelectorAll(UISelectors.listItems);
+      console.log('SHIT');
+      // Turn Node list into array
+      listItems = Array.from(listItems);
+
+      listItems.forEach(function(listItem){
+        const itemID = listItem.getAttribute('id');
+
+        if(itemID === `item-${item.id}`){
+          document.querySelector(`#${itemID}`).innerHTML = `<strong>${item.name}: </strong>
+           <em> ${item.calories} Calories</em>
+          <a href="#" class="secondary-content">
+            <i class="edit-item fa fa-pencil"></i>
+          </a>`;
+        }
+      });
+    },
     clearInput: function(){
       document.querySelector(UISelector.itemNameInput).value = '';
       document.querySelector(UISelector.itemCaloriesInput).value = '';
@@ -129,11 +162,12 @@ const UICtrl = (function(){
       document.querySelector(UISelector.backBtn).style.display = 'inline'
     },
     showEditState: function(){
-      UICtrl.clearInput();
       document.querySelector(UISelector.addBtn).style.display = 'none'
       document.querySelector(UISelector.updateBtn).style.display = 'inline'
       document.querySelector(UISelector.deleteBtn).style.display = 'inline'
       document.querySelector(UISelector.backBtn).style.display = 'inline'
+      document.querySelector(UISelector.itemNameInput).value = ItemCtrl.getCurrentItem().name;
+      document.querySelector(UISelector.itemCaloriesInput).value = ItemCtrl.getCurrentItem().calories;
     },
     getUISelector: function(){
       return UISelector
@@ -141,16 +175,26 @@ const UICtrl = (function(){
   }
 })()
 
+
 // -- App Conroller --
 const App = (function(ItemCtrl, UICtrl){
   // Gets the selectors and adds 2 click-events
   const loadEventListeners = function(){
     const UISelectors = UICtrl.getUISelector();
     document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
-    document.querySelector(UISelectors.itemList).addEventListener('click', itemEditSubmit);
+    document.querySelector(UISelectors.itemList).addEventListener('click', itemEditClick);
+    document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
+
+    //disable 'enter' on Input
+    document.addEventListener('keypress', e => {
+      if(e.keyCode === 13 || e.which === 13){
+        e.preventDefault();
+        return false
+      }
+    })
   }
 
-  // Two Functions waiting for a click
+  // Three Functions waiting for a click
   const itemAddSubmit = function(e){
     // Get Form input from UICtrl
     const input = UICtrl.getItemInput();
@@ -167,7 +211,7 @@ const App = (function(ItemCtrl, UICtrl){
     e.preventDefault()
   }
 
-  const itemEditSubmit = function(e){
+  const itemEditClick = function(e){
       if(e.target.classList.contains('edit-item')){
         // Turn id into number
         const itemId = e.target.parentNode.parentNode.id;
@@ -182,6 +226,22 @@ const App = (function(ItemCtrl, UICtrl){
         UICtrl.showEditState();
       }
       e.preventDefault()
+  }
+
+  const itemUpdateSubmit = function(e){
+    // Gets the input and updates the item and ui controlers
+    const input = UICtrl.getItemInput();
+    const updatedItem = ItemCtrl.updateItem(input.name, input.calories);
+
+    // UICtrl.updateListItem(updatedItem); didn't work so I used theese two
+    const items = ItemCtrl.getItems()
+    UICtrl.populateItemList(items);
+
+    //Updates the total
+    const totalCalories = ItemCtrl.getTotalCalories();
+    UICtrl.showTotalCalories(totalCalories);
+    UICtrl.clearEditState();
+    e.preventDefault();
   }
 
   // PUBLIC METHODS
