@@ -26,6 +26,29 @@ const StorageCtrl = (function(){
       items = JSON.parse(localStorage.getItem('items'));
     }
     return items;
+  },
+  updateItemStorage: function(updatedItem){
+    let items = JSON.parse(localStorage.getItem('items'))
+
+    items.forEach(function(item, index){
+      if(updatedItem.id === item.id){
+        items.splice(index, 1, updatedItem)
+      }
+    })
+    localStorage.setItem('items', JSON.stringify(items));
+  },
+  deleteItemFromStorage: function(id){
+    let items = JSON.parse(localStorage.getItem('items'))
+
+    items.forEach(function(item, index){
+      if(id === item.id){
+        items.splice(index, 1)
+      }
+    })
+    localStorage.setItem('items', JSON.stringify(items));
+  },
+  clearItemsFromStorage: function(){
+    localStorage.removeItem('items')
   }
 }
 })();
@@ -294,6 +317,7 @@ const App = (function(ItemCtrl, UICtrl){
     // Gets the input and updates the item and ui controlers
     const input = UICtrl.getItemInput();
     const updatedItem = ItemCtrl.updateItem(input.name, input.calories);
+    StorageCtrl.updateItemStorage(updatedItem);
 
     // UICtrl.updateListItem(updatedItem); didn't work so I used theese two
     const items = ItemCtrl.getItems()
@@ -310,6 +334,7 @@ const App = (function(ItemCtrl, UICtrl){
     const currentItem = ItemCtrl.getCurrentItem();
     ItemCtrl.deleteItem(currentItem.id);
     UICtrl.deleteListItem(currentItem.id)
+    StorageCtrl.deleteItemFromStorage(currentItem.id);
 
     //Updates the total
     const totalCalories = ItemCtrl.getTotalCalories();
@@ -321,6 +346,7 @@ const App = (function(ItemCtrl, UICtrl){
     ItemCtrl.clearAllItems();
     UICtrl.clearAllItems();
     UICtrl.hideList();
+    StorageCtrl.clearItemsFromStorage();
 
     //Updates the total
     const totalCalories = ItemCtrl.getTotalCalories();
