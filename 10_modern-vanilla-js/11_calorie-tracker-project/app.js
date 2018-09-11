@@ -1,3 +1,36 @@
+// -- Storage Constroller --
+const StorageCtrl = (function(){
+
+  // PUBLIC METHODS
+  return {
+    storeItem: function(item){
+
+    let items;
+
+    if(localStorage.getItem('items') === null){
+      items = [];
+      items.push(item)
+      localStorage.setItem('items', JSON.stringify(items))
+      console.log(items);
+    } else {
+      items = JSON.parse(localStorage.getItem('items'))
+      items.push(item);
+      localStorage.setItem('items', JSON.stringify(items))
+    }
+  },
+  getItemsFromStorage: function(){
+    let items;
+    if(localStorage.getItem('items') === null){
+      items = [];
+    } else {
+      items = JSON.parse(localStorage.getItem('items'));
+    }
+    return items;
+  }
+}
+})();
+
+
 // -- Item Conroller --
 const ItemCtrl = (function(){
   const Item = function(id, name, calories){
@@ -8,7 +41,7 @@ const ItemCtrl = (function(){
 
   //Initializing
   const data = {
-    items: [],
+    items: StorageCtrl.getItemsFromStorage(),
     currentItem: null,
     totalCalories: 0
   }
@@ -223,11 +256,17 @@ const App = (function(ItemCtrl, UICtrl){
     const input = UICtrl.getItemInput();
 
     if(input.name !== '' && input.calories !== ''){
+      // Adds item
+      const newItem = ItemCtrl.addItem(input.name, input.calories);
+
       // Adding a new Item to the UI
-      UICtrl.addListItem(ItemCtrl.addItem(input.name, input.calories));
+      UICtrl.addListItem(newItem);
       // Calculate and Display Total calories
       const totalCalories = ItemCtrl.getTotalCalories();
       UICtrl.showTotalCalories(totalCalories);
+
+      // Store in Local Storage
+      StorageCtrl.storeItem(newItem);
 
       UICtrl.clearInput();
     }
