@@ -4,11 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Micor</title>
 </head>
 <body>
-  <script src="./build/app.bundle.js">
+  <nav class="navbar navbar-dark bg-primary mb3">
+    <div class="container">
+      <a href="#" class="navbar-brand"><i class="fa fa-cubes"></i> Micor</a>
+    </div>
+  </nav>
 
+  <div class="container postsContainer mt-3">
+    <div class="card card-body card-form">
+      <h1 class="card-title">Say Something</h1>
+      <p class="lead">What's on your mind?</p>
+      <div class="form-group">
+        <input type="text" id="title" class="form-control" placeholder="Post Titel">
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" placeholder="Post Body"></textarea>
+      </div>
+      <input type="hidden" id="id">
+      <button class="btn btn-primary btn-block post-submit">Post it</button>
+      <span class="form-end"></span>
+    </div>
+    <br>
+    <div id="posts"></div>
+  </div>
+  <footer class="text-center bg-light p-4 fixed-bottom">
+    Micor
+  </footer>
+  <script src="./build/app.bundle.js">
   </script>
 </body>
 </html>
