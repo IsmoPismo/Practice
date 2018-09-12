@@ -1,3 +1,4 @@
-const test = () => console.log(123);
+import { person, tellAge } from './lib'
 
-test()
+document.querySelector('body').style.backgroundColor = 'black'
+alert(`Age is ${tellAge()}`)
