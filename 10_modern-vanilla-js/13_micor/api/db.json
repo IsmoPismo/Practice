@@ -1,9 +1,54 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "title": "Post Title",
+      "body": "GET TO THE CHOPPER!",
+      "id": 2
+    },
+    {
+      "title": "Post numbero due",
+      "body": "Io non parlo tedeško, Džeko?",
+      "id": 3
+    },
+    {
+      "title": "Alert Aded!",
+      "body": "Wrong written",
+      "id": 4
+    },
+    {
+      "title": "Focus",
+      "body": "Focus!!!",
+      "id": 5
+    },
+    {
+      "title": "Jobangebot",
+      "body": "Aus Chicago!",
+      "id": 6
+    },
+    {
+      "title": "Aha",
+      "body": "Filmstar!",
+      "id": 7
+    },
+    {
+      "title": "Doppelganger",
+      "body": "Barney im Taxi",
+      "id": 8
+    },
+    {
+      "title": "Mućos Grasias",
+      "body": "Liebe der Karriere vorziehen :)",
+      "id": 9
+    }
   ],
   "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "name": "typicode"
+  }
 }
