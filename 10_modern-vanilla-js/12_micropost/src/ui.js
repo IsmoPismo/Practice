@@ -66,6 +66,10 @@ class UI {
     this.bodyInput.value = data.body;
     this.idInput.value = data.id;
   }
+
+  clearInputId(){
+    this.idInput.value = '';
+  }
 }
 
 export const ui = new UI();
