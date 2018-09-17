@@ -5,6 +5,7 @@ import { ui } from './ui';
 document.addEventListener('DOMContentLoaded', getPosts);
 document.querySelector('.post-submit').addEventListener('click', submitPost);
 document.querySelector('#posts').addEventListener('click', deletePost);
+document.querySelector('#posts').addEventListener('click', enableEdit);
 
 function getPosts() {
   http.get('http://localhost:3000/posts')
@@ -39,5 +40,19 @@ function deletePost(e){
       .catch(err => console.log(err))
   }
 
+  e.preventDefault();
+}
+
+function enableEdit(e){
+  if(e.target.parentElement.classList.contains("edit")){
+    const id = e.target.parentElement.getAttribute('data-id');
+    const title = e.target.parentElement.previousElementSibling.previousElementSibling.innerText;
+    const body = e.target.parentElement.previousElementSibling.innerText;
+    const data = {
+      id, title, body
+    }
+
+    ui.fillForm(data);
+  }
   e.preventDefault();
 }
