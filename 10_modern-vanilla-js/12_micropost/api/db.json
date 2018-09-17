@@ -1,34 +1,3 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "Post One",
-      "body": "This is post one"
-    },
-    {
-      "id": 2,
-      "title": "Post Two",
-      "body": "This is post two"
-    },
-    {
-      "id": 3,
-      "title": "Post Three",
-      "body": "This is post three"
-    },
-    {
-      "title": "Just",
-      "body": "The Two of Us",
-      "id": 4
-    },
-    {
-      "title": "Added",
-      "body": "Sexy Post",
-      "id": 5
-    },
-    {
-      "title": "Added a Post",
-      "body": "Dude",
-      "id": 6
-    }
-  ]
+  "posts": []
 }
