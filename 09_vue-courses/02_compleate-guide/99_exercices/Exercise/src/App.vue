@@ -7,22 +7,22 @@
           <server-status></server-status>
         </div>
         <hr>
-        <server-update></server-update>
+        <app-footer></app-footer>
     </div>
 </template>
 
 <script>
-  import ServerStatus from './ServerStatus.vue'
-  import ServerList from './ServerList.vue'
-  import ServerUpdate from './ServerUpdate.vue'
-  import AppHeader from './Header.vue'
+  import ServerStatus from './Servers/ServerStatus.vue'
+  import ServerList from './Servers/ServerList.vue'
+  import AppFooter from './Shared/Footer.vue'
+  import AppHeader from './Shared/Header.vue'
 
   export default {
     components: {
       AppHeader,
       ServerList,
       ServerStatus,
-      ServerUpdate
+      AppFooter
     }
   }
 </script>
