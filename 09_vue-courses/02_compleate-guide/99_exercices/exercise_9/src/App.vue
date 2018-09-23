@@ -5,14 +5,27 @@
                 <h1>Directives Exercise</h1>
                 <!-- Exercise -->
                 <!-- Build a Custom Directive which works like v-on (Listen for Events) -->
-
+                <button v-handler:click="logIt">Whatever</button>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+      directives: {
+        'handler': {
+          bind(el, bind){
+            el.addEventListener(bind.arg, bind.value)
+          }
+        }
+      },
+      methods: {
+        logIt(){
+          console.log('LOGGED');
+        }
+      }
+    }
 </script>
 
 <style>
