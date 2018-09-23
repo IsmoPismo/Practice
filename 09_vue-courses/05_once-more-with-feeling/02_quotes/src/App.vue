@@ -19,12 +19,15 @@ import QuoteGrid from './components/QuoteGrid.vue'
 export default {
   data: function(){
     return {
-      quotes: ['This is a quote to show something', 'And another one bites the dust'],
+      quotes: [],
       maxQuotes: 10
     }
   },
   methods: {
     addQuote(newQuote){
+      if(this.quotes.length >= 10){
+        return alert('You can\'t have more than 10 quotes')
+      }
       this.quotes.push(newQuote);
     },
     deleteQuote(index){
