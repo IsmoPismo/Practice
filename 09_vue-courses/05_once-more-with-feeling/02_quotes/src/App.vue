@@ -1,11 +1,18 @@
 <template>
   <div class="container">
+    <new-quote @saveNewQuote="addQuote"></new-quote>
     <quote-grid :quotes="quotes"></quote-grid>
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="alert alert-info">Info: Click on a Quote to delete it</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import QuoteGrid from './components/QuoteGrid.vue'
+import NewQuote from './components/NewQuote.vue'
 
 export default {
   data: function(){
@@ -14,8 +21,14 @@ export default {
       maxQuotes: 10
     }
   },
+  methods: {
+    addQuote(newQuote){
+      this.quotes.push(newQuote);
+    }
+  },
   components: {
-    QuoteGrid
+    QuoteGrid,
+    NewQuote
   }
 }
 </script>
