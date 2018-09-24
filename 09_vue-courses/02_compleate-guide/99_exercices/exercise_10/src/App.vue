@@ -3,6 +3,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Filters & Mixins</h1>
+                <hr>
+                <h2>{{ status | reverseText | count-chars }}</h2>
+                <h3>{{ charCounter }}</h3>
                 <!-- Exercise 1) -->
                 <!-- Build a local Filter which reverses the Text it is applied on -->
 
@@ -21,7 +24,20 @@
 </template>
 
 <script>
+import { computedMixin } from './computedMixin'
+
     export default {
+      mixins: [computedMixin],
+      data(){
+        return {
+          status: 'Marshall\'s Gielatto'
+        }
+      },
+      filters: {
+        reverseText(val){
+          return val.split('').reverse().join('');
+        }
+      }
     }
 </script>
 
