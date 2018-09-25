@@ -1,8 +1,11 @@
 <template>
   <div id="app">
       <app-health :player="playerHealth" :monster="monsterHealth"></app-health>
-      <component  :is="!gameIsRunning ? 'appStart' : 'appButtons'"
-                  :startFunc="startNewGame"></component>
+      <transition name="fade" mode="out-in">
+        <component  :is="!gameIsRunning ? 'appStart' : 'appButtons'"
+                    :startFunc="startNewGame">
+        </component>
+      </transition>
       <app-log></app-log>
   </div>
 </template>
@@ -50,6 +53,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+  .fade-enter {
+    opacity: 0;
+  }
 
+  .fade-enter-active {
+    transition: opacity 380ms ease-in;
+  }
+
+  .fade-leave-active {
+    opacity: 0;
+    transition: opacity 170ms ease-out;
+  }
 </style>
