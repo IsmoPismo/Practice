@@ -1,5 +1,10 @@
-.text-center {
+body {
+  background-color: #111;
+}
+
+.text-center, li {
     text-align: center;
+    color: white;
 }
 
 .healthbar {

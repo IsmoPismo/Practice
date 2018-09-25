@@ -1,9 +1,9 @@
 <template lang="html">
   <section class="row log">
-      <div class="small-12 columns">
+      <div class="small-12 columns" id="ludilo">
           <ul>
             <transition-group name='fade'>
-              <li v-for="turn in log" :key="turn">
+              <li v-for="(turn, i) in log" :key="turn">
                 {{ turn }}
               </li>
             </transition-group>
@@ -32,8 +32,8 @@ export default {
       this.log.unshift(`Monster damages player for ${md}`);
     },
     heal(h, md){
-      this.log.unshift(`Player heals himself for ${h}`);
-      this.log.unshift(`Monster damages player for ${md}`);
+      this.log.push(`Player heals himself for ${h}`);
+      this.log.push(`Monster damages player for ${md}`);
     }
   }
 }
