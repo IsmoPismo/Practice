@@ -30,17 +30,19 @@
             name: '',
             mail: ''
           },
-          userArray: []
+          userArray: [],
+          resource: {}
         }
       },
       methods: {
         submit(){
-          this.$http.post('', this.user)
-            .then(response => console.log(response),
-              error => console.error(error))
+          // this.$http.post('vue-resource-db.json', this.user)
+          //   .then(response => console.log(response),
+          //     error => console.error(error))
+          this.resource.save({}, this.user);
         },
         fetchData(){
-          this.$http.get('')
+          this.$http.get('vue-resource-db.json')
             .then(res => res.json())
             .then(data => {
               const arr = []
@@ -50,6 +52,9 @@
               this.userArray = arr;
             })
         }
+      },
+      created(){
+        this.resource = this.$resource('vue-resource-db.json')
       }
     }
 </script>

@@ -3,7 +3,7 @@ import App from './App.vue'
 import VueResource from 'vue-resource'
 
 Vue.use(VueResource);
-Vue.http.options.root = 'https://postreq-4f157.firebaseio.com/vue-resource-db.json'
+Vue.http.options.root = 'https://postreq-4f157.firebaseio.com/'
 Vue.http.interceptors.push((request, next) => {
     console.log(`This is the req: ${request}`);
     if(request.method == 'POST'){
@@ -11,7 +11,7 @@ Vue.http.interceptors.push((request, next) => {
     }
     next(response => {
       response.json = () => {
-        return {message: response.body} 
+        return {message: response.body}
       }
     });
 })
