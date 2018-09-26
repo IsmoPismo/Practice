@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-warning">
+  <div class="bg-info">
     <ul class="nav container">
       <router-link tag="li" to="/" active-class="active" exact class="nav-item">
         <a class="nav-link text-light">Home</a>
