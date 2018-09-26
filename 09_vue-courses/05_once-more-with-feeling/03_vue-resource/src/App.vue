@@ -35,12 +35,12 @@
       },
       methods: {
         submit(){
-          this.$http.post('https://postreq-4f157.firebaseio.com/vue-resource-db.json', this.user)
+          this.$http.post('', this.user)
             .then(response => console.log(response),
               error => console.error(error))
         },
         fetchData(){
-          this.$http.get('https://postreq-4f157.firebaseio.com/vue-resource-db.json')
+          this.$http.get('')
             .then(res => res.json())
             .then(data => {
               const arr = []
