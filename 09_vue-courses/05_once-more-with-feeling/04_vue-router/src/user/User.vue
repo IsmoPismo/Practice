@@ -4,7 +4,9 @@
     <hr>
     <button class="btn btn-outline-warning" @click="navigateToHome">Navigate to Home</button>
     <p class="display-4 my-4">User Info</p>
-    <router-view></router-view>
+    <transition name="slide" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
