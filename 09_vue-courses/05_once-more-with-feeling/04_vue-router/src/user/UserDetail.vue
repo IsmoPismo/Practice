@@ -25,11 +25,7 @@
       }
     },
     beforeRouteEnter(to, from, next) {
-      if(false){
-        next()
-      } else {
-        next({name: 'home'})
-      }
+      next();
     }
   }
 </script>
