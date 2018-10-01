@@ -15,6 +15,49 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n) {}
+function matrix(n) {
+  const bound = {
+    up: 0,
+    right: (n - 1),
+    down: (n - 1),
+    left: 0
+  }
+
+  let counter = 0;
+
+  const matrix = [];
+  for (let i = 0; i < n; i++){
+    matrix.push([])
+  }
+
+  while (bound.up <= bound.down && bound.left <= bound.right) {
+
+    for (let i = bound.left; i <= bound.right; i++){
+      counter++;
+      matrix[bound.left][i] = counter;
+    }
+    bound.up++;
+
+    for (let i = bound.up; i <= bound.down; i++){
+      counter++;
+      matrix[i][bound.right] = counter;
+    }
+    bound.right--;
+
+    for (let i = bound.right; i >= bound.left; i--){
+      counter++;
+      matrix[bound.down][i] = counter;
+    }
+    bound.down--;
+
+    for (let i = bound.down; i >= bound.up; i--){
+      counter++;
+      matrix[i][bound.left] = counter;
+    }
+    bound.left++;
+  }
+
+  return matrix
+}
 
 module.exports = matrix;
