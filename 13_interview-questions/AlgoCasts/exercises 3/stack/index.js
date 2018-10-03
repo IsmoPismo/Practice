@@ -23,7 +23,7 @@ class Stack {
     return this.data.unshift();
   }
 
-  peak(){
+  peek(){
     this.data[this.data.length -1]
   }
 }
