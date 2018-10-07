@@ -6,7 +6,7 @@
       <router-link to="/list" class="badge badge-secondary p-3">List</router-link>
     </nav>
     <div class="container">
-      <transition appear>
+      <transition name="router-anim" enter-active-class="animation fadeOutLeft" enter-leave-class="animation fadeOutLeft">
         <router-view class="mt-3"></router-view>
       </transition>
     </div>
@@ -14,15 +14,7 @@
 </template>
 
 <style>
-.badge {
-  cursor: pointer;
-}
-.v-enter {
-  opacity: 0;
-  transform: rotateZ(-20deg);
-}
 
-.v-enter-active{
-  transition: all 800ms ease;
-}
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css'
+
 </style>
