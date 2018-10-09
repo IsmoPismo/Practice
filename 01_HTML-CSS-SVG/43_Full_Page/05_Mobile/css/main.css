@@ -32,7 +32,7 @@ header nav {
 }
 
 header h1  {
-    font-size: 2rem;
+    font-size: 1,4rem;
 }
 header a
 {
@@ -41,7 +41,7 @@ header a
   align-content: center;
   color: rgba(200,0,110,.6);
   fill: rgba(200,0,110,.6);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 header a:hover {
     fill: rgba(200,0,110,.85);
@@ -85,14 +85,19 @@ header nav a:last-child {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 section#idx-atf h1 {
-  font-size: 2.8rem;
+  font-size: 1.8rem;
+  margin-top: 60px;
 }
 
 h2, h3 {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 h3 {
@@ -109,6 +114,7 @@ button {
 
 button:hover {
   background-color: rgba(200,0,110,.5);
+  cursor: pointer;
 }
 
 footer {
@@ -116,7 +122,7 @@ footer {
 }
 
 footer nav {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -130,4 +136,8 @@ footer nav a {
 
 footer nav a svg {
   padding-right: 2rem;
+}
+
+#ccc {
+  line-height: 2;
 }
