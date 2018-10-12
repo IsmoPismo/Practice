@@ -19,8 +19,7 @@ export default {
         query: {
           locale: 'en',
           q: 1000
-        },
-        hash: '#data'
+        }
       }
     }
   }
