@@ -1,11 +1,10 @@
 <template>
 <footer class="footer navbar-light bg-light fixed p-3">
   <div class="container">
-    <button class="btn btn-outline-dark" @click="saveData">Save</button>
-    <button class="btn btn-outline-dark mr-4" @click="loadData">Load</button>
+    <button class="btn btn-outline-dark btn-sm" @click="saveData">Save</button>
+    <button class="btn btn-outline-dark mr-4 btn-sm" @click="loadData">Load</button>
     <strong class="nav-brand mx-auto">Funds: {{ funds | currency }}</strong>
-    <button class="btn btn-outline-dark ml-4" @click="endDay">End Day</button>
-    <p>{{ stocky }}</p>
+    <button class="btn btn-outline-dark ml-4 btn-sm" @click="endDay">End Day</button>
 </div>
 </footer>
 </template>
@@ -17,9 +16,6 @@ export default {
   computed: {
     funds(){
       return this.$store.getters.funds
-    },
-    stocky(){
-      return this.$store.getters.stockPortfolio
     }
   },
   methods: {
