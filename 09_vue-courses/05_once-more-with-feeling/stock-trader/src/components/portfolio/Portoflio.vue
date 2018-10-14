@@ -1,10 +1,26 @@
 <template lang="html">
-  <h1 class="display-1">The PORTFOLIO</h1>
+  <div>
+    <app-stock  class="mx-auto"
+                v-for="stock in stocks"
+                :stock="stock">
+    </app-stock>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import Stock from './Stock.vue'
+
 export default {
-}
+    computed: {
+      ...mapGetters({
+        stocks: 'stockPortfolio'
+      })
+    },
+    components: {
+      appStock: Stock
+    }
+  }
 </script>
 
 <style lang="css">
