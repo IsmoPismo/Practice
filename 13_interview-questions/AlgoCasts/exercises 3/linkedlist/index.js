@@ -33,6 +33,9 @@ class LinkedList {
   }
 
   getLast(){
+    if (!this.head){
+      return null
+    }
     let node = this.head;
     while(node.next){
       node = node.next
@@ -71,11 +74,28 @@ class LinkedList {
   }
 
   insertLast(data){
+    if(!this.head){
+      return null
+    }
     let node = this.getLast()
     node.next = new Node(data)
   }
 
-  
+  getAt(n){
+    if(!this.head){
+      return null
+    }
+    let count = 0;
+    let node = this.head
+    while(node){
+      if(count === n){
+        return node
+      }
+      count++
+      node = node.next
+    }
+    return null
+  }
 }
 
 module.exports = { Node, LinkedList };
