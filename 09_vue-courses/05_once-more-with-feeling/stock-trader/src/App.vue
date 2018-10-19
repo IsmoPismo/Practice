@@ -2,13 +2,13 @@
   <div id="app">
     <app-header></app-header>
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 mb-5">
         <transition name="slide" mode="out-in">
           <router-view></router-view>
         </transition>
       </div>
     </div>
-    <app-footer class="fixed-bottom py-4 bg-light"></app-footer>
+    <app-footer></app-footer>
   </div>
 </template>
 

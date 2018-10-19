@@ -1,5 +1,5 @@
 <template>
-<footer class="footer navbar-light bg-light fixed p-3">
+<footer class="footer bg-light fixed-bottom p-2" style="opacity: .6;">
   <div class="container">
     <button class="btn btn-outline-dark btn-sm" @click="saveData">Save</button>
     <button class="btn btn-outline-dark mr-4 btn-sm" @click="loadData">Load</button>

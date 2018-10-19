@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="col-md-6 mb-3">
+  <div class="col-md-6 mb-5">
     <div class="card border-info">
       <div class="card-title bg-info text-white p-4 h4">
         {{ stock.name }}: <small>(price: {{ stock.price }}) | Qunatity: {{ stock.quantity }}</small>
