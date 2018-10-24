@@ -4,13 +4,17 @@ function tickets(peopleInLine){
   for (let i of peopleInLine){
     if (i === 25){
       kassa[25]++
-    } else if (i === 50){
+    }
+
+    else if (i === 50){
       kassa[50]++
       kassa[25]--
       if (kassa[25] < 0) {
         return 'NO'
       }
-    } else {
+    }
+
+    else {
         if (kassa[50] === 0){
           kassa[25] -= 3
         } else {
@@ -24,5 +28,3 @@ function tickets(peopleInLine){
   }
   return 'YES'
 }
-
-console.log(tickets([25,50]))
