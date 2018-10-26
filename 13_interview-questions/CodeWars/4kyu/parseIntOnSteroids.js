@@ -1,6 +1,7 @@
 function parseInt(string) {
   // remove edge case
-  let stringArr = string.replace(/ and/, '').split(' ')
+  let stringArr = string.replace(/ and/, '')
+  stringArr = string.replace(/-/, ' ').split(' ')
 
   let num = 0;
   const map = {
@@ -16,8 +17,9 @@ function parseInt(string) {
   }
 
   for (let i = stringArr.length - 1; i >= 0 ; i--){
-      num += map[i]
-      console.log(i, map[i]);
+      num += map[stringArr[i]]
   }
   return num
 }
+
+console.log(parseInt('one'))
