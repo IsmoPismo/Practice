@@ -1,25 +1,16 @@
-function parseInt(string) {
-  // remove edge case
-  let stringArr = string.replace(/ and/, '')
-  stringArr = string.replace(/-/, ' ').split(' ')
+function chooseBestSum(t, k, ls) {
+  let sum = 0;
+  let count = 0;
 
-  let num = 0;
-  const map = {
-    'one': 1,
-    'two': 2,
-    'three': 3,
-    'four': 4,
-    'five': 5,
-    'six': 6,
-    'seven': 7,
-    'eight': 8,
-    'nine': 9
+  for (let i of ls){
+    if (sum + i <= t && count <= k){
+      sum += i;
+      count ++;
+    }
   }
 
-  for (let i = stringArr.length - 1; i >= 0 ; i--){
-      num += map[stringArr[i]]
-  }
-  return num
+  return sum
 }
 
-console.log(parseInt('one'))
+
+console.log(chooseBestSum(15, 4, [5, 2, 7, 13, 1]))
