@@ -8,7 +8,7 @@ const countUniqueValues = arr => {
   let i = 0;
   let j = 1;
 
-  while (i <= arr.length - 1 || j <= arr.length - 1){
+  while (i <= arr.length - 1){
     // if the pointers have different values incremen counter
     if (arr[i] !== arr[j]) {
       counter++
