@@ -26,7 +26,10 @@ const merge = (a1, a2) => {
 }
 
 const mergeSort = arr => {
-  return merge([1, 5], [-1,0,1,6])
+  if (arr.length < 2) return arr
+
+  let mid = Math.floor(arr.length / 2)
+  return merge(mergeSort(arr.slice(0, mid)), mergeSort(arr.slice(mid)))
 }
 
-console.log(mergeSort('x'));
+console.log(mergeSort([1,-1,0,5,-2,8,10]));
