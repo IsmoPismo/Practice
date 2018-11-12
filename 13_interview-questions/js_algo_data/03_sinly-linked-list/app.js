@@ -48,10 +48,23 @@ class SinglyLinkedList {
 
   shift(){
      if (!this.head) return undefined
-     let returnVal = this.head;
+     let oldHead = this.head;
      this.head = this.head.next;
      this.length--;
-     return returnVal;
+     return oldHead;
+  }
+
+  unshift(val){
+    let newHead = new Node(val);
+    if (!this.head) {
+      this.head = newHead;
+      this.tail = this.head;
+    } else {
+      newHead.next = this.head;
+      this.head = newHead;
+    }
+
+    this.length++;
   }
 }
 
@@ -60,4 +73,3 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
-console.log(list.shift())
