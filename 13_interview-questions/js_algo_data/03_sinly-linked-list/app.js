@@ -76,6 +76,13 @@ class SinglyLinkedList {
     }
     return node
   }
+
+  set(val, n){
+    let node = this.get(n);
+    if(!node) return false
+    node.val = val;
+    return true
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -83,7 +90,3 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
-console.log(list.get(0));
-console.log(list.get(1));
-console.log(list.get(2));
-console.log(list.get(3));
