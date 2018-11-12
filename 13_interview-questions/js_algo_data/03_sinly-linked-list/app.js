@@ -83,6 +83,19 @@ class SinglyLinkedList {
     node.val = val;
     return true
   }
+
+  insert(val, n){
+    if (n < 0 || n > this.length) return false
+    if (n === this.length) return this.push(val) == this
+    if (n === 0) return this.unshift(val) == this
+
+    let node = new Node(val);
+    let prev = this.get(n - 1);
+    node.next = prev.next;
+    prev.next = node;
+    this.length++;
+    return true
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -90,3 +103,6 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
+list.insert('i bogo', 4);
+list.insert('!!!', 2)
+console.log(list);
