@@ -96,6 +96,18 @@ class SinglyLinkedList {
     this.length++;
     return true
   }
+
+  remove(n){
+    if (n < 0 || n >= this.length) return undefined
+    if (n === this.length - 1) return this.pop()
+    if (n === 0) return this.shift()
+
+    let node = this.get(n - 1);
+    let removedNode = node.next
+    node.next = node.next.next;
+    this.length--;
+    return removedNode;
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -103,6 +115,4 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
-list.insert('i bogo', 4);
-list.insert('!!!', 2)
-console.log(list);
+console.log(list.remove(1))
