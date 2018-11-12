@@ -65,6 +65,16 @@ class SinglyLinkedList {
     }
 
     this.length++;
+    return this;
+  }
+
+  get(n){
+    if (n < 0 || n >= this.length) return null
+    let node = this.head;
+    for (let i = 0; i < n; i++){
+      node = node.next;
+    }
+    return node
   }
 }
 
@@ -73,3 +83,7 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
+console.log(list.get(0));
+console.log(list.get(1));
+console.log(list.get(2));
+console.log(list.get(3));
