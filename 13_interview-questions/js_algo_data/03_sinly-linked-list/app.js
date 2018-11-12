@@ -108,6 +108,21 @@ class SinglyLinkedList {
     this.length--;
     return removedNode;
   }
+
+  reverse(){
+    [this.head, this.tail] = [this.tail, this.head]
+    let next;
+    let prev = null;
+    let node = this.tail;
+
+    for (let i = 0; i < this.length; i++){
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -115,4 +130,5 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
-console.log(list.remove(1))
+list.reverse();
+console.log(list);
