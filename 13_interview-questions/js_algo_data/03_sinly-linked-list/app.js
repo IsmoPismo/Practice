@@ -123,6 +123,16 @@ class SinglyLinkedList {
     }
     return this
   }
+
+  print(){
+      var arr = [];
+      var current = this.head
+      while(current){
+          arr.push(current.val)
+          current = current.next
+      }
+      console.log(arr);
+  }
 }
 
 let list = new SinglyLinkedList();
@@ -130,5 +140,6 @@ list.push('Jebo')
 list.push('te')
 list.push('otac')
 list.push('očin')
+list.print();
 list.reverse();
-console.log(list);
+list.print();
