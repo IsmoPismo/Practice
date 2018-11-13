@@ -71,10 +71,27 @@ class DoublyLinkedList{
       return this;
     }
 
-    
+    get(n){
+      if(n < 0 || n >= this.length) return null;
+      if(n < this.length/2){
+        var node = this.head;
+        for (let i = 0; i < n; i++){
+          node = node.next
+        }
+      } else {
+        var node = this.tail;
+        for (let i = this.legnth - 1; i > this.length - n; i--){
+          node = node.prev
+        }
+      }
+      return node;
+    }
 }
 
 let list = new DoublyLinkedList();
 list.push(99)
 list.push(100)
-console.log(list);
+list.push(101)
+list.push(102)
+list.push(103)
+list.unshift(90)
