@@ -51,6 +51,19 @@ class BinarySearchTree {
     traverse(this.root)
     return data;
   }
+
+  depthPostOrder(){
+    let data = [];
+
+    function traverse(node){
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+      data.push(node.val);
+    }
+
+    traverse(this.root)
+    return data;
+  }
 }
 
 let tree = new BinarySearchTree();
@@ -65,3 +78,4 @@ tree.insert('x')
 tree.insert('j')
 tree.insert('h')
 console.log(tree.depthPreOrder())
+console.log(tree.depthPostOrder())
