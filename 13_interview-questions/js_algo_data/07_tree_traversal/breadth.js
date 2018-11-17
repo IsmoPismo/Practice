@@ -64,18 +64,32 @@ class BinarySearchTree {
     traverse(this.root)
     return data;
   }
+
+  depthInOrder(){
+    let data = [];
+
+    function traverse(node){
+      if (node.left) traverse(node.left)
+      data.push(node.val);
+      if (node.right) traverse(node.right)
+    }
+
+    traverse(this.root)
+    return data;
+  }
 }
 
 let tree = new BinarySearchTree();
 
-tree.insert('I')
-tree.insert('A')
-tree.insert('B')
-tree.insert('Z')
-tree.insert('X')
-tree.insert('a')
-tree.insert('x')
-tree.insert('j')
-tree.insert('h')
+tree.insert(100)
+tree.insert(50)
+tree.insert(200)
+tree.insert(30)
+tree.insert(111)
+tree.insert(150)
+tree.insert(60)
+tree.insert(80)
+tree.insert(400)
 console.log(tree.depthPreOrder())
 console.log(tree.depthPostOrder())
+console.log(tree.depthInOrder())
