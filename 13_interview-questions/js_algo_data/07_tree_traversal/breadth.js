@@ -40,7 +40,16 @@ class BinarySearchTree {
   }
 
   depthPreOrder(){
-    let queue = [this.root];
+    let data = [];
+
+    function traverse(node){
+      data.push(node.val);
+      if (node.left) traverse(node.left)
+      if (node.right) traverse(node.right)
+    }
+
+    traverse(this.root)
+    return data;
   }
 }
 
@@ -55,4 +64,4 @@ tree.insert('a')
 tree.insert('x')
 tree.insert('j')
 tree.insert('h')
-console.log(tree.breadth())
+console.log(tree.depthPreOrder())
