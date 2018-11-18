@@ -23,15 +23,17 @@ class MaxBinaryHeap {
   }
 
   extractMax(){
+    // Swap first and last value | pops the last (max)
     [this.arr[0], this.arr[this.arr.length - 1]] = [this.arr[this.arr.length - 1], this.arr[0]];
     const max = this.arr.pop();
-
-    let i = this.arr.indexOf(this.arr[0]);
+    let i = 0;
 
     while(true){
+      // calculating the left and right children
       let l = 2 * i + 1,
           r = 2 * i + 2;
 
+      // Main logic
       if (this.arr[i] < this.arr[l] && this.arr[l] > this.arr[r]){
         [this.arr[i], this.arr[l]] = [this.arr[l], this.arr[i]]
         i = l;
