@@ -21,8 +21,37 @@ class MaxBinaryHeap {
 
     return bubleUp(this.arr)
   }
+
+  extractMax(){
+    [this.arr[0], this.arr[this.arr.length - 1]] = [this.arr[this.arr.length - 1], this.arr[0]];
+    const max = this.arr.pop();
+
+    let i = this.arr.indexOf(this.arr[0]);
+
+    while(true){
+      let l = 2 * i + 1,
+          r = 2 * i + 2;
+
+      if (this.arr[i] < this.arr[l] && this.arr[l] > this.arr[r]){
+        [this.arr[i], this.arr[l]] = [this.arr[l], this.arr[i]]
+        i = l;
+        continue;
+      } else if (this.arr[i] < this.arr[r] && this.arr[r] > this.arr[l]){
+        [this.arr[i], this.arr[r]] = [this.arr[r], this.arr[i]]
+        i = r;
+        continue;
+      } else break
+    }
+
+    return [max, this.arr]
+  }
 }
 
 let heap = new MaxBinaryHeap();
-console.log(heap.insert(500))
-console.log(heap.insert(400));
+console.log(heap.extractMax());
+console.log(heap.extractMax());
+console.log(heap.extractMax());
+console.log(heap.extractMax());
+console.log(heap.extractMax());
+console.log(heap.extractMax());
+console.log(heap.extractMax());
