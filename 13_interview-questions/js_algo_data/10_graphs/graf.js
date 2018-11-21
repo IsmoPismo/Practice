@@ -9,6 +9,14 @@ class Graph {
       }
     }
 
+    removeVertex(vertex){
+      for(let v of this.adjacencyList[vertex]){
+        this.removeEdge(v, vertex)
+      }
+
+      delete this.adjacencyList[vertex]
+    }
+
     addEdge(v1, v2){
       this.adjacencyList[v1].push(v2);
       this.adjacencyList[v2].push(v1);
@@ -32,5 +40,5 @@ g.addEdge('B', 'Z')
 g.addEdge('B', 'LJ')
 g.addEdge('Z', 'LJ')
 g.addEdge('S', 'Z')
-g.removeEdge('S', 'Z')
+g.removeVertex('S')
 console.log(g);
